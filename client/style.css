@@ -1,3 +1,33 @@
 body {
-    background-color: ghostwhite;
+    background-color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    color: darkgrey;
+}
+
+.hello {
+    color: hotpink;
+}
+
+.logo {
+    width: 10%;
+    height: auto;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.logoBig {
+    width: 50%;
+    height: auto;
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
 }
