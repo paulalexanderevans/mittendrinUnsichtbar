@@ -3,12 +3,10 @@ import React from "react";
 import axios from "./axios";
 import { Link } from "react-router-dom";
 
-export default class Registration extends React.Component {
+export default class LogIn extends React.Component {
     constructor() {
         super();
         this.state = {
-            first: "",
-            last: "",
             email: "",
             password: "",
             error: false,
@@ -16,9 +14,7 @@ export default class Registration extends React.Component {
     }
 
     handleChange(e) {
-        console.log("handleChange is firing");
-        console.log("handleChange e.target.value: ", e.target.value);
-        console.log("handleChange e.target.name: ", e.target.name);
+        console.log("logIn handleChange is firing");
         this.setState(
             {
                 [e.target.name]: e.target.value,
@@ -36,18 +32,19 @@ export default class Registration extends React.Component {
         console.log("ts: ", ts);
         // fd.reset();
         axios
-            .post("/registration", ts)
+            .post("/login", ts)
             .then((res) => {
                 console.log("response from server: ", res);
                 if (this.error) {
                     //handle error - render error message for user
                     console.log("this.error = true");
                 } else {
-                    location.replace("/");
+                    console.log("successful log in");
+                    location.replace("/logo");
                 }
             })
             .catch((err) => {
-                console.log("error in registration axios.post request: ", err);
+                console.log("error in login axios.post request: ", err);
             });
     }
 
@@ -57,28 +54,13 @@ export default class Registration extends React.Component {
                 {this.state.error && (
                     <p>You done broke it...please try again</p>
                 )}
-                <h2>Welcome to Netzung</h2>
-                <h3>Create account</h3>
+                <h2>Log in to Netzung</h2>
                 <form>
-                    <input
-                        onChange={(e) => this.handleChange(e)}
-                        name="first"
-                        type="text"
-                        placeholder="Name"
-                    />
-                    <br />
-                    <input
-                        onChange={(e) => this.handleChange(e)}
-                        name="last"
-                        type="text"
-                        placeholder="Surname"
-                    />
-                    <br />
                     <input
                         onChange={(e) => this.handleChange(e)}
                         name="email"
                         type="text"
-                        placeholder="eMail"
+                        placeholder="Email"
                     />
                     <br />
                     <input
@@ -88,12 +70,10 @@ export default class Registration extends React.Component {
                         placeholder="Password"
                     />
                     <br />
-                    <button onClick={(e) => this.handleClick(e)}>
-                        Register
-                    </button>
+                    <button onClick={(e) => this.handleClick(e)}>Log In</button>
                 </form>
                 <br />
-                <Link to="/login">Already a member? Log in</Link>
+                <Link to="/resetPassword">Forgotten your password? Reset</Link>
             </div>
         );
     }
