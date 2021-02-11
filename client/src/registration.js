@@ -12,6 +12,8 @@ export default class Registration extends React.Component {
             email: "",
             password: "",
             error: false,
+            errorMessage: "",
+            success: true,
         };
     }
 
@@ -38,11 +40,15 @@ export default class Registration extends React.Component {
         axios
             .post("/registration", ts)
             .then((res) => {
-                console.log("response from server: ", res);
-                if (this.error) {
+                console.log("response from server: ", res.data);
+                console.log("this.state: ", this.state);
+                this.setState(res.data, () => {
+                    console.log("this.state: ", this.state);
+                });
+                if (this.state.error) {
                     //handle error - render error message for user
-                    console.log("this.error = true");
-                } else {
+                    console.log("this.state.error = true");
+                } else if (this.state.success) {
                     location.replace("/");
                 }
             })
@@ -54,11 +60,9 @@ export default class Registration extends React.Component {
     render() {
         return (
             <div>
-                {this.state.error && (
-                    <p>You done broke it...please try again</p>
-                )}
                 <h2>Welcome to Netzung</h2>
                 <h3>Create account</h3>
+                {this.state.error && <h4>{this.state.errorMessage}</h4>}
                 <form>
                     <input
                         onChange={(e) => this.handleChange(e)}

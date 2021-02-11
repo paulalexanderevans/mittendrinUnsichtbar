@@ -34,14 +34,16 @@ export default class LogIn extends React.Component {
         axios
             .post("/login", ts)
             .then((res) => {
-                console.log("response from server: ", res);
-                if (this.error) {
-                    //handle error - render error message for user
-                    console.log("this.error = true");
-                } else {
-                    console.log("successful log in");
-                    location.replace("/logo");
-                }
+                console.log("response from server: ", res.data);
+                console.log("this.state 1: ", this.state);
+                this.setState(res.data, () => {
+                    console.log("this.state after setState: ", this.state);
+                    if (this.state.error) {
+                        console.log("this.state.error = true");
+                    } else if (this.state.success) {
+                        location.replace("/app");
+                    }
+                });
             })
             .catch((err) => {
                 console.log("error in login axios.post request: ", err);
@@ -51,10 +53,8 @@ export default class LogIn extends React.Component {
     render() {
         return (
             <div>
-                {this.state.error && (
-                    <p>You done broke it...please try again</p>
-                )}
                 <h2>Log in to Netzung</h2>
+                {this.state.error && <h4>{this.state.errorMessage}</h4>}
                 <form>
                     <input
                         onChange={(e) => this.handleChange(e)}
@@ -66,7 +66,7 @@ export default class LogIn extends React.Component {
                     <input
                         onChange={(e) => this.handleChange(e)}
                         name="password"
-                        type="text"
+                        type="password"
                         placeholder="Password"
                     />
                     <br />

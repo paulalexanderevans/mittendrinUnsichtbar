@@ -1,7 +1,17 @@
-export default function ProfiePic(props) {
+export default function ProfilePic({
+    image,
+    first,
+    last,
+    clickhandler,
+    size = "",
+}) {
     return (
-        <div className="profilePic">
-            <img src={props.profilePicUrl} alt={"{props.first}"} />
+        <div>
+            <img
+                className={`${size} profilePic`}
+                src={image}
+                alt={"{props.first}"}
+            />
         </div>
     );
 }

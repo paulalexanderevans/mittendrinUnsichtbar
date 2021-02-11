@@ -14,6 +14,9 @@ const ses = new aws.SES({
 });
 
 exports.sendEmail = function (recipient, message, subject) {
+    console.log("sendEmail recipient: ", recipient);
+    console.log("sendEmail message: ", message);
+    console.log("sendEmail subject: ", subject);
     return ses
         .sendEmail({
             Source: "Netzung<paulalexanderevans@live.com>",
@@ -33,5 +36,15 @@ exports.sendEmail = function (recipient, message, subject) {
         })
         .promise()
         .then(() => console.log("it worked!"))
-        .catch((err) => console.log(err));
+        .catch((err) => {
+            console.log("error in sendEmail: ", err.code);
+            if (err.code === "MessageRejected") {
+                console.log("message rejected");
+                return {
+                    success: false,
+                    error: true,
+                    errorMessage: "Message Rejected",
+                };
+            }
+        });
 };

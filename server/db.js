@@ -22,6 +22,22 @@ module.exports.getHashedPW = (usersEmail) => {
     return db.query(q, params);
 };
 
+module.exports.getEmail = (usersEmail) => {
+    // const q = `SELECT * FROM users`;
+    const q = `SELECT * FROM users WHERE email = ($1)`;
+    const params = [usersEmail];
+    return db.query(q, params);
+};
+
+module.exports.storeReset_codes = (email, secretCode) => {
+    const q = `
+INSERT into reset_codes (email, code)
+VALUES ($1, $2) RETURNING *`;
+    const params = [email, secretCode];
+
+    return db.query(q, params);
+};
+
 ////////////////
 
 // module.exports.getId = () => {
@@ -63,15 +79,6 @@ module.exports.getHashedPW = (usersEmail) => {
 // module.exports.getNumberOfSigners = () => {
 //     const q = `SELECT count (*) FROM signatures`;
 //     return db.query(q);
-// };
-
-// module.exports.addSignature = (user_id, signature) => {
-//     const q = `
-// INSERT into signatures (user_id, signature)
-// VALUES ($1, $2) RETURNING id`;
-//     const params = [user_id, signature];
-
-//     return db.query(q, params);
 // };
 
 // module.exports.updateInfoAndPW = (user_id, first, last, email, password) => {
