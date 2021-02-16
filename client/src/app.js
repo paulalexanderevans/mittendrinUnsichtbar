@@ -1,35 +1,60 @@
 import { Component } from "react";
 import Logo from "./logo.js";
 import ProfilePic from "./profile_pic.js";
-import Uploader from "./Uploader.js";
+import Uploader from "./uploader.js";
 import Profile from "./profile.js";
+import { BrowserRouter, Route } from "react-router-dom";
+import OtherProfile from "./otherProfile.js";
+import axios from "./axios";
+import { Link } from "react-router-dom";
 
 export default class App extends Component {
     constructor(props) {
         super(props);
-
+        this.toggleUploader = this.toggleUploader.bind(this);
+        this.setProfilePicUrl = this.setProfilePicUrl.bind(this);
+        this.setBio = this.setBio.bind(this);
         // Initialize App's state
-        this.state = { uploaderVisible: false };
+        this.state = {
+            uploaderVisible: false,
+        };
 
         // TODO: Bind methods if needed
     }
 
     componentDidMount() {
-        // Special React Lifecycle Method
-        // TODO: Make an axios request to fetch the user's data when the component mounts
-        // TODO: update the state when the data is retrieved
+        axios
+            .get("/user")
+            .then((res) => {
+                this.setState(res.data, () => {});
+                console.log("this.state: ", this.state);
+            })
+
+            .catch((err) => {
+                console.log("error in /user axios.get request: ", err);
+            });
     }
 
     toggleUploader() {
-        // TODO: Toggles the "uploaderVisible" state
+        if (this.state.uploaderVisible) {
+            this.setState({ uploaderVisible: false });
+        } else {
+            this.setState({ uploaderVisible: true });
+        }
     }
     setProfilePicUrl(profilePicUrl) {
-        // TODO: Updates the "profilePicUrl" in the state
-        // TODO: Hides the uploader
+        console.log("setProfilePicUrl fired");
+        this.setState({ profilePicUrl: profilePicUrl });
+        this.setState({ uploaderVisible: false });
+    }
+
+    setBio(newBio) {
+        console.log("setBio fired");
+        console.log("bio: ", newBio);
+        this.setState({ bio: newBio });
     }
 
     render() {
-        console.log("this.state in app.js: ", this.state);
         // if user is not logged in or database requests haven't been received
         // if (!this.state.id) {
         //     // return null;
@@ -40,33 +65,57 @@ export default class App extends Component {
         //     );
         // }
         return (
-            <div className={"app"}>
-                <Logo />
-                <ProfilePic
-                    // Passing down props:
-                    firstName={this.state.first}
-                    lastName={this.state.lastName}
-                    profilePicUrl={this.state.profilePicUrl}
-                    // Passing down methods as standard functions (binding needed):
-                    toggleUploader={this.toggleUploader}
-                    size="small"
-                />
-                <Profile
-                    // Passing down props:
-                    firstName={this.state.first}
-                    lastName={this.state.lastName}
-                    profilePicUrl={this.state.profilePicUrl}
-                    // Passing down methods as standard functions (binding needed):
-                    toggleUploader={this.toggleUploader}
-                />
-                {/*Conditionally render the Uploader: */}
-                {this.state.uploaderVisible && (
-                    <Uploader
-                        // Passing down methods with arrow function (no binding needed):
-                        setProfilePicUrl={() => this.setProfilePicUrl()}
+            <BrowserRouter>
+                <div className={"app"}>
+                    <div className="header">
+                        <Logo />
+                        <Link to="/resetPassword">Find People</Link>
+                        <ProfilePic
+                            // Passing down props:
+                            first={this.state.first}
+                            last={this.state.last}
+                            profilePicUrl={this.state.profilepicurl}
+                            // Passing down methods as standard functions (binding needed):
+                            toggleUploader={this.toggleUploader}
+                            size="small"
+                        />
+                    </div>
+                    {this.state.uploaderVisible && (
+                        <Uploader
+                            userId={this.state.id}
+                            setProfilePicUrl={this.setProfilePicUrl}
+                        />
+                    )}
+                    <Route
+                        exact
+                        path="/"
+                        render={() => (
+                            <Profile
+                                // Passing down props:
+                                first={this.state.first}
+                                last={this.state.last}
+                                profilePicUrl={this.state.profilepicurl}
+                                size="medium"
+                                bio={this.state.bio}
+                                // Passing down methods as standard functions (binding needed):
+                                toggleUploader={this.toggleUploader}
+                                setBio={this.setBio}
+                            />
+                        )}
                     />
-                )}
-            </div>
+
+                    <Route
+                        path="/user/:id"
+                        render={(props) => (
+                            <OtherProfile
+                                key={props.match.url}
+                                match={props.match}
+                                history={props.history}
+                            />
+                        )}
+                    />
+                </div>
+            </BrowserRouter>
         );
     }
 }

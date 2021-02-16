@@ -50,6 +50,30 @@ export default class ResetPassword extends React.Component {
             });
     }
 
+    handleClickRV2(e) {
+        e.preventDefault();
+        console.log("handleClickRV2 fired");
+        const ts = this.state;
+        console.log("ts: ", ts);
+        axios
+            .post("/resetpassword/verify", ts)
+            .then((res) => {
+                console.log("response from server: ", res);
+                this.setState(res.data, () => {
+                    console.log("this.state: ", this.state);
+                });
+                if (this.state.error) {
+                    console.log("this.error = true");
+                }
+            })
+            .catch((err) => {
+                console.log(
+                    "error in resetpassword/verify axios.post request: ",
+                    err
+                );
+            });
+    }
+
     determineWhichViewToRender() {
         console.log("renderView: ", this.state.renderView);
         if (this.state.renderView === 1) {
@@ -69,6 +93,7 @@ export default class ResetPassword extends React.Component {
                         onChange={(e) => this.handleChange(e)}
                         type="text"
                         placeholder="email"
+                        key="1"
                     ></input>
                     <br />
                     <button onClick={(e) => this.handleClickRV1(e)}>
@@ -86,6 +111,10 @@ export default class ResetPassword extends React.Component {
                     {!this.state.error && (
                         <div>
                             <h3>Reset code sent</h3>
+                            <h3 className="error">
+                                Note: reset code only valid for 10 mins
+                            </h3>
+
                             <h4>
                                 Please check your email, type the code you
                                 received into the input field along with a new
@@ -102,6 +131,9 @@ export default class ResetPassword extends React.Component {
                         onChange={(e) => this.handleChange(e)}
                         type="text"
                         placeholder="code"
+                        length="6"
+                        required
+                        key="2"
                     ></input>
                     <input
                         name="password"
@@ -109,7 +141,7 @@ export default class ResetPassword extends React.Component {
                         type="text"
                         placeholder="New password"
                     ></input>
-                    <button onClick={(e) => this.handleClick(e)}>
+                    <button onClick={(e) => this.handleClickRV2(e)}>
                         Set new password
                     </button>
                 </div>
@@ -117,7 +149,8 @@ export default class ResetPassword extends React.Component {
         } else if (this.state.renderView === 3) {
             return (
                 <div>
-                    <h1>Great Success</h1>
+                    <h3>Password successfully updated</h3>
+                    <Link to="/login">click here to log in</Link>
                 </div>
             );
         }

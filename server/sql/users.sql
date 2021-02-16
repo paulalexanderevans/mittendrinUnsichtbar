@@ -9,3 +9,12 @@ CREATE TABLE users(
 );
 
 SELECT * FROM users
+
+-- Alter Table
+-- add profilePicUrl column
+ALTER TABLE users
+ADD profilePicUrl VARCHAR;
+
+-- add bio column
+ALTER TABLE users
+ADD bio VARCHAR;

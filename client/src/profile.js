@@ -3,12 +3,19 @@ import BioEditor from "./bio_editor.js";
 export default function Profile(props) {
     console.log("props in profile: ", props);
     return (
-        <div className="profileContainer">
-            <h4>
-                Hi {props.first} {props.last}
-            </h4>
-            {/* <img src={props.profilePicUrl} alt={"{props.first}"} /> */}
-            <BioEditor />
+        <div className="mainContainer">
+            <div className="profileContainer">
+                <h2>
+                    {props.first} {props.last}
+                </h2>
+                <img
+                    className={`${props.size}profilePic`}
+                    src={props.profilePicUrl || "default.jpg"}
+                    alt={props.first}
+                    onClick={(e) => props.toggleUploader(e)}
+                />
+            </div>
+            <BioEditor bio={props.bio} setBio={props.setBio} />
         </div>
     );
 }

@@ -1,16 +1,11 @@
-export default function ProfilePic({
-    image,
-    first,
-    last,
-    clickhandler,
-    size = "",
-}) {
+export default function ProfilePic(props) {
     return (
         <div>
             <img
-                className={`${size} profilePic`}
-                src={image}
-                alt={"{props.first}"}
+                className={`${props.size}profilePic`}
+                src={props.profilePicUrl || "default.jpg"}
+                alt={props.first}
+                onClick={(e) => props.toggleUploader(e)}
             />
         </div>
     );

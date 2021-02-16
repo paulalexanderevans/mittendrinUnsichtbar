@@ -8,12 +8,13 @@ body {
     color: hotpink;
 }
 
+.error {
+    color: hotpink;
+}
+
 .logo {
-    width: 10%;
-    height: auto;
-    position: absolute;
-    left: 10px;
-    top: 10px;
+    width: auto;
+    height: 80px;
 }
 
 .logoBig {
@@ -30,4 +31,114 @@ body {
     align-items: center;
     flex-direction: column;
     position: relative;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    /* height: 100px; */
+}
+.app {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: white;
+    height: auto;
+    align-items: center;
+}
+.uploader {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(219, 219, 219);
+    height: auto;
+    align-items: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.profileContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    /* background-color: palegreen; */
+    height: auto;
+    align-items: flex-start;
+}
+
+.bio {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    /* background-color: paleturquoise; */
+    height: auto;
+    align-items: flex-start;
+    padding-top: 10px;
+}
+
+.mainContainer {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: white;
+    height: auto;
+    align-items: center;
+}
+
+.smallprofilePic {
+    width: auto;
+    height: 67px;
+}
+
+.mediumprofilePic {
+    width: 100px;
+    height: auto;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+
+h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+h4 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+h5 {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+p {
+    /* margin-top: 0px;
+    margin-bottom: 0px; */
+    /* margin-left: 0;
+    margin-right: 0; */
+    /* font-size: 10px; */
 }

@@ -35,7 +35,13 @@ exports.sendEmail = function (recipient, message, subject) {
             },
         })
         .promise()
-        .then(() => console.log("it worked!"))
+        .then(() => {
+            console.log("it worked!");
+            return {
+                success: true,
+            };
+        })
+
         .catch((err) => {
             console.log("error in sendEmail: ", err.code);
             if (err.code === "MessageRejected") {

@@ -3,6 +3,8 @@ const app = express();
 const csurf = require("csurf");
 const db = require("./db");
 const cryptoRandomString = require("crypto-random-string");
+const { uploader } = require("./uploader.js");
+const s3 = require("./s3");
 
 const sendEmailFunc = require("./ses.js");
 let secrets;
@@ -74,11 +76,18 @@ app.get("/app", (req, res) => {
 //         });
 // });
 
-app.get("*", function (req, res) {
-    if (!req.session.userId) {
-        res.redirect("/welcome");
-    } else {
-        res.sendFile(path.join(__dirname, "..", "client", "index.html"));
+app.get("/user", async (req, res) => {
+    console.log("app.get /user fired");
+    console.log("req.session.userId: ", req.session.userId);
+    try {
+        let result = await db.getUser(req.session.userId);
+        res.json(result.rows[0]);
+    } catch (err) {
+        console.log("error in getUser: ", err);
+        res.json({
+            error: true,
+            errorMessage: "User not found.",
+        });
     }
 });
 
@@ -148,12 +157,8 @@ app.post("/login", (req, res) => {
 
 app.post("/resetpassword/start", async (req, res) => {
     console.log("app.post/resetpassword/start fired");
-    //*verify that the email entered exists in users
-    // - query
     try {
         const results = await db.getEmail(req.body.email);
-        // console.log("results.rows[0]: ", results.rows[0].email);
-        //*if email exists:
         if (req.body.email === results.rows[0].email) {
             try {
                 console.log("User has account");
@@ -169,25 +174,21 @@ app.post("/resetpassword/start", async (req, res) => {
                 console.log(
                     "Netzung database, reset_codes table update successful"
                 );
-                console.log("results.rows[0]: ", results.rows[0]);
-                // - send code to user using sendEmail function
-                console.log("results.rows[0].email: ", results.rows[0].email);
-                console.log("results.rows[0].email: ", results.rows[0].code);
                 const emailResults = await sendEmailFunc.sendEmail(
                     results.rows[0].email,
                     results.rows[0].code,
                     "Reset your Netzung Password"
                 );
-                console.log("sendEmail fired");
                 console.log("results from sendEmail: ", emailResults);
-                // console.log("sendEmail response: ", res);
-                //if messageRejected do something:
-                //else send response
-                res.json({
-                    success: true,
-                    error: false,
-                    renderView: 2,
-                });
+                if (emailResults.error) {
+                    res.json(emailResults);
+                } else {
+                    res.json({
+                        success: true,
+                        error: false,
+                        renderView: 2,
+                    });
+                }
             } catch (err) {
                 console.log("err in db.sendEmail:");
             }
@@ -211,24 +212,104 @@ app.post("/resetpassword/start", async (req, res) => {
     }
 });
 
-app.post("/resetpassword/verify", (req, res) => {
+app.post("/resetpassword/verify", async (req, res) => {
     console.log("app.post/resetpassword/verify fired");
-    // - verify the code that the user inputted is correct:
-    //      - database query reset_codes and retreive code and email
-    // db.getCode(req.body.first, req.body.last, req.body.email, hashedPW)
-    //             .then((results) => {
-    //                 console.log(
-    //                     "Netzung database, users table update successful"
-    //                 );
-    //                 console.log("results.rows: ", results.rows[0]);
-    //                 req.session.userId = results.rows[0].id;
-    //             })
-    //             .catch((err) => {
-    //                 console.log("err in db.register: ", err);
-    //             });
-    // - if code is expired send failure message
+    try {
+        const codes = await db.getValidCodes();
+        console.log("Netzung database, reset_codes table request successful");
+        var j = 0;
+        for (var i = 0; i < codes.rows.length; i++) {
+            if (codes.rows[i].code === req.body.code) {
+                console.log("it's a match!");
+                console.log(codes.rows[i]);
+                try {
+                    console.log("try resetPassword");
+                    const hashedPW = await hash(req.body.password);
+                    const results = await db.resetPassword(
+                        codes.rows[i].email,
+                        hashedPW
+                    );
+                    console.log("resetPassword results.rows: ", results.rows);
+                    req.session.userId = results.rows[0].id;
+                    res.json({
+                        success: true,
+                        error: false,
+                        renderView: 3,
+                    });
+                } catch (err) {
+                    console.log("err in db.resetPassword: ", err);
+                }
+            } else {
+                console.log("no match!");
+                j++;
+                console.log("j: ", j);
+                if (j === codes.rows.length) {
+                    res.json({
+                        success: false,
+                        error: true,
+                        errorMessage: "Code invalid or expired",
+                    });
+                }
+            }
+        }
+    } catch (err) {
+        console.log("err in db.getValidCodes: ", err);
+        res.json({
+            success: false,
+            error: true,
+            errorMessage: "Code invalid or expired",
+        });
+    }
+});
 
-    // - take new password, hash it and store it in users
+app.post("/bio", async (req, res) => {
+    console.log("app.post /bio fired");
+    console.log("bioText: ", req.body.bioText);
+    console.log("req.session.userId: ", req.session.userId);
+    db.updateBio(req.body.bioText, req.session.userId)
+        .then((results) => {
+            res.json(results.rows[0]);
+        })
+        .catch((err) => console.log("err in profile update: ", err));
+});
+
+app.post("/profilePic", uploader.single("file"), s3.upload, (req, res) => {
+    console.log("app.post /profilePic fired");
+    let fullURL =
+        "https://radfarimagebucket.s3.amazonaws.com/" + req.file.filename;
+    db.updateProfilePic(fullURL, req.session.userId)
+        .then((results) => {
+            res.json(results.rows[0]);
+        })
+        .catch((err) => console.log("err in profile update: ", err));
+});
+
+app.get("/loggedInUser", function (req, res) {
+    console.log("get /loggedInUser fired");
+    res.json(req.session.userId);
+});
+
+app.get("/userInfo/:userId", async (req, res) => {
+    console.log("app.get /userInfo fired");
+    console.log("req: ", req.params);
+    try {
+        let result = await db.getUser(req.params.userId);
+        res.json(result.rows[0]);
+    } catch (err) {
+        console.log("error in getUser: ", err);
+        res.json({
+            error: true,
+            errorMessage: "User not found.",
+        });
+    }
+});
+
+app.get("*", function (req, res) {
+    if (!req.session.userId) {
+        res.redirect("/welcome");
+    } else {
+        res.sendFile(path.join(__dirname, "..", "client", "index.html"));
+    }
 });
 
 app.listen(process.env.PORT || 3001, function () {

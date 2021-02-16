@@ -54,7 +54,9 @@ export default class LogIn extends React.Component {
         return (
             <div>
                 <h2>Log in to Netzung</h2>
-                {this.state.error && <h4>{this.state.errorMessage}</h4>}
+                {this.state.error && (
+                    <h4 className="error">{this.state.errorMessage}</h4>
+                )}
                 <form>
                     <input
                         onChange={(e) => this.handleChange(e)}

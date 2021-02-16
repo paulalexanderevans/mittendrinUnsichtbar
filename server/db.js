@@ -38,7 +38,67 @@ VALUES ($1, $2) RETURNING *`;
     return db.query(q, params);
 };
 
+module.exports.getValidCodes = () => {
+    const q = `
+SELECT * FROM reset_codes
+WHERE CURRENT_TIMESTAMP - timestamp < INTERVAL '10 minutes'`;
+    // const params = [userCode];
+    return db.query(q);
+};
+
+module.exports.resetPassword = (email, password) => {
+    const q = `
+UPDATE users
+SET password = ($2)
+WHERE email = ($1)
+RETURNING *
+`;
+    const params = [email, password];
+
+    return db.query(q, params);
+};
+
+module.exports.getUser = (userId) => {
+    const q = `SELECT * FROM users WHERE id = ($1)`;
+    const params = [userId];
+    return db.query(q, params);
+};
+
+module.exports.updateProfilePic = (profilePicUrl, userId) => {
+    const q = `
+UPDATE users
+SET profilePicUrl = ($1)
+WHERE id = ($2)
+RETURNING *
+`;
+    const params = [profilePicUrl, userId];
+
+    return db.query(q, params);
+};
+
+module.exports.updateBio = (bio, userId) => {
+    const q = `
+UPDATE users
+SET bio = ($1)
+WHERE id = ($2)
+RETURNING *
+`;
+    const params = [bio, userId];
+
+    return db.query(q, params);
+};
+
 ////////////////
+
+// module.exports.getUser = (userId) => {
+//     const q = `SELECT first, last, email, age, city, url FROM users
+//     JOIN user_profiles
+// ON users.id = user_profiles.user_id
+// WHERE users.id = ($1)
+// `;
+//     const params = [userId];
+//     return db.query(q, params);
+// };
 
 // module.exports.getId = () => {
 //     const q = `SELECT * FROM signatures`;
@@ -81,20 +141,6 @@ VALUES ($1, $2) RETURNING *`;
 //     return db.query(q);
 // };
 
-// module.exports.updateInfoAndPW = (user_id, first, last, email, password) => {
-//     const q = `
-// UPDATE users
-// SET first = ($2),
-// last = ($3),
-// email = ($4),
-// password = ($5)
-// WHERE id = ($1)
-// `;
-//     const params = [user_id, first, last, email, password];
-
-//     return db.query(q, params);
-// };
-
 // module.exports.updateInfoNoPW = (user_id, first, last, email) => {
 //     const q = `
 // UPDATE users
@@ -129,16 +175,6 @@ VALUES ($1, $2) RETURNING *`;
 // VALUES ($1, $2, $3, $4) RETURNING id`;
 //     const params = [age, city, url, user_id];
 
-//     return db.query(q, params);
-// };
-
-// module.exports.getUserInfo = (user_id) => {
-//     const q = `SELECT first, last, email, age, city, url FROM users
-//     JOIN user_profiles
-// ON users.id = user_profiles.user_id
-// WHERE users.id = ($1)
-// `;
-//     const params = [user_id];
 //     return db.query(q, params);
 // };
 
