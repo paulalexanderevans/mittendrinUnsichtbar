@@ -304,6 +304,37 @@ app.get("/userInfo/:userId", async (req, res) => {
     }
 });
 
+app.get("/recentlyJoined", async (req, res) => {
+    console.log("app.get /recentlyJoined fired");
+    try {
+        let result = await db.getRecentlyJoined();
+        res.json(result.rows);
+    } catch (err) {
+        console.log("error in getRecentlyJoined: ", err);
+        res.json({
+            error: true,
+            errorMessage: "User not found.",
+        });
+    }
+});
+
+app.get("/findPeople/:inputval", async (req, res) => {
+    console.log("app.get /findPeople fired");
+    console.log("req: ", req.params.inputval);
+    // if (req.params.inputval)
+    try {
+        let result = await db.findPeople(req.params.inputval);
+        console.log("result.rows: ", result.rows);
+        res.json(result.rows);
+    } catch (err) {
+        console.log("error in findPeople: ", err);
+        res.json({
+            error: true,
+            errorMessage: "User not found.",
+        });
+    }
+});
+
 app.get("*", function (req, res) {
     if (!req.session.userId) {
         res.redirect("/welcome");

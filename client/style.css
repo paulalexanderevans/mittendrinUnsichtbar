@@ -2,6 +2,7 @@ body {
     background-color: #ffffff;
     font-family: "Roboto", sans-serif;
     color: darkgrey;
+    background-color: darkgrey;
 }
 
 .hello {
@@ -49,6 +50,7 @@ body {
     background-color: white;
     height: auto;
     align-items: center;
+    padding: 10px;
 }
 .uploader {
     width: 100%;
@@ -141,4 +143,21 @@ p {
     /* margin-left: 0;
     margin-right: 0; */
     /* font-size: 10px; */
+}
+
+.findPeopleLink {
+    color: hotpink;
+    align-self: flex-end;
+}
+
+.findPeople {
+    padding: 5px 5px 5px 0px;
+    /* width: 50%; */
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    background-color: white;
+    /* height: auto;*/
+    align-items: center;
 }

@@ -88,6 +88,17 @@ RETURNING *
     return db.query(q, params);
 };
 
+module.exports.getRecentlyJoined = () => {
+    const q = `SELECT * FROM users ORDER BY id DESC LIMIT 3;`;
+    return db.query(q);
+};
+
+module.exports.findPeople = (inputVal) => {
+    const q = `SELECT * FROM users WHERE first ILIKE $1 OR last ILIKE $1;`;
+    const params = [inputVal + "%"];
+    return db.query(q, params);
+};
+
 ////////////////
 
 // module.exports.getUser = (userId) => {

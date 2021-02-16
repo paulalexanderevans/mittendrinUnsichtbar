@@ -7,6 +7,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import OtherProfile from "./otherProfile.js";
 import axios from "./axios";
 import { Link } from "react-router-dom";
+import FindPeople from "./findPeople.js";
 
 export default class App extends Component {
     constructor(props) {
@@ -69,7 +70,9 @@ export default class App extends Component {
                 <div className={"app"}>
                     <div className="header">
                         <Logo />
-                        <Link to="/resetPassword">Find People</Link>
+                        <Link to="/users" className="findPeopleLink">
+                            Find People
+                        </Link>
                         <ProfilePic
                             // Passing down props:
                             first={this.state.first}
@@ -111,6 +114,20 @@ export default class App extends Component {
                                 key={props.match.url}
                                 match={props.match}
                                 history={props.history}
+                            />
+                        )}
+                    />
+
+                    <Route
+                        exact
+                        path="/users"
+                        render={() => (
+                            <FindPeople
+                                // Passing down props:
+                                first={this.state.first}
+                                last={this.state.last}
+                                id={this.state.id}
+                                // Passing down methods as standard functions (binding needed):
                             />
                         )}
                     />
