@@ -28,7 +28,7 @@ export default class App extends Component {
             .get("/user")
             .then((res) => {
                 this.setState(res.data, () => {});
-                console.log("this.state: ", this.state);
+                // console.log("this.state: ", this.state);
             })
 
             .catch((err) => {

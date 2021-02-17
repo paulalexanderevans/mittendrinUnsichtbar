@@ -335,6 +335,41 @@ app.get("/findPeople/:inputval", async (req, res) => {
     }
 });
 
+app.get("/relationship/:profileId", async (req, res) => {
+    console.log("app.get /relationship fired");
+    console.log("req in relationship: ", req.params.profileId);
+    console.log("req.session.userId: ", req.session.userId);
+    try {
+        let result = await db.checkRelationship(
+            req.params.profileId,
+            req.session.userId
+        );
+        // console.log("result.rows: ", result.rows);
+        res.json(result.rows);
+    } catch (err) {
+        console.log("error in checkRelationship: ", err);
+        res.json({
+            error: true,
+            errorMessage: "User not found.",
+        });
+    }
+});
+
+app.post("/friendRequest", async (req, res) => {
+    console.log("app.post /friendRequest");
+    console.log("req.body: ", req.body);
+    console.log("req.session.userId: ", req.session.userId);
+    if (req.body.buttonText === "Make friend request") {
+        console.log("Make friend request");
+        //#### pick up part 8 here! :)
+    }
+    // db.updateBio(req.body.bioText, req.session.userId)
+    //     .then((results) => {
+    //         res.json(results.rows[0]);
+    //     })
+    //     .catch((err) => console.log("err in profile update: ", err));
+});
+
 app.get("*", function (req, res) {
     if (!req.session.userId) {
         res.redirect("/welcome");

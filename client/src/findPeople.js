@@ -64,14 +64,21 @@ export default function FindPeople(props) {
             {!inputVal && <h4>Check out who just joined</h4>}
             {resultList.map((user) => (
                 <div className="findPeople" key={user.id}>
-                    <img
-                        className={`smallprofilePic`}
-                        src={user.profilepicurl || "default.jpg"}
-                        alt={user.first}
-                        onClick={(e) => props.toggleUploader(e)}
-                    />
+                    <Link to={`/user/${user.id}`} className="findPeopleLink">
+                        <img
+                            className={`smallprofilePic`}
+                            src={user.profilepicurl || "default.jpg"}
+                            alt={user.first}
+                            onClick={(e) => props.toggleUploader(e)}
+                        />
+                    </Link>
                     <p>
-                        {user.first} {user.last}
+                        <Link
+                            to={`/user/${user.id}`}
+                            className="findPeopleLink"
+                        >
+                            {user.first} {user.last}
+                        </Link>
                     </p>
                 </div>
             ))}

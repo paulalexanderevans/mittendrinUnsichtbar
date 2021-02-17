@@ -99,6 +99,15 @@ module.exports.findPeople = (inputVal) => {
     return db.query(q, params);
 };
 
+module.exports.checkRelationship = (recipient_id, sender_id) => {
+    const q = `
+SELECT * FROM friends
+WHERE (recipientid = $1 AND senderid = $2)
+OR (recipientid = $2 AND senderid = $1);`;
+    const params = [recipient_id, sender_id];
+
+    return db.query(q, params);
+};
 ////////////////
 
 // module.exports.getUser = (userId) => {

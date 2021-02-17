@@ -1,5 +1,6 @@
 import { Component } from "react";
 import axios from "./axios";
+import FriendRequestButton from "./friendRequestButton.js";
 
 export default class OtherProfile extends Component {
     constructor(props) {
@@ -23,7 +24,7 @@ export default class OtherProfile extends Component {
             .get(`/userInfo/${this.props.match.params.id}`)
             .then((res) => {
                 this.setState(res.data, () => {
-                    console.log("this.state in otherProfile: ", this.state);
+                    // console.log("this.state in otherProfile: ", this.state);
                 });
             })
             .catch((err) => {
@@ -54,12 +55,9 @@ export default class OtherProfile extends Component {
                 {this.state.bio && (
                     <div className="bio">
                         <div>
-                            <h4>Bio</h4>
-                            {this.state.message && (
-                                <h4 className="error">
-                                    {this.state.displayMessage}
-                                </h4>
-                            )}
+                            <FriendRequestButton
+                                id={this.props.match.params.id}
+                            />
                             <p>{this.state.bio}</p>
                         </div>
                     </div>
