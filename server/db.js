@@ -108,6 +108,37 @@ OR (recipientid = $2 AND senderid = $1);`;
 
     return db.query(q, params);
 };
+
+module.exports.MakeFriendRequest = (senderid, recipientid) => {
+    const q = `
+INSERT into friends (senderid, recipientid) 
+VALUES ($1, $2) RETURNING *`;
+    const params = [senderid, recipientid];
+
+    return db.query(q, params);
+};
+
+module.exports.deleteFriendRequest = (recipient_id, sender_id) => {
+    const q = `
+DELETE FROM friends
+WHERE (recipientid = $1 AND senderid = $2)
+OR (recipientid = $2 AND senderid = $1);`;
+    const params = [recipient_id, sender_id];
+
+    return db.query(q, params);
+};
+
+module.exports.acceptFriendRequest = (recipient_id, sender_id) => {
+    const q = `
+UPDATE friends
+SET accepted = true
+WHERE (recipientid = $1 AND senderid = $2)
+OR (recipientid = $2 AND senderid = $1)
+RETURNING *`;
+    const params = [recipient_id, sender_id];
+
+    return db.query(q, params);
+};
 ////////////////
 
 // module.exports.getUser = (userId) => {

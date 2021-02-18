@@ -8,6 +8,7 @@ import OtherProfile from "./otherProfile.js";
 import axios from "./axios";
 import { Link } from "react-router-dom";
 import FindPeople from "./findPeople.js";
+import Friends from "./friends.js";
 
 export default class App extends Component {
     constructor(props) {
@@ -28,7 +29,6 @@ export default class App extends Component {
             .get("/user")
             .then((res) => {
                 this.setState(res.data, () => {});
-                // console.log("this.state: ", this.state);
             })
 
             .catch((err) => {
@@ -72,6 +72,12 @@ export default class App extends Component {
                         <Logo />
                         <Link to="/users" className="findPeopleLink">
                             Find People
+                        </Link>
+                        <Link to="/friends" className="findPeopleLink">
+                            Friends
+                        </Link>
+                        <Link to="/" className="findPeopleLink">
+                            Profile
                         </Link>
                         <ProfilePic
                             // Passing down props:
@@ -117,6 +123,8 @@ export default class App extends Component {
                             />
                         )}
                     />
+
+                    <Route path="/friends" render={(props) => <Friends />} />
 
                     <Route
                         exact

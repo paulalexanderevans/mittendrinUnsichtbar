@@ -344,7 +344,6 @@ app.get("/relationship/:profileId", async (req, res) => {
             req.params.profileId,
             req.session.userId
         );
-        // console.log("result.rows: ", result.rows);
         res.json(result.rows);
     } catch (err) {
         console.log("error in checkRelationship: ", err);
@@ -359,15 +358,48 @@ app.post("/friendRequest", async (req, res) => {
     console.log("app.post /friendRequest");
     console.log("req.body: ", req.body);
     console.log("req.session.userId: ", req.session.userId);
+    //make friend request
     if (req.body.buttonText === "Make friend request") {
         console.log("Make friend request");
-        //#### pick up part 8 here! :)
+        try {
+            const results = await db.MakeFriendRequest(
+                req.session.userId,
+                req.body.recipientid
+            );
+            console.log("results from db.MakeFriendRequest: ", results.rows);
+            res.json(results.rows);
+        } catch (err) {
+            console.log("db.MakeFriendRequest: ", err);
+        }
     }
-    // db.updateBio(req.body.bioText, req.session.userId)
-    //     .then((results) => {
-    //         res.json(results.rows[0]);
-    //     })
-    //     .catch((err) => console.log("err in profile update: ", err));
+    //cancel friend request
+    if (req.body.buttonText === ("Cancel friend request" || "End friendship")) {
+        console.log("Cancel friend request");
+        try {
+            const results = await db.deleteFriendRequest(
+                req.session.userId,
+                req.body.recipientid
+            );
+            console.log("results from db.deleteFriendRequest: ", results.rows);
+            res.json(results.rows);
+        } catch (err) {
+            console.log("db.MakeFriendRequest: ", err);
+        }
+    }
+    //accept friend request
+    if (req.body.buttonText === "Accept friend request") {
+        console.log("Accept friend request");
+        try {
+            const results = await db.acceptFriendRequest(
+                req.session.userId,
+                req.body.recipientid
+            );
+            console.log("results from db.MakeFriendRequest: ", results.rows);
+            res.json(results.rows);
+        } catch (err) {
+            console.log("db.MakeFriendRequest: ", err);
+        }
+    }
 });
 
 app.get("*", function (req, res) {
