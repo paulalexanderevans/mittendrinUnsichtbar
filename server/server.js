@@ -1,5 +1,10 @@
 const express = require("express");
 const app = express();
+// const server = require("http").Server(app);
+// const io = require("socket.io")(server, {
+//     allowRequest: (req, callback) =>
+//         callback(null, req.headers.referer.startsWith("http://localhost:3000")),
+// });
 const csurf = require("csurf");
 const db = require("./db");
 const cryptoRandomString = require("crypto-random-string");
@@ -386,6 +391,21 @@ app.post("/friendRequest", async (req, res) => {
             console.log("db.MakeFriendRequest: ", err);
         }
     }
+    //end friendship
+    if (req.body.buttonText === "End friendship") {
+        console.log("Cancel friend request");
+        try {
+            const results = await db.deleteFriendRequest(
+                req.session.userId,
+                req.body.recipientid
+            );
+            console.log("results from db.deleteFriendRequest: ", results.rows);
+            res.json(results.rows);
+        } catch (err) {
+            console.log("db.MakeFriendRequest: ", err);
+        }
+    }
+
     //accept friend request
     if (req.body.buttonText === "Accept friend request") {
         console.log("Accept friend request");
@@ -394,11 +414,27 @@ app.post("/friendRequest", async (req, res) => {
                 req.session.userId,
                 req.body.recipientid
             );
-            console.log("results from db.MakeFriendRequest: ", results.rows);
+            console.log("results from db.acceptFriendRequest: ", results.rows);
             res.json(results.rows);
         } catch (err) {
             console.log("db.MakeFriendRequest: ", err);
         }
+    }
+});
+
+app.get("/contacts", async (req, res) => {
+    console.log("app.get /friends fired");
+    console.log("req.session.userId: ", req.session.userId);
+    try {
+        let result = await db.getFriends(req.session.userId);
+        console.log("getFriends result: ", result.rows);
+        res.json(result.rows);
+    } catch (err) {
+        console.log("error in get friends: ", err);
+        res.json({
+            error: true,
+            errorMessage: "User not found.",
+        });
     }
 });
 
@@ -413,3 +449,11 @@ app.get("*", function (req, res) {
 app.listen(process.env.PORT || 3001, function () {
     console.log("Netzung server listening...");
 });
+
+// io.on("connection", (socket) => {
+//     console.log("socket: ", socket);
+//     console.log(`Socket with id: ${socket.id} has connected`);
+//     socket.on("disconnect", () => {
+//         console.log(`Socket with id: ${socket.id} just disconected`);
+//     });
+// });

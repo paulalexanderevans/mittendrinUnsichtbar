@@ -14,9 +14,9 @@ export default function FriendRequestButton(props) {
                     console.log("response.data[0]: ", response.data[0]);
                     if (!response.data[0].accepted) {
                         console.log("pending request");
-                        if (props.id !== response.data[0].recipientid) {
+                        if (props.id === response.data[0].recipientid) {
                             setButtonText("Cancel friend request");
-                        } else if (props.id === response.data[0].recipientid) {
+                        } else if (props.id !== response.data[0].recipientid) {
                             setButtonText("Accept friend request");
                         }
                     }
@@ -42,6 +42,8 @@ export default function FriendRequestButton(props) {
                     setButtonText("Make friend request");
                 } else if (!res.data[0].accepted) {
                     setButtonText("Cancel friend request");
+                } else if (res.data[0].accepted) {
+                    setButtonText("End friendship");
                 }
             })
             .catch((err) => {

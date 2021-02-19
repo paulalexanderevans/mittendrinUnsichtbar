@@ -139,6 +139,17 @@ RETURNING *`;
 
     return db.query(q, params);
 };
+
+module.exports.getFriends = (userId) => {
+    const q = `    SELECT users.id, first, last, profilePicUrl, accepted
+    FROM friends
+    JOIN users
+    ON (accepted = false AND recipientid = $1 AND senderid = users.id)
+    OR (accepted = true AND recipientid = $1 AND senderid = users.id)
+    OR (accepted = true AND senderid = $1 AND recipientid = users.id)`;
+    const params = [userId];
+    return db.query(q, params);
+};
 ////////////////
 
 // module.exports.getUser = (userId) => {

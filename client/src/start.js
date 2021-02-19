@@ -4,11 +4,12 @@ import Welcome from "./welcome.js";
 import App from "./app.js";
 import { createStore, applyMiddleware } from "redux";
 import reduxPromise from "redux-promise";
-import { reducer } from "./reducer";
+import Reducer from "./reducers";
 import { Provider } from "react-redux";
+// import { io } from "socket -io";
 
 const store = createStore(
-    reducer,
+    Reducer,
     composeWithDevTools(applyMiddleware(reduxPromise))
 );
 

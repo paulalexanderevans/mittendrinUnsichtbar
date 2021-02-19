@@ -124,7 +124,7 @@ export default class App extends Component {
                         )}
                     />
 
-                    <Route path="/friends" render={(props) => <Friends />} />
+                    <Route path="/friends" render={() => <Friends />} />
 
                     <Route
                         exact
