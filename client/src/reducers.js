@@ -1,4 +1,28 @@
 export default function Reducer(state = {}, action) {
+    if (action.type == "CHAT_MESSAGES") {
+        state = {
+            ...state,
+            messages: action.messages,
+        };
+    }
+
+    if (action.type == "NEW_MESSAGE") {
+        state = {
+            ...state,
+            messages: state.messages.concat(action.message),
+        };
+    }
+
+    if (action.type === "DELETE_MESSAGE") {
+        state = {
+            ...state,
+            messages: state.messages.filter(
+                (message) => message.id != action.messageId
+            ),
+        };
+        console.log("state.messages: ", state.messages);
+    }
+
     if (action.type == "GET_CONTACTS") {
         state = {
             ...state,

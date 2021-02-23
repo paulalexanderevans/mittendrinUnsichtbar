@@ -1,10 +1,10 @@
 const express = require("express");
 const app = express();
-// const server = require("http").Server(app);
-// const io = require("socket.io")(server, {
-//     allowRequest: (req, callback) =>
-//         callback(null, req.headers.referer.startsWith("http://localhost:3000")),
-// });
+const server = require("http").Server(app);
+const io = require("socket.io")(server, {
+    allowRequest: (req, callback) =>
+        callback(null, req.headers.referer.startsWith("http://localhost:3000")),
+});
 const csurf = require("csurf");
 const db = require("./db");
 const cryptoRandomString = require("crypto-random-string");
@@ -17,18 +17,20 @@ if (process.env.sessionSecret) {
     secrets = process.env.sessionSecret;
 } else secrets = require("./secrets").sessionSecret;
 const cookieSession = require("cookie-session");
-app.use(
-    cookieSession({
-        maxAge: 1000 * 60 * 60 * 24 * 14,
-        keys: ["key1", "key2"],
-        secret: secrets,
-    })
-);
+const cookieSessionMiddleware = cookieSession({
+    maxAge: 1000 * 60 * 60 * 24 * 14,
+    keys: ["key1", "key2"],
+    secret: secrets,
+});
+
+app.use(cookieSessionMiddleware);
+io.use(function (socket, next) {
+    cookieSessionMiddleware(socket.request, socket.request.res, next);
+});
 
 app.use(csurf());
 
 app.use(function (req, res, next) {
-    console.log("csrf");
     res.cookie("mytoken", req.csrfToken());
     next();
 });
@@ -43,7 +45,6 @@ app.use(express.static(path.join(__dirname, "..", "client", "public")));
 app.get("/welcome", (req, res) => {
     console.log("req.session.userId: ", req.session.userId);
     if (req.session.userId) {
-        //if user is logged in redirect away from welcome
         res.redirect("/");
     } else {
         res.sendFile(path.join(__dirname, "..", "client", "index.html"));
@@ -53,33 +54,11 @@ app.get("/welcome", (req, res) => {
 app.get("/app", (req, res) => {
     console.log("req.session.userId: ", req.session.userId);
     if (!req.session.userId) {
-        //if user is logged in redirect away from welcome
         res.redirect("/welcome");
     } else {
         res.sendFile(path.join(__dirname, "..", "client", "index.html"));
     }
 });
-
-// app.post("/registration", (req, res) => {
-//     console.log("POST /registration fired");
-//     hash(req.body.password)
-//         .then((hashedPW) => {
-//             db.register(req.body.first, req.body.last, req.body.email, hashedPW)
-//                 .then((results) => {
-//                     console.log(
-//                         "Netzung database, users table update successful"
-//                     );
-//                     console.log("results.rows: ", results.rows[0]);
-//                     req.session.userId = results.rows[0].id;
-//                 })
-//                 .catch((err) => {
-//                     console.log("err in db.register: ", err);
-//                 });
-//         })
-//         .catch((err) => {
-//             console.log("err in hash: ", err);
-//         });
-// });
 
 app.get("/user", async (req, res) => {
     console.log("app.get /user fired");
@@ -423,11 +402,8 @@ app.post("/friendRequest", async (req, res) => {
 });
 
 app.get("/contacts", async (req, res) => {
-    console.log("app.get /friends fired");
-    console.log("req.session.userId: ", req.session.userId);
     try {
         let result = await db.getFriends(req.session.userId);
-        console.log("getFriends result: ", result.rows);
         res.json(result.rows);
     } catch (err) {
         console.log("error in get friends: ", err);
@@ -438,6 +414,22 @@ app.get("/contacts", async (req, res) => {
     }
 });
 
+app.get("/chatMessages", async (req, res) => {
+    try {
+        let result = await db.getChatMessages();
+        const reverse = result.rows.reverse();
+        res.json(reverse);
+    } catch (err) {
+        console.log("error in get chatMessages: ", err);
+        res.json({
+            error: true,
+            errorMessage: "Messages not found, please try again.",
+        });
+    }
+});
+
+app.post("/chatMessage", async (req, res) => {});
+
 app.get("*", function (req, res) {
     if (!req.session.userId) {
         res.redirect("/welcome");
@@ -446,14 +438,47 @@ app.get("*", function (req, res) {
     }
 });
 
-app.listen(process.env.PORT || 3001, function () {
+server.listen(process.env.PORT || 3001, function () {
     console.log("Netzung server listening...");
 });
 
-// io.on("connection", (socket) => {
-//     console.log("socket: ", socket);
-//     console.log(`Socket with id: ${socket.id} has connected`);
-//     socket.on("disconnect", () => {
-//         console.log(`Socket with id: ${socket.id} just disconected`);
-//     });
-// });
+io.on("connection", (socket) => {
+    console.log(`Socket id: ${socket.id} has connected`);
+    const userId = socket.request.session.userId;
+    if (!userId) {
+        return socket.disconect(true);
+    }
+    socket.on("chatMessage", async (text) => {
+        console.log("ping");
+        try {
+            let results = await db.postChatMessage(userId, text.message);
+            let senderInfo = await db.getUser(userId);
+            let payload = {
+                id: results.rows[0].id,
+                first: senderInfo.rows[0].first,
+                last: senderInfo.rows[0].last,
+                profilepicurl: senderInfo.rows[0].profilepicurl,
+                senderid: userId,
+                timestamp: results.rows[0].timestamp,
+                message: results.rows[0].message,
+            };
+            io.emit("newMessage", payload);
+        } catch (err) {
+            console.log("err in messages table: ", err);
+        }
+    });
+    socket.on("delete", async (messageId) => {
+        console.log("socket delete fired");
+        console.log("messageId: ", messageId.messageId);
+        try {
+            let results = await db.deleteChatMessage(messageId.messageId);
+            console.log("results: ", results.rows);
+            io.emit("deleteMessage", messageId.messageId);
+        } catch (err) {
+            console.log("err in messages table: ", err);
+        }
+    });
+    socket.on("disconnect", () => {
+        console.log(`Socket with id: ${socket.id} just disconected`);
+    });
+});

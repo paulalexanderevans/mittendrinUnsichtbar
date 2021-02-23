@@ -9,6 +9,7 @@ import axios from "./axios";
 import { Link } from "react-router-dom";
 import FindPeople from "./findPeople.js";
 import Friends from "./friends.js";
+import Chat from "./chat.js";
 
 export default class App extends Component {
     constructor(props) {
@@ -50,12 +51,13 @@ export default class App extends Component {
     }
 
     setBio(newBio) {
-        console.log("setBio fired");
-        console.log("bio: ", newBio);
         this.setState({ bio: newBio });
     }
 
     render() {
+        const title =
+            window.location.pathname.substring(1, 2).toUpperCase() +
+            window.location.pathname.substring(2);
         // if user is not logged in or database requests haven't been received
         // if (!this.state.id) {
         //     // return null;
@@ -73,6 +75,9 @@ export default class App extends Component {
                         <Link to="/users" className="findPeopleLink">
                             Find People
                         </Link>
+                        <Link to="/chat" className="findPeopleLink">
+                            Chat
+                        </Link>
                         <Link to="/friends" className="findPeopleLink">
                             Friends
                         </Link>
@@ -89,6 +94,7 @@ export default class App extends Component {
                             size="small"
                         />
                     </div>
+                    <div className="title">{title}</div>
                     {this.state.uploaderVisible && (
                         <Uploader
                             userId={this.state.id}
@@ -125,6 +131,11 @@ export default class App extends Component {
                     />
 
                     <Route path="/friends" render={() => <Friends />} />
+
+                    <Route
+                        path="/chat"
+                        render={() => <Chat userId={this.state.id} />}
+                    />
 
                     <Route
                         exact

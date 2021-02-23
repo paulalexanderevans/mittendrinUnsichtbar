@@ -122,7 +122,8 @@ module.exports.deleteFriendRequest = (recipient_id, sender_id) => {
     const q = `
 DELETE FROM friends
 WHERE (recipientid = $1 AND senderid = $2)
-OR (recipientid = $2 AND senderid = $1);`;
+OR (recipientid = $2 AND senderid = $1);
+`;
     const params = [recipient_id, sender_id];
 
     return db.query(q, params);
@@ -150,6 +151,37 @@ module.exports.getFriends = (userId) => {
     const params = [userId];
     return db.query(q, params);
 };
+
+module.exports.getChatMessages = () => {
+    const q = `SELECT messages.id, users.first, users.last, users.profilepicurl, messages.senderid, messages.timestamp, messages.message
+    FROM users
+    RIGHT JOIN messages
+    on users.id = messages.senderid
+    ORDER BY messages.id DESC
+    LIMIT 10`;
+    return db.query(q);
+};
+
+module.exports.postChatMessage = (senderid, message) => {
+    const q = `
+INSERT into messages (senderid, message) 
+VALUES ($1, $2) RETURNING *`;
+    const params = [senderid, message];
+
+    return db.query(q, params);
+};
+
+module.exports.deleteChatMessage = (messageId) => {
+    const q = `
+DELETE FROM messages
+WHERE id = $1
+RETURNING *
+`;
+    const params = [messageId];
+
+    return db.query(q, params);
+};
+
 ////////////////
 
 // module.exports.getUser = (userId) => {

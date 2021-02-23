@@ -10,24 +10,18 @@ import {
 
 export default function Friends() {
     const dispatch = useDispatch();
-    const users = useSelector(
-        (state) => state.users && state.users.filter((user) => user.hot == null)
-    );
 
     const requests = useSelector(
         (state) =>
             state.contacts &&
             state.contacts.filter((user) => user.accepted == false)
     );
-    console.log("requests: ", requests);
     const friends = useSelector(
         (state) =>
             state.contacts && state.contacts.filter((user) => user.accepted)
     );
-    console.log("friends: ", friends);
 
     const contacts = useSelector((state) => state.contacts);
-    console.log("contacts: ", contacts);
 
     useEffect(() => {
         dispatch(getLoggedInUser());
@@ -35,25 +29,18 @@ export default function Friends() {
     }, []);
 
     const handleClick1 = (senderid) => {
-        console.log("e: ", senderid);
-        console.log("someone clicked accept friend request");
         const data = {
             recipientid: senderid,
             buttonText: "Accept friend request",
         };
-        console.log("data: ", data);
         dispatch(acceptFriendRequest(data));
-        // const data = { buttonText: buttonText, recipientid: props.id };
     };
 
     const handleClick2 = (senderid) => {
-        console.log("e: ", senderid);
-        console.log("someone clicked End friendship");
         const data = {
             recipientid: senderid,
             buttonText: "End friendship",
         };
-        console.log("data: ", data);
         dispatch(endFriendship(data));
     };
 

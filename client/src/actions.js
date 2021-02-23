@@ -50,6 +50,28 @@ export async function endFriendship(reqData) {
     }
 }
 
+export async function newMessage(data) {
+    return {
+        type: "NEW_MESSAGE",
+        message: data,
+    };
+}
+
+export async function deleteMessage(messageId) {
+    return {
+        type: "DELETE_MESSAGE",
+        messageId: messageId,
+    };
+}
+
+export async function getChatMessages() {
+    const { data } = await axios.get("/chatMessages");
+    return {
+        type: "CHAT_MESSAGES",
+        messages: data,
+    };
+}
+
 export async function makeHot(id) {
     const { data } = await axios.post(`/hot/${id}`);
     console.log("data: ", data);
