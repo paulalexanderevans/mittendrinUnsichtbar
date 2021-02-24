@@ -47,70 +47,66 @@ export default function Friends() {
     return (
         <div className="friendsPage">
             {requests && (
-                <div className="requestsContainer">
+                <div>
                     <h4 className="error">Requests ({requests.length})</h4>
-                    {requests.map((user) => (
-                        <div className="requests" key={user.id}>
-                            <Link
-                                to={`/user/${user.id}`}
-                                className="findPeopleLink"
-                            >
-                                {user.first} {user.last}
-                            </Link>
-                            <br />
-                            <Link
-                                to={`/user/${user.id}`}
-                                className="findPeopleLink"
-                            >
-                                <img
-                                    className={`smallprofilePic`}
-                                    src={user.profilepicurl || "default.jpg"}
-                                    alt={user.first}
-                                />
-                            </Link>
-                            <br />
-                            <button
-                                className="friendRequestButton"
-                                onClick={() => handleClick1(user.id)}
-                            >
-                                Accept friend request
-                            </button>
-                        </div>
-                    ))}
+                    <div className="friendsContainer">
+                        {requests.map((user) => (
+                            <div className="friends" key={user.id}>
+                                <Link to={`/user/${user.id}`} className="name">
+                                    {user.first} {user.last}
+                                </Link>
+                                <br />
+                                <Link to={`/user/${user.id}`}>
+                                    <img
+                                        className={`smallprofilePic`}
+                                        src={
+                                            user.profilepicurl || "default.jpg"
+                                        }
+                                        alt={user.first}
+                                    />
+                                </Link>
+                                <br />
+                                <button
+                                    className="friendRequestButton"
+                                    onClick={() => handleClick1(user.id)}
+                                >
+                                    Accept friend request
+                                </button>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             )}
             {friends && (
-                <div className="friendsContainer">
+                <div>
                     <h4 className="error">Friends ({friends.length})</h4>
-                    {friends.map((user) => (
-                        <div className="friends" key={user.id}>
-                            <Link
-                                to={`/user/${user.id}`}
-                                className="findPeopleLink"
-                            >
-                                {user.first} {user.last}
-                            </Link>
-                            <br />
-                            <Link
-                                to={`/user/${user.id}`}
-                                className="findPeopleLink"
-                            >
-                                <img
-                                    className={`smallprofilePic`}
-                                    src={user.profilepicurl || "default.jpg"}
-                                    alt={user.first}
-                                    // onClick={(e) => props.toggleUploader(e)}
-                                />
-                            </Link>
-                            <br />
-                            <button
-                                className="friendRequestButton"
-                                onClick={() => handleClick2(user.id)}
-                            >
-                                End friendship
-                            </button>
-                        </div>
-                    ))}
+                    <div className="friendsContainer">
+                        {friends.map((user) => (
+                            <div className="friends" key={user.id}>
+                                <Link to={`/user/${user.id}`} className="name">
+                                    {user.first} {user.last}
+                                </Link>
+                                <br />
+                                <Link to={`/user/${user.id}`}>
+                                    <img
+                                        className={`smallprofilePic`}
+                                        src={
+                                            user.profilepicurl || "default.jpg"
+                                        }
+                                        alt={user.first}
+                                        // onClick={(e) => props.toggleUploader(e)}
+                                    />
+                                </Link>
+                                <br />
+                                <button
+                                    className="friendRequestButton"
+                                    onClick={() => handleClick2(user.id)}
+                                >
+                                    End friendship
+                                </button>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             )}
         </div>

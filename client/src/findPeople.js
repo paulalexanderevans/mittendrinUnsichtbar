@@ -56,32 +56,34 @@ export default function FindPeople(props) {
     };
 
     return (
-        <div>
-            {/* <h2>Hi {props.first}</h2> */}
-            <h3>Find People</h3>
-            <input name="first" type="text" onChange={handleChange} />
+        <div className="chatPage">
+            <input
+                name="first"
+                type="text"
+                className="chatInput"
+                placeholder="Type to find people"
+                onChange={handleChange}
+            />
             {error && <h4 className="error">{errorMessage}</h4>}
             {!inputVal && <h4>Check out who just joined</h4>}
-            {resultList.map((user) => (
-                <div className="findPeople" key={user.id}>
-                    <Link to={`/user/${user.id}`} className="findPeopleLink">
-                        <img
-                            className={`smallprofilePic`}
-                            src={user.profilepicurl || "default.jpg"}
-                            alt={user.first}
-                            onClick={(e) => props.toggleUploader(e)}
-                        />
-                    </Link>
-                    <p>
-                        <Link
-                            to={`/user/${user.id}`}
-                            className="findPeopleLink"
-                        >
+            <div className="friendsContainer">
+                {resultList.map((user) => (
+                    <div className="friends" key={user.id}>
+                        <Link to={`/user/${user.id}`} className="name">
                             {user.first} {user.last}
                         </Link>
-                    </p>
-                </div>
-            ))}
+                        <br />
+                        <Link to={`/user/${user.id}`}>
+                            <img
+                                className={`smallprofilePic`}
+                                src={user.profilepicurl || "default.jpg"}
+                                alt={user.first}
+                                onClick={(e) => props.toggleUploader(e)}
+                            />
+                        </Link>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 }

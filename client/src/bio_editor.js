@@ -73,18 +73,13 @@ export default class BioEditor extends React.Component {
         if (!this.props.bio) {
             return (
                 <div className="bio">
-                    <div>
-                        <h4 className="error">Bio</h4>
-                        {this.state.message && (
-                            <h4 className="error">
-                                {this.state.displayMessage}
-                            </h4>
-                        )}
-                        <p>{this.props.bio}</p>
-                        <button onClick={(e) => this.toggleBioEditor(e)}>
-                            Add Bio
-                        </button>
-                    </div>
+                    {this.state.message && (
+                        <h4 className="error">{this.state.displayMessage}</h4>
+                    )}
+                    <p>{this.props.bio}</p>
+                    <button onClick={(e) => this.toggleBioEditor(e)}>
+                        Add Bio
+                    </button>
                 </div>
             );
         }
@@ -92,18 +87,13 @@ export default class BioEditor extends React.Component {
         if (this.props.bio) {
             return (
                 <div className="bio">
-                    <div>
-                        <h4>Bio</h4>
-                        {this.state.message && (
-                            <h4 className="error">
-                                {this.state.displayMessage}
-                            </h4>
-                        )}
-                        <p>{this.props.bio}</p>
-                        <button onClick={(e) => this.toggleBioEditor(e)}>
-                            Edit Bio
-                        </button>
-                    </div>
+                    {this.state.message && (
+                        <h4 className="error">{this.state.displayMessage}</h4>
+                    )}
+                    <p>{this.props.bio}</p>
+                    <button onClick={(e) => this.toggleBioEditor(e)}>
+                        Edit Bio
+                    </button>
                 </div>
             );
         }

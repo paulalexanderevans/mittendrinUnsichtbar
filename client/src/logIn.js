@@ -52,7 +52,7 @@ export default class LogIn extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="registrationContainer">
                 <h2>Log in to Netzung</h2>
                 {this.state.error && (
                     <h4 className="error">{this.state.errorMessage}</h4>

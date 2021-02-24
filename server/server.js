@@ -56,7 +56,17 @@ app.get("/app", (req, res) => {
     if (!req.session.userId) {
         res.redirect("/welcome");
     } else {
-        res.sendFile(path.join(__dirname, "..", "client", "index.html"));
+        res.redirect("/");
+        // res.sendFile(path.join(__dirname, "..", "client", "index.html"));
+    }
+});
+
+app.get("/logOut", (req, res) => {
+    console.log("/logout fired");
+    if (req.session.userId) {
+        req.session.userId = null;
+        console.log("req.session.userId: ", req.session.userId);
+        res.redirect("/welcome");
     }
 });
 

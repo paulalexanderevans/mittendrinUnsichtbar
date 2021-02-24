@@ -78,7 +78,7 @@ export default class ResetPassword extends React.Component {
         console.log("renderView: ", this.state.renderView);
         if (this.state.renderView === 1) {
             return (
-                <div>
+                <div className="registrationContainer">
                     {!this.state.error && (
                         <h4>
                             Enter your email address and press send to receive a
@@ -107,7 +107,7 @@ export default class ResetPassword extends React.Component {
             );
         } else if (this.state.renderView === 2) {
             return (
-                <div>
+                <div className="registrationContainer">
                     {!this.state.error && (
                         <div>
                             <h3>Reset code sent</h3>
@@ -126,29 +126,31 @@ export default class ResetPassword extends React.Component {
                     {this.state.error && (
                         <h4 className="error">{this.state.errorMessage}</h4>
                     )}
-                    <input
-                        name="code"
-                        onChange={(e) => this.handleChange(e)}
-                        type="text"
-                        placeholder="code"
-                        length="6"
-                        required
-                        key="2"
-                    ></input>
-                    <input
-                        name="password"
-                        onChange={(e) => this.handleChange(e)}
-                        type="text"
-                        placeholder="New password"
-                    ></input>
-                    <button onClick={(e) => this.handleClickRV2(e)}>
-                        Set new password
-                    </button>
+                    <div className="registrationContainer">
+                        <input
+                            name="code"
+                            onChange={(e) => this.handleChange(e)}
+                            type="text"
+                            placeholder="code"
+                            length="6"
+                            required
+                            key="2"
+                        ></input>
+                        <input
+                            name="password"
+                            onChange={(e) => this.handleChange(e)}
+                            type="text"
+                            placeholder="New password"
+                        ></input>
+                        <button onClick={(e) => this.handleClickRV2(e)}>
+                            Set new password
+                        </button>
+                    </div>
                 </div>
             );
         } else if (this.state.renderView === 3) {
             return (
-                <div>
+                <div className="registrationContainer">
                     <h3>Password successfully updated</h3>
                     <Link to="/login">click here to log in</Link>
                 </div>

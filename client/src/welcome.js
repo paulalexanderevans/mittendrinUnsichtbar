@@ -2,13 +2,13 @@
 import { Link } from "react-router-dom";
 import { HashRouter, Route } from "react-router-dom";
 import Registration from "./registration";
-import Login from "./login";
+import Login from "./login.js";
 import ResetPassword from "./ResetPassword";
 
 export default function Welcome() {
     return (
         <div className="container">
-            <img className="logoBig" src="netzungDataLogo2.jpg"></img>
+            <img className="logoBig" src="netzungLogo.jpg"></img>
             <HashRouter>
                 <div>
                     <Route exact path="/" component={Registration} />

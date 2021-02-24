@@ -19,19 +19,29 @@ body {
 }
 
 .logoBig {
-    width: 50%;
-    height: auto;
-    position: relative;
+    width: auto;
+    height: 50vh;
+    left: 25%;
 }
 
 .container {
     width: 100%;
-    height: auto;
+    padding: 10px;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     position: relative;
+    background-color: #fff;
+}
+.registrationContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    background-color: #fff;
 }
 
 .header {
@@ -131,10 +141,15 @@ h3 {
 }
 
 h4 {
-    margin-top: 0px;
+    /* margin-top: 0px; */
     margin-bottom: 0px;
     margin-left: 0;
     margin-right: 0;
+    color: hotpink;
+    align-self: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
 }
 
 h5 {
@@ -147,9 +162,22 @@ h5 {
 p {
 }
 
-.findPeopleLink {
+.findPeopleLink:hover {
     color: hotpink;
-    align-self: center;
+    align-self: flex-start;
+    text-decoration: none;
+    font-weight: bold;
+}
+.findPeopleLink {
+    color: darkgrey;
+    align-self: flex-start;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.title {
+    color: darkgrey;
+    font-weight: bold;
 }
 
 .findPeople {
@@ -165,20 +193,51 @@ p {
 }
 
 .friendRequestButton {
+    align-self: center;
+    text-decoration: none;
+    font-size: 12px;
+    color: white;
+    background-color: darkgray;
+    align-self: center;
+    width: 100px;
+    border-radius: 2px;
+    border: none;
+}
+.friendRequestButton:hover {
     color: white;
     background-color: hotpink;
     align-self: center;
     width: 100px;
+    border-radius: 5px;
 }
 
 .chatPage {
     overflow-y: scroll;
     position: fixed;
-    /* height: 100%; */
     top: 120px;
     left: 25%;
     width: 50%;
     bottom: 20px;
+}
+
+.friendsPage {
+    overflow-y: scroll;
+    position: fixed;
+    top: 120px;
+    left: 25%;
+    width: 50%;
+    bottom: 20px;
+}
+.friendsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.friends {
+    width: 100px;
+    margin: 5px;
 }
 
 .chatInfo {
@@ -189,6 +248,22 @@ p {
     background-color: white;
     align-items: center;
     font-size: 10px;
+}
+
+.name {
+    color: darkgray;
+    align-self: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.name:hover {
+    color: hotpink;
+    /* align-self: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px; */
 }
 
 .chatName {

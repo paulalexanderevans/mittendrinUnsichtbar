@@ -59,7 +59,7 @@ export default class Registration extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="registrationContainer">
                 <h2>Welcome to Netzung</h2>
                 <h3>Create account</h3>
                 {this.state.error && <h4>{this.state.errorMessage}</h4>}

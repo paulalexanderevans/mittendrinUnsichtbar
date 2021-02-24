@@ -52,9 +52,9 @@ export default class OtherProfile extends Component {
                         alt={this.state.first}
                     />
                 </div>
+                <FriendRequestButton id={this.props.match.params.id} />
                 {this.state.bio && (
                     <div className="bio">
-                        <FriendRequestButton id={this.props.match.params.id} />
                         <p>{this.state.bio}</p>
                     </div>
                 )}

@@ -20,6 +20,9 @@ export default class App extends Component {
         // Initialize App's state
         this.state = {
             uploaderVisible: false,
+            title:
+                window.location.pathname.substring(1, 2).toUpperCase() +
+                window.location.pathname.substring(2),
         };
 
         // TODO: Bind methods if needed
@@ -55,9 +58,6 @@ export default class App extends Component {
     }
 
     render() {
-        const title =
-            window.location.pathname.substring(1, 2).toUpperCase() +
-            window.location.pathname.substring(2);
         // if user is not logged in or database requests haven't been received
         // if (!this.state.id) {
         //     // return null;
@@ -84,6 +84,9 @@ export default class App extends Component {
                         <Link to="/" className="findPeopleLink">
                             Profile
                         </Link>
+                        <a href="/logOut" className="findPeopleLink">
+                            Log-out
+                        </a>
                         <ProfilePic
                             // Passing down props:
                             first={this.state.first}
@@ -94,13 +97,16 @@ export default class App extends Component {
                             size="small"
                         />
                     </div>
-                    <div className="title">{title}</div>
+
                     {this.state.uploaderVisible && (
                         <Uploader
                             userId={this.state.id}
                             setProfilePicUrl={this.setProfilePicUrl}
                         />
                     )}
+
+                    <div className="title">{this.state.title}</div>
+
                     <Route
                         exact
                         path="/"

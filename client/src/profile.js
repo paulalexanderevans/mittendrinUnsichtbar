@@ -3,7 +3,7 @@ import BioEditor from "./bio_editor.js";
 export default function Profile(props) {
     console.log("props in profile: ", props);
     return (
-        <div className="mainContainer">
+        <div className="chatPage">
             <div className="profileContainer">
                 <h2>
                     {props.first} {props.last}
