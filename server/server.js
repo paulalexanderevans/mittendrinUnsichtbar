@@ -34,6 +34,7 @@ app.use(function (req, res, next) {
 const compression = require("compression");
 const path = require("path");
 const { hash, compare } = require("./bCrypt.js");
+const { response } = require("express");
 app.use(compression());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "..", "client", "public")));
@@ -76,27 +77,42 @@ app.post("/search", async (req, res) => {
             `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=${part}&appid=${owmKey}`
         );
         // console.log("data.current: ", data.current);
-        console.log("data.hourly: ", data.hourly);
+        // console.log("data.hourly: ", data.hourly);
 
         console.log("data.alerts: ", data.alerts);
         var matchResults = [];
         for (var i = 1; i < data.hourly.length; i++) {
             if (
-                (req.body.start < data.hourly[i].dt,
-                data.hourly[i].dt < req.body.end)
+                req.body.start <= data.hourly[i].dt &&
+                data.hourly[i].dt < req.body.end
             ) {
                 matchResults.push(data.hourly[i]);
             }
         }
         console.log("matchResults: ", matchResults);
-        console.log("matchResults[0].weather: ", matchResults[0].weather);
+        let response = {};
+
+        // middle response
+        let matchResultsMiddle = Math.floor(matchResults.length / 2);
+        response["weather"] = matchResults[matchResultsMiddle].weather;
+
         // average temp
         let tempSum = 0;
         for (let i = 0; i < matchResults.length; i++) {
             tempSum = matchResults[i].feels_like + tempSum;
         }
-        let averageTemp = Math.round(tempSum / matchResults.length - 273.15);
-        console.log("averageTemp: ", averageTemp);
+        let temp = Math.round(tempSum / matchResults.length - 273.15);
+        console.log("average temp: ", temp);
+        response["temp"] = temp;
+        let tableTemp;
+        if (temp < -5) {
+            tableTemp = -5;
+        } else if (temp > 25) {
+            tableTemp = 30;
+        } else {
+            tableTemp = Math.ceil(temp / 5) * 5;
+        }
+        console.log("tableTemp: ", tableTemp);
 
         //max & min temp
         let tempArr = [];
@@ -107,6 +123,67 @@ app.post("/search", async (req, res) => {
         console.log("maxTemp: ", maxTemp);
         let minTemp = Math.round(Math.min(...tempArr) - 273.15);
         console.log("minTemp: ", minTemp);
+
+        // average uvi
+        let uviSum = 0;
+        for (let i = 0; i < matchResults.length; i++) {
+            uviSum = matchResults[i].uvi + uviSum;
+        }
+        let uviAverage = uviSum / matchResults.length;
+        let uvi;
+        if (uviAverage < 2) {
+            uvi = "Clear glasses recommended";
+        } else if (uviAverage < 5) {
+            uvi = "Moderate levels of UV, sunglasses recommended";
+        } else if (uviAverage >= 5) {
+            uvi = "High levels of UV, sunscreen & sunglasses recommended";
+        }
+        response["uvi"] = uvi;
+        // average wind_speed
+        let wind_speedSum = 0;
+        for (let i = 0; i < matchResults.length; i++) {
+            wind_speedSum = matchResults[i].wind_speed + wind_speedSum;
+        }
+        let wind_speed = Math.round(
+            (wind_speedSum / matchResults.length) * 3.6
+        );
+        console.log("average wind_speed: ", wind_speed);
+        response["wind_speed"] = wind_speed;
+        // average wind_deg
+        let wind_degSum = 0;
+        for (let i = 0; i < matchResults.length; i++) {
+            wind_degSum = matchResults[i].wind_deg + wind_degSum;
+        }
+        let wind_deg = Math.round(wind_degSum / matchResults.length);
+        response["wind_deg"] = wind_deg;
+        // average pop
+        let popSum = 0;
+        for (let i = 0; i < matchResults.length; i++) {
+            popSum = matchResults[i].pop + popSum;
+        }
+        let pop = popSum / matchResults.length;
+        console.log("average pop: ", pop);
+        let dry;
+        if (pop > 0.4) {
+            dry = false;
+        } else {
+            dry = true;
+        }
+        console.log("dry: ", dry);
+
+        //db query data
+
+        try {
+            let result = await db.getData(tableTemp, dry, req.body.effort);
+            response = Object.assign(response, result.rows[0]);
+        } catch (err) {
+            console.log("error in db.getData: ", err);
+        }
+
+        console.log("response: ", response);
+        res.json({
+            response,
+        });
     } catch (err) {
         console.log("error in search: ", err);
         // res.json({

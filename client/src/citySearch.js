@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Welcome from "./welcome.js";
 import App from "./app.js";
 import { Link } from "react-router-dom";
@@ -20,6 +20,8 @@ export default function FindPeople(props) {
     const [userInput, setUserInput] = useState({});
     const [timeArray, setTimeArray] = useState([]);
     const [today, setToday] = useState([]);
+    const refToday = useRef(null);
+    const refTomorrow = useRef(null);
 
     useEffect(() => {
         let current = new Date();
@@ -62,7 +64,7 @@ export default function FindPeople(props) {
 
     const handleChange1 = (e) => {
         setInputVal(e.target.value);
-        setReset();
+        // setReset();
     };
 
     const handleChange2 = async (e) => {
@@ -70,12 +72,27 @@ export default function FindPeople(props) {
         currentUserInput = Object.assign(currentUserInput, userInput);
         currentUserInput[e.target.name] = e.target.value;
         setUserInput(currentUserInput);
+        // if (refToday.current) {
+        //     let currentUserInput = {};
+        //     currentUserInput = Object.assign(currentUserInput, userInput);
+        //     currentUserInput["time"] = refTomorrow.current.value;
+        //     setUserInput(currentUserInput);
+        // }
     };
+
+    useEffect(() => {
+        console.log("userInput updated");
+        // console.log("ref today: ", refToday.current);
+        // console.log("ref tomorrow: ", refTomorrow.current);
+        console.log("userInput: ", userInput);
+    }, [userInput]);
 
     const handleClick = async (city) => {
         setResultList([]);
         await setSelectedCity(city);
-        setSelectVal(`${city.name}, ${city.country}`);
+        setInputVal(`${city.name}, ${city.country}`);
+        console.log("selectVal: ", inputVal);
+        console.log("typeOf selectVal: ", typeof inputVal);
         // use lon & lat values from selectedCity to set correct time zone for ui and unix conversion
     };
 
@@ -87,22 +104,18 @@ export default function FindPeople(props) {
         // console.log("userInput in button handler: ", userInput);
         let data = { ...selectedCity, ...userInput };
         console.log("data: ", data);
-        axios.post("/search", data);
-        // .then((res) => {
-        //     console.log("response from server: ", res.data);
-        //     console.log("this.state 1: ", this.state);
-        //     this.setState(res.data, () => {
-        //         console.log("this.state after setState: ", this.state);
-        //         if (this.state.error) {
-        //             console.log("this.state.error = true");
-        //         } else if (this.state.success) {
-        //             location.replace("/app");
-        //         }
-        //     });
-        // })
-        // .catch((err) => {
-        //     console.log("error in login axios.post request: ", err);
-        // });
+        axios
+            .post("/search", data)
+            .then((res) => {
+                console.log("response from server: ", res.data.response);
+            })
+            .catch((err) => {
+                console.log("error in login axios.post /search: ", err);
+            });
+    };
+
+    const keyPressed = () => {
+        console.log("typing");
     };
 
     const buildTimeArray = async () => {
@@ -149,10 +162,11 @@ export default function FindPeople(props) {
                 className="inputField"
                 placeholder="enter city name"
                 autoComplete="off"
-                value={selectVal}
+                value={inputVal}
                 onChange={handleChange1}
+                onKeyPress={keyPressed}
             />
-            {error && <h4 className="error">{errorMessage}</h4>}
+            {/* {error && <h4 className="error">{errorMessage}</h4>} */}
             <div className="citiesContainer">
                 {resultList.map((city) => (
                     <div
@@ -201,6 +215,7 @@ export default function FindPeople(props) {
                     name="time"
                     placeholder="now"
                     className="time"
+                    ref={refToday}
                 >
                     {timeArray.map((hour) => (
                         <option key={hour.val} value={hour.val}>
@@ -213,8 +228,8 @@ export default function FindPeople(props) {
                 <select
                     onChange={handleChange2}
                     name="time"
-                    placeholder="now"
                     className="time"
+                    ref={refTomorrow}
                 >
                     <option value="00">00:00</option>
                     <option value="01">01:00</option>
