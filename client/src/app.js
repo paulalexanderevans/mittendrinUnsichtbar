@@ -2,60 +2,25 @@ import { Component } from "react";
 import Logo from "./logo.js";
 import ProfilePic from "./profile_pic.js";
 import Uploader from "./uploader.js";
-import Profile from "./profile.js";
+import Search from "./citySearch.js";
 import { BrowserRouter, Route } from "react-router-dom";
 import OtherProfile from "./otherProfile.js";
 import axios from "./axios";
 import { Link } from "react-router-dom";
-import FindPeople from "./findPeople.js";
-import Friends from "./friends.js";
-import Chat from "./chat.js";
 
 export default class App extends Component {
     constructor(props) {
         super(props);
-        this.toggleUploader = this.toggleUploader.bind(this);
-        this.setProfilePicUrl = this.setProfilePicUrl.bind(this);
-        this.setBio = this.setBio.bind(this);
+        // this.toggleUploader = this.toggleUploader.bind(this);
+        // this.setProfilePicUrl = this.setProfilePicUrl.bind(this);
+        // this.setBio = this.setBio.bind(this);
         // Initialize App's state
-        this.state = {
-            uploaderVisible: false,
-            title:
-                window.location.pathname.substring(1, 2).toUpperCase() +
-                window.location.pathname.substring(2),
-        };
+        this.state = {};
 
         // TODO: Bind methods if needed
     }
 
-    componentDidMount() {
-        axios
-            .get("/user")
-            .then((res) => {
-                this.setState(res.data, () => {});
-            })
-
-            .catch((err) => {
-                console.log("error in /user axios.get request: ", err);
-            });
-    }
-
-    toggleUploader() {
-        if (this.state.uploaderVisible) {
-            this.setState({ uploaderVisible: false });
-        } else {
-            this.setState({ uploaderVisible: true });
-        }
-    }
-    setProfilePicUrl(profilePicUrl) {
-        console.log("setProfilePicUrl fired");
-        this.setState({ profilePicUrl: profilePicUrl });
-        this.setState({ uploaderVisible: false });
-    }
-
-    setBio(newBio) {
-        this.setState({ bio: newBio });
-    }
+    componentDidMount() {}
 
     render() {
         // if user is not logged in or database requests haven't been received
@@ -70,7 +35,24 @@ export default class App extends Component {
         return (
             <BrowserRouter>
                 <div className={"app"}>
-                    <div className="header">
+                    <Route
+                        exact
+                        path="/"
+                        render={() => (
+                            <Search
+                                // Passing down props:
+                                first={this.state.first}
+                                last={this.state.last}
+                                profilePicUrl={this.state.profilepicurl}
+                                size="medium"
+                                bio={this.state.bio}
+                                // Passing down methods as standard functions (binding needed):
+                                toggleUploader={this.toggleUploader}
+                                setBio={this.setBio}
+                            />
+                        )}
+                    />
+                    {/* <div className="header">
                         <Logo />
                         <Link to="/users" className="findPeopleLink">
                             Find People
@@ -107,23 +89,7 @@ export default class App extends Component {
 
                     <div className="title">{this.state.title}</div>
 
-                    <Route
-                        exact
-                        path="/"
-                        render={() => (
-                            <Profile
-                                // Passing down props:
-                                first={this.state.first}
-                                last={this.state.last}
-                                profilePicUrl={this.state.profilepicurl}
-                                size="medium"
-                                bio={this.state.bio}
-                                // Passing down methods as standard functions (binding needed):
-                                toggleUploader={this.toggleUploader}
-                                setBio={this.setBio}
-                            />
-                        )}
-                    />
+            
 
                     <Route
                         path="/user/:id"
@@ -155,7 +121,7 @@ export default class App extends Component {
                                 // Passing down methods as standard functions (binding needed):
                             />
                         )}
-                    />
+                    /> */}
                 </div>
             </BrowserRouter>
         );

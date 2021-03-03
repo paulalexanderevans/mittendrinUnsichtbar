@@ -200,7 +200,7 @@ p {
     background-color: darkgray;
     align-self: center;
     width: 100px;
-    border-radius: 2px;
+    /* border-radius: 2px; */
     border: none;
 }
 .friendRequestButton:hover {
@@ -208,83 +208,23 @@ p {
     background-color: hotpink;
     align-self: center;
     width: 100px;
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
 
 .chatPage {
     overflow-y: scroll;
     position: fixed;
-    top: 120px;
+    top: 50px;
     left: 25%;
     width: 50%;
     bottom: 20px;
 }
-
-.friendsPage {
-    overflow-y: scroll;
-    position: fixed;
-    top: 120px;
-    left: 25%;
+.effort {
+    width: 100%;
+}
+.inputField {
+    width: 96%;
+}
+.time {
     width: 50%;
-    bottom: 20px;
-}
-.friendsContainer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-.friends {
-    width: 100px;
-    margin: 5px;
-}
-
-.chatInfo {
-    padding-right: 5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    background-color: white;
-    align-items: center;
-    font-size: 10px;
-}
-
-.name {
-    color: darkgray;
-    align-self: center;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 12px;
-}
-
-.name:hover {
-    color: hotpink;
-    /* align-self: center;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 12px; */
-}
-
-.chatName {
-    padding-left: 5px;
-    padding-right: 5px;
-    color: hotpink;
-    align-self: center;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 12px;
-}
-.chatInput {
-    width: 90%;
-}
-
-.messageContainer {
-    padding-bottom: 10px;
-}
-
-.message {
-    padding-left: 30px;
-
-    font-size: 12px;
 }
