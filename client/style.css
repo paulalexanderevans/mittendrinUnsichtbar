@@ -1,27 +1,25 @@
-body {
-    background-color: #ffffff;
-    font-family: "Roboto", sans-serif;
-    color: darkgrey;
-    background-color: darkgrey;
-}
+/* @font-face {
+    font-family: "Trade Gothic LT Bold";
+    src: url("./fonts/TradeGothicLTLight.ttf") format("embedded-opentype");
+} */
 
-.hello {
-    color: hotpink;
+body {
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /* background-color: #ffffff; */
+    /* font-family: "Courier New", Courier, monospace; */
+    font-family: "Roboto", sans-serif;
+    color: white;
+    /* background-color: darkgrey; */
 }
 
 .error {
     color: hotpink;
-}
-
-.logo {
-    width: auto;
-    height: 80px;
-}
-
-.logoBig {
-    width: auto;
-    height: 50vh;
-    left: 25%;
 }
 
 .container {
@@ -35,70 +33,31 @@ body {
     position: relative;
     background-color: #fff;
 }
-.registrationContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
-    background-color: #fff;
-}
 
 .header {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    background-color: white;
-    height: 80px;
+    justify-content: center;
+    /* background-color: lightblue; */
+    height: auto;
+}
+
+.headerImage {
+    width: 66%;
+    height: auto;
 }
 .app {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: white;
-    height: 100vh;
     align-items: center;
     align-content: flex-start;
     padding-right: 10px;
     padding-left: 10px;
     padding-top: 10px;
-}
-.uploader {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: rgb(219, 219, 219);
-    height: auto;
-    align-items: center;
     padding-bottom: 10px;
-    padding-top: 10px;
-}
-
-.profileContainer {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    /* background-color: palegreen; */
-    height: auto;
-    align-items: center;
-    text-align: center;
-}
-
-.bio {
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    height: auto;
-    align-items: center;
-    padding-top: 10px;
 }
 
 .mainContainer {
@@ -112,22 +71,6 @@ body {
     align-items: center;
 }
 
-.smallprofilePic {
-    width: auto;
-    height: 67px;
-}
-
-.chatProfilePic {
-    width: auto;
-    height: 20px;
-}
-
-.mediumprofilePic {
-    width: 100px;
-    height: auto;
-    padding-top: 5px;
-}
-
 h2 {
     margin-top: 0px;
     margin-bottom: 0px;
@@ -138,93 +81,90 @@ h3 {
     margin-bottom: 0px;
     margin-left: 0;
     margin-right: 0;
+    font-weight: lighter;
+    font-size: 14px;
 }
 
 h4 {
-    /* margin-top: 0px; */
+    margin-top: 0px;
     margin-bottom: 0px;
     margin-left: 0;
     margin-right: 0;
-    color: hotpink;
+    color: white;
     align-self: center;
     text-decoration: none;
-    font-weight: bold;
     font-size: 14px;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: lighter;
 }
 
 h5 {
     margin-top: 0px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
     margin-left: 0;
     margin-right: 0;
-}
-
-p {
-}
-
-.findPeopleLink:hover {
-    color: hotpink;
-    align-self: flex-start;
+    color: white;
+    align-self: center;
     text-decoration: none;
-    font-weight: bold;
+    font-size: 14px;
+    font-family: "Courier New", Courier, monospace;
+    /* font-weight: lighter; */
 }
-.findPeopleLink {
-    color: darkgrey;
-    align-self: flex-start;
+
+.goButton {
+    align-self: center;
     text-decoration: none;
-    font-weight: bold;
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-family: "Roboto", sans-serif;
+}
+.goButton:hover {
+    color: white;
+    background-color: hotpink;
+    font-family: "Roboto", sans-serif;
 }
 
-.title {
-    color: darkgrey;
-    font-weight: bold;
+.effort {
+    width: 100%;
+    font-family: "Courier New", Courier, monospace;
+}
+.inputField {
+    width: 98%;
+    font-family: "Courier New", Courier, monospace;
 }
 
-.findPeople {
-    padding: 5px 5px 5px 0px;
-    /* width: 50%; */
+.time {
+    width: 50%;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.input {
+    /* background-color: lightgreen; */
+    width: 50%;
+    padding-top: 10px;
+    padding-right: 5px;
+}
+
+.output {
+    width: 50%;
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+.ui {
+    width: 66%;
     display: flex;
     flex-direction: row;
     /* flex-wrap: wrap; */
-    justify-content: space-between;
-    background-color: white;
+    justify-content: center;
+
     /* height: auto;*/
-    align-items: center;
+    align-items: flex-start;
 }
 
-.friendRequestButton {
-    align-self: center;
-    text-decoration: none;
-    font-size: 12px;
+.windArrow {
+    height: 12px;
+    width: auto;
     color: white;
-    background-color: darkgray;
-    align-self: center;
-    width: 100px;
-    /* border-radius: 2px; */
-    border: none;
-}
-.friendRequestButton:hover {
-    color: white;
-    background-color: hotpink;
-    align-self: center;
-    width: 100px;
-    /* border-radius: 5px; */
-}
-
-.chatPage {
-    overflow-y: scroll;
-    position: fixed;
-    top: 50px;
-    left: 25%;
-    width: 50%;
-    bottom: 20px;
-}
-.effort {
-    width: 100%;
-}
-.inputField {
-    width: 96%;
-}
-.time {
-    width: 50%;
 }

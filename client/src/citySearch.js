@@ -22,7 +22,7 @@ export default function FindPeople(props) {
     const [today, setToday] = useState([]);
     const refToday = useRef(null);
     const refTomorrow = useRef(null);
-
+    const [responseData, setResponseData] = useState();
     useEffect(() => {
         let current = new Date();
         // console.log("current: ", current);
@@ -87,6 +87,17 @@ export default function FindPeople(props) {
         console.log("userInput: ", userInput);
     }, [userInput]);
 
+    useEffect(() => {
+        if (responseData) {
+            console.log(responseData.weather[0].description);
+        }
+        weatherIconUrl();
+    }, [responseData]);
+
+    const weatherIconUrl = async () => {
+        let url;
+    };
+
     const handleClick = async (city) => {
         setResultList([]);
         await setSelectedCity(city);
@@ -108,6 +119,7 @@ export default function FindPeople(props) {
             .post("/search", data)
             .then((res) => {
                 console.log("response from server: ", res.data.response);
+                setResponseData(res.data.response);
             })
             .catch((err) => {
                 console.log("error in login axios.post /search: ", err);
@@ -124,6 +136,10 @@ export default function FindPeople(props) {
             arr.push({ val: i, time: i + ":00" });
         }
         setTimeArray(arr);
+    };
+
+    const bold = {
+        fontWeight: "bold",
     };
 
     const buildStart = async () => {
@@ -153,94 +169,115 @@ export default function FindPeople(props) {
     };
 
     return (
-        <div className="chatPage">
-            <h1>citySearch</h1>
-            <h3>Where are you riding?</h3>
-            <input
-                name="first"
-                type="text"
-                className="inputField"
-                placeholder="enter city name"
-                autoComplete="off"
-                value={inputVal}
-                onChange={handleChange1}
-                onKeyPress={keyPressed}
-            />
-            {/* {error && <h4 className="error">{errorMessage}</h4>} */}
-            <div className="citiesContainer">
-                {resultList.map((city) => (
-                    <div
-                        className="cities"
-                        onClick={() => handleClick(city)}
-                        key={city.id}
-                    >
-                        {city.state && (
-                            <h4>
-                                {city.name}, {city.state}, {city.country}
-                            </h4>
-                        )}
+        <div className="ui">
+            <div className="input">
+                <h3>Where are you riding?</h3>
 
-                        {!city.state && (
-                            <h4>
-                                {city.name}, {city.country}
-                            </h4>
-                        )}
-                    </div>
-                ))}
-            </div>
-            <h3>When are you riding?</h3>
-            {/* <input
-                id="start"
-                type="datetime-local"
-                name="start"
-                min={min}
-                max={max}
-                data-date-format="YYYY-MM-DD HH:mm"
-                value={min}
-                placeholder={min}
-                onChange={handleChange2}
-            /> */}
-            <select
-                onChange={handleChange2}
-                name="day"
-                placeholder="today"
-                className="time"
-            >
-                <option value="today">today</option>
-                <option value="tomorrow">tomorrow</option>
-            </select>
-            {userInput.day === "today" && (
-                <select
-                    onChange={handleChange2}
-                    name="time"
-                    placeholder="now"
-                    className="time"
-                    ref={refToday}
-                >
-                    {timeArray.map((hour) => (
-                        <option key={hour.val} value={hour.val}>
-                            {hour.time}
-                        </option>
+                <input
+                    name="first"
+                    type="text"
+                    className="inputField"
+                    placeholder="enter city name"
+                    autoComplete="off"
+                    value={inputVal}
+                    onChange={handleChange1}
+                    onKeyPress={keyPressed}
+                />
+                <div className="citiesContainer">
+                    {resultList.map((city) => (
+                        <div
+                            className="cities"
+                            onClick={() => handleClick(city)}
+                            key={city.id}
+                        >
+                            {city.state && (
+                                <h4>
+                                    {city.name}, {city.state}, {city.country}
+                                </h4>
+                            )}
+
+                            {!city.state && (
+                                <h4>
+                                    {city.name}, {city.country}
+                                </h4>
+                            )}
+                        </div>
                     ))}
-                </select>
-            )}
-            {userInput.day !== "today" && (
+                </div>
+                <h3>When are you riding?</h3>
                 <select
                     onChange={handleChange2}
-                    name="time"
+                    name="day"
+                    placeholder="today"
                     className="time"
-                    ref={refTomorrow}
                 >
-                    <option value="00">00:00</option>
-                    <option value="01">01:00</option>
-                    <option value="02">02:00 </option>
-                    <option value="03">03:00</option>
-                    <option value="04">04:00</option>
-                    <option value="05">05:00</option>
-                    <option value="06">06:00</option>
-                    <option value="07">07:00</option>
-                    <option value="08">08:00</option>
-                    <option value="09">09:00</option>
+                    <option value="today">today</option>
+                    <option value="tomorrow">tomorrow</option>
+                </select>
+                {userInput.day === "today" && (
+                    <select
+                        onChange={handleChange2}
+                        name="time"
+                        placeholder="now"
+                        className="time"
+                        ref={refToday}
+                    >
+                        {timeArray.map((hour) => (
+                            <option key={hour.val} value={hour.val}>
+                                {hour.time}
+                            </option>
+                        ))}
+                    </select>
+                )}
+                {userInput.day !== "today" && (
+                    <select
+                        onChange={handleChange2}
+                        name="time"
+                        className="time"
+                        ref={refTomorrow}
+                    >
+                        <option value="00">00:00</option>
+                        <option value="01">01:00</option>
+                        <option value="02">02:00 </option>
+                        <option value="03">03:00</option>
+                        <option value="04">04:00</option>
+                        <option value="05">05:00</option>
+                        <option value="06">06:00</option>
+                        <option value="07">07:00</option>
+                        <option value="08">08:00</option>
+                        <option value="09">09:00</option>
+                        <option value="10">10:00</option>
+                        <option value="11">11:00</option>
+                        <option value="12">12:00</option>
+                        <option value="13">13:00</option>
+                        <option value="14">14:00</option>
+                        <option value="15">15:00</option>
+                        <option value="16">16:00</option>
+                        <option value="17">17:00</option>
+                        <option value="18">18:00</option>
+                        <option value="19">19:00</option>
+                        <option value="20">20:00</option>
+                        <option value="21">21:00</option>
+                        <option value="22">22:00</option>
+                        <option value="23">23:00</option>
+                    </select>
+                )}
+                <h3>Duration</h3>
+                <select
+                    onChange={handleChange2}
+                    name="duration"
+                    placeholder="duration"
+                    className="time"
+                >
+                    <option value="1">01:00</option>
+                    <option value="2">02:00</option>
+                    <option value="3">03:00</option>
+                    <option value="4">04:00</option>
+                    <option value="5">05:00</option>
+                    <option value="6">06:00</option>
+                    <option value="7">07:00</option>
+                    <option value="8">08:00</option>
+                    <option value="9">09:00</option>
                     <option value="10">10:00</option>
                     <option value="11">11:00</option>
                     <option value="12">12:00</option>
@@ -255,57 +292,73 @@ export default function FindPeople(props) {
                     <option value="21">21:00</option>
                     <option value="22">22:00</option>
                     <option value="23">23:00</option>
+                    <option value="24">24:00</option>
                 </select>
-            )}
-            <h3>Duration</h3>
-            <select
-                onChange={handleChange2}
-                name="duration"
-                placeholder="duration"
-                className="time"
-            >
-                <option value="1">01:00</option>
-                <option value="2">02:00</option>
-                <option value="3">03:00</option>
-                <option value="4">04:00</option>
-                <option value="5">05:00</option>
-                <option value="6">06:00</option>
-                <option value="7">07:00</option>
-                <option value="8">08:00</option>
-                <option value="9">09:00</option>
-                <option value="10">10:00</option>
-                <option value="11">11:00</option>
-                <option value="12">12:00</option>
-                <option value="13">13:00</option>
-                <option value="14">14:00</option>
-                <option value="15">15:00</option>
-                <option value="16">16:00</option>
-                <option value="17">17:00</option>
-                <option value="18">18:00</option>
-                <option value="19">19:00</option>
-                <option value="20">20:00</option>
-                <option value="21">21:00</option>
-                <option value="22">22:00</option>
-                <option value="23">23:00</option>
-                <option value="24">24:00</option>
-            </select>
-            <h3>Effort level</h3>
-            <select
-                onChange={handleChange2}
-                name="effort"
-                placeholder="Full-gas"
-                className="effort"
-            >
-                <option value="1">Endurance</option>
-                <option value="2">Tempo</option>
-                <option value="3">Full-gas</option>
-            </select>
-            <button
-                className="friendRequestButton"
-                onClick={(e) => handleButtonClick(e)}
-            >
-                Go!
-            </button>
+                <h3>Effort level</h3>
+                <select
+                    onChange={handleChange2}
+                    name="effort"
+                    placeholder="Full-gas"
+                    className="effort"
+                >
+                    <option value="1">Endurance</option>
+                    <option value="2">Tempo</option>
+                    <option value="3">Full-gas</option>
+                </select>
+                <button
+                    className="goButton"
+                    onClick={(e) => handleButtonClick(e)}
+                >
+                    <h3>Go!</h3>
+                </button>
+            </div>
+            <div className="output">
+                {responseData && (
+                    <div>
+                        <h3>Weather description</h3>
+                        <h4>{responseData.weather[0].description}</h4>
+                        <h3>Average Temperature</h3>
+                        <h4>{responseData.temp}°C</h4>
+                        <h3>Wind</h3>
+                        <h4>
+                            <img
+                                className="windArrow"
+                                src="windArrow.png"
+                                style={{
+                                    transform: `rotate(${responseData.wind_deg}deg)`,
+                                }}
+                            ></img>{" "}
+                            {responseData.wind_speed} k/h
+                        </h4>
+                        <h3>Chance of Precipitation</h3>
+                        {responseData.dry && <h4>low</h4>}
+                        {!responseData.dry && <h4>high</h4>}
+                        <h3>Recommended Kit</h3>
+                        <h4>
+                            <span style={bold}>head:</span>{" "}
+                            {responseData.data.head}
+                        </h4>
+                        <h4>
+                            <span style={bold}>body:</span>{" "}
+                            {responseData.data.top}
+                        </h4>
+                        <h4>
+                            <span style={bold}>legs:</span>{" "}
+                            {responseData.data.bottom}
+                        </h4>
+                        <h4>
+                            <span style={bold}>hands:</span>{" "}
+                            {responseData.data.hands}
+                        </h4>
+                        <h4>
+                            <span style={bold}>feet:</span>{" "}
+                            {responseData.data.feet}
+                        </h4>
+                        <h3>UV Warning</h3>
+                        <h4>{responseData.uvi}</h4>
+                    </div>
+                )}
+            </div>
         </div>
     );
 }

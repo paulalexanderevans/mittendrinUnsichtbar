@@ -35,6 +35,13 @@ export default class App extends Component {
         return (
             <BrowserRouter>
                 <div className={"app"}>
+                    <div className="header">
+                        <img
+                            src="header.png"
+                            alt="CyclingKit header"
+                            className="headerImage"
+                        />
+                    </div>
                     <Route
                         exact
                         path="/"
@@ -52,76 +59,6 @@ export default class App extends Component {
                             />
                         )}
                     />
-                    {/* <div className="header">
-                        <Logo />
-                        <Link to="/users" className="findPeopleLink">
-                            Find People
-                        </Link>
-                        <Link to="/chat" className="findPeopleLink">
-                            Chat
-                        </Link>
-                        <Link to="/friends" className="findPeopleLink">
-                            Friends
-                        </Link>
-                        <Link to="/" className="findPeopleLink">
-                            Profile
-                        </Link>
-                        <a href="/logOut" className="findPeopleLink">
-                            Log-out
-                        </a>
-                        <ProfilePic
-                            // Passing down props:
-                            first={this.state.first}
-                            last={this.state.last}
-                            profilePicUrl={this.state.profilepicurl}
-                            // Passing down methods as standard functions (binding needed):
-                            toggleUploader={this.toggleUploader}
-                            size="small"
-                        />
-                    </div>
-
-                    {this.state.uploaderVisible && (
-                        <Uploader
-                            userId={this.state.id}
-                            setProfilePicUrl={this.setProfilePicUrl}
-                        />
-                    )}
-
-                    <div className="title">{this.state.title}</div>
-
-            
-
-                    <Route
-                        path="/user/:id"
-                        render={(props) => (
-                            <OtherProfile
-                                key={props.match.url}
-                                match={props.match}
-                                history={props.history}
-                            />
-                        )}
-                    />
-
-                    <Route path="/friends" render={() => <Friends />} />
-
-                    <Route
-                        path="/chat"
-                        render={() => <Chat userId={this.state.id} />}
-                    />
-
-                    <Route
-                        exact
-                        path="/users"
-                        render={() => (
-                            <FindPeople
-                                // Passing down props:
-                                first={this.state.first}
-                                last={this.state.last}
-                                id={this.state.id}
-                                // Passing down methods as standard functions (binding needed):
-                            />
-                        )}
-                    /> */}
                 </div>
             </BrowserRouter>
         );
