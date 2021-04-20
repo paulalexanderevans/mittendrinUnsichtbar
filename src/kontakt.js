@@ -23,14 +23,11 @@ export default class Kontakt extends React.Component {
                         Meldet Euch gerne für eine Zusammenarbeit, um den Frauen
                         noch mehr Sichtbarkeit zu geben und über die Thematik
                         mehr Aufmerksamkeit zu schaffen. <br></br>
-<<<<<<< HEAD
                         Eine erste physische Ausstellung wird in Zusammenarbeit
                         mit dem Strassenfeger e.V. im Sommer 2021 stattfinden.
                         Genauere Informationen werden sobald als möglich hier
                         vermerkt.
                         <br></br>
-=======
->>>>>>> e4941be39cfe747495ba641005a6e897458c9740
                         <br></br>Konzept & Gestaltung
                         <br />
                         Ronja Lang
