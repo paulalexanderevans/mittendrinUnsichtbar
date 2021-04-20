@@ -1,0 +1,729 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+* {
+    cursor: default;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+}
+*::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+
+html {
+    font-size: calc(0.5em + 1vw);
+}
+
+@font-face {
+    font-family: "bigdailyshort-extralightitalic";
+    src: url("fonts/bigdailyshort-extralightitalic.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "bigdailyshort-semilight";
+    src: url("fonts/bigdailyshort-semilight.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "aktiv_grotesk_corpregular";
+    src: url("fonts/aktivGrotesk/aktivgroteskcorp-regular-webfont.woff2")
+            format("woff2"),
+        url("fonts/aktivGrotesk/aktivgroteskcorp-regular-webfont.woff")
+            format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+h3,
+h4 {
+    display: inline;
+}
+h1 {
+    font-family: "aktiv_grotesk_corpregular";
+    font-size: 1em;
+    color: white;
+    display: inline;
+}
+
+h2 {
+    font-family: "bigdailyshort-semilight";
+    font-size: 1em;
+    color: white;
+    display: inline;
+}
+
+h3 {
+    font-family: "bigdailyshort-semilight";
+    font-size: 2.5em;
+}
+
+h4 {
+    font-family: "bigdailyshort-extralightitalic";
+    font-size: 2.5em;
+}
+
+h5 {
+    font-family: "aktiv_grotesk_corpregular";
+    font-size: 0.6em;
+    display: inline;
+}
+
+h6 {
+    font-family: "bigdailyshort-extralightitalic";
+    font-size: 0.7em;
+    display: inline;
+}
+
+p {
+    font-family: "bigdailyshort-semilight";
+    font-size: 0.7em;
+    display: inline;
+}
+
+.welcome {
+    background-color: #3e0062;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    /* overflow: scroll; */
+}
+
+.headerWelcome {
+    width: 100%;
+    height: 7%;
+    position: fixed;
+    z-index: 50;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #3e0062; */
+}
+
+.headerMain {
+    width: 100%;
+    height: 7%;
+    position: fixed;
+    z-index: 50;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerMainBackground {
+    width: 100%;
+    height: 7%;
+    position: fixed;
+    background-color: #fff;
+    top: 0px;
+    left: 0px;
+}
+
+.fixedLogo {
+    height: 100%;
+    width: auto;
+    position: absolute;
+    opacity: 100%;
+    transition: all 0.5s ease-in-out;
+    z-index: 300;
+    padding: 0.5em;
+    top: 0;
+    left: 0;
+}
+
+.headerLetters {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 35%;
+    top: 0;
+    left: 35%;
+    position: fixed;
+    height: 7%;
+    opacity: 100%;
+    padding-bottom: 0.3em;
+    z-index: 30;
+}
+
+/* .headerLetters h5 {
+    color: #3e0062;
+} */
+
+.menuButtonWelcome {
+    height: 100%;
+    width: auto;
+    position: relative;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+    z-index: 1000;
+    right: 0;
+}
+
+.menuBurgerWelcome1 {
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+    height: 0.08em;
+    width: 1.5em;
+    background-color: white;
+    transition: all 0.5s ease-in-out;
+}
+
+.menuBurgerWelcome2 {
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+    height: 0.08em;
+    width: 1.5em;
+    background-color: white;
+    transition: all 0.5s ease-in-out;
+}
+
+/* menu open */
+.menuButtonWelcome.open .menuBurgerWelcome1 {
+    transform: rotate(45deg) translateX(0.3em);
+}
+
+.menuButtonWelcome.open .menuBurgerWelcome2 {
+    transform: rotate(-45deg) translateX(0.3em);
+}
+
+.menuWelcome {
+    height: 100vh;
+    width: 20%;
+    position: fixed;
+    padding-right: 40px;
+    padding-left: 0.5em;
+    padding-top: 6%;
+    top: 0;
+    right: -50%;
+    transition: all 0.5s ease-in-out;
+    z-index: 20;
+    text-align: left;
+    background-color: #3e0062;
+}
+
+h1.menu {
+    color: #dbd9e0;
+}
+
+/* main menu */
+.menuBurgerMain1 {
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+    height: 0.08em;
+    width: 1.5em;
+    background-color: #3e0062;
+    transition: all 0.5s ease-in-out;
+}
+
+.menuBurgerMain2 {
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+    height: 0.08em;
+    width: 1.5em;
+    background-color: #3e0062;
+    transition: all 0.5s ease-in-out;
+}
+
+/* menu open */
+.menuButtonWelcome.open .menuBurgerMain1 {
+    transform: rotate(45deg) translateX(0.3em);
+    background-color: #fff;
+}
+
+.menuButtonWelcome.open .menuBurgerMain2 {
+    transform: rotate(-45deg) translateX(0.3em);
+    background-color: #fff;
+}
+
+.mainWelcome {
+    position: fixed;
+    top: 7%;
+    left: 0;
+    width: 100%;
+    color: white;
+    height: 100%;
+    overflow: scroll;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0;
+    padding-bottom: 45px;
+    z-index: 0;
+    opacity: 0.99;
+}
+
+.light .sitaten {
+    z-index: 1;
+    opacity: 0;
+}
+
+a.letter {
+    text-decoration: none;
+    opacity: 100%;
+    color: #370058;
+}
+
+a.mainLetter {
+    text-decoration: none;
+    opacity: 20%;
+    color: #3e0062;
+}
+
+.sitaten {
+    display: inline;
+    opacity: 100%;
+    color: #370058;
+    z-index: 0;
+    position: relative;
+}
+
+a.sitaten {
+    text-decoration: none;
+    opacity: 100%;
+}
+
+.teaser {
+    position: fixed;
+    height: 65%;
+    width: auto;
+    opacity: 0%;
+    z-index: 1;
+    top: 35%;
+    left: 35%;
+}
+
+.app {
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #3e0062;
+    height: 100vh;
+    width: 100vw;
+}
+.mainContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: #f4f2f9;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #3e0062;
+    height: 100vh;
+    width: 100vw;
+}
+
+.infoOverlay {
+    top: 7%;
+    width: 35%;
+    height: 100%;
+    left: 0;
+    background-color: #36005f;
+    position: fixed;
+    opacity: 95%;
+    z-index: 10;
+    transition: all 0.3s ease-in-out;
+}
+
+.info {
+    top: 7%;
+    width: 35%;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    overflow: scroll;
+    box-sizing: border-box;
+    z-index: 5;
+    transition: all 1s ease-in-out;
+}
+
+.infoTxt {
+    padding-top: 50%;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-bottom: 70px;
+    box-sizing: border-box;
+    z-index: 5;
+    transition: all 1s ease-in-out;
+}
+
+.stats {
+    transition: all 1s ease-in-out;
+}
+
+.galleryL {
+    top: 7%;
+    right: 0px;
+    position: fixed;
+    width: 65%;
+    height: 100%;
+    overflow: scroll;
+}
+
+.galleryP {
+    top: 7%;
+    right: 0px;
+    position: fixed;
+    width: 65%;
+    height: 100%;
+    display: none;
+    flex-direction: row;
+}
+
+.galleryImageL {
+    width: 100%;
+    height: auto;
+}
+
+.galleryImageP {
+    width: auto;
+    height: 100%;
+}
+
+.captionLContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: scroll;
+}
+
+.captionLText {
+    width: 95%;
+    padding-left: 0.5em;
+    padding-top: 2px;
+    padding-right: 0.5em;
+    padding-bottom: 0.5em;
+    height: 100%;
+}
+
+.counter {
+    padding-right: 0.5em;
+    padding-bottom: 0.5em;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.captionP {
+    width: auto;
+    height: 100%;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+    padding-top: 0.4em;
+    padding-bottom: 0.5em;
+    overflow: scroll;
+}
+
+.about {
+    top: 0px;
+    right: -100%;
+    padding-top: 6%;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease-in-out;
+    z-index: 40;
+    text-align: left;
+    background-color: #3e0062;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.aboutTxt {
+    right: 0;
+    width: 65%;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+    z-index: 40;
+    text-align: left;
+    padding-bottom: 30px;
+    padding-right: 0.5em;
+    overflow: scroll;
+}
+
+.interview {
+    top: 0;
+    padding-top: 6%;
+    right: -100%;
+
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease-in-out;
+    z-index: 20;
+    text-align: left;
+    background-color: #3e0062;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.interviewTxt {
+    right: 0;
+    width: 65%;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+    z-index: 20;
+    text-align: left;
+    padding-bottom: 30px;
+    overflow: scroll;
+    padding-right: 0.5em;
+}
+
+.interviewTxt h1 {
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.interviewTxt h2 {
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.answer {
+    margin-left: 2em;
+}
+
+.kontakt {
+    top: 0px;
+    right: -100%;
+    padding-top: 6%;
+    padding-right: 0.5em;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease-in-out;
+    z-index: 40;
+    text-align: left;
+    background-color: #3e0062;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.kontaktTxt {
+    right: 0;
+    width: 65%;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+    z-index: 40;
+    text-align: left;
+    padding-bottom: 30px;
+    padding-right: 0.5em;
+    overflow: scroll;
+}
+
+.galleryNav {
+    top: 7%;
+    right: 0px;
+    position: fixed;
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 10;
+    background-color: #36005f;
+    opacity: 95%;
+    transition: all 0.3s ease-in-out;
+}
+
+.left {
+    width: 50%;
+    height: 100%;
+}
+
+.right {
+    width: 50%;
+    height: 100%;
+}
+
+.arrowLeft {
+    top: 50%;
+    left: 0.5em;
+    position: fixed;
+}
+
+.arrowRight {
+    top: 50%;
+    height: 100%;
+}
+
+.book {
+    top: 0px;
+    right: -100%;
+    padding-top: 0px;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease-in-out;
+    z-index: 40;
+    text-align: left;
+    background-color: #3e0062;
+    overflow: scroll;
+}
+
+.bookGallery {
+    top: 0px;
+    right: -100%;
+    padding-top: 0px;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    transition: all 1s ease-in-out;
+    overflow: scroll;
+}
+
+.bookGalleryImage {
+    width: 100vw;
+    height: auto;
+}
+
+.bookNav {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 50;
+    position: relative;
+}
+
+/* mobile */
+@media screen and (max-width: 700px) {
+    .infoOverlay {
+        display: none;
+        opacity: 0;
+    }
+    .galleryNav {
+        opacity: 0%;
+    }
+    .galleryImageP {
+        width: 50%;
+        height: auto;
+    }
+    .galleryP {
+        /* height: 50%; */
+        flex-direction: column;
+    }
+
+    .headerWelcome {
+        width: 100%;
+        height: 15%;
+        position: fixed;
+        z-index: 50;
+        top: 0px;
+        left: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .headerMain {
+        width: 100%;
+        height: auto;
+
+        color: white;
+    }
+
+    .fixedLogo {
+        height: auto;
+        width: 80%;
+        position: relative;
+        opacity: 100%;
+        transition: all 0.5s ease-in-out;
+        z-index: 300;
+        padding-top: 0.6em;
+        padding-left: 0.6em;
+        padding-bottom: 0.6em;
+        padding-right: 0;
+    }
+
+    .headerLetters {
+        width: 80%;
+        left: 0;
+        position: relative;
+        padding-top: 0;
+        padding-left: 0.6em;
+    }
+    .menuButtonWelcome {
+        position: fixed;
+        right: 0;
+        top: 4%;
+        height: auto;
+    }
+    .light .sitaten {
+        color: white;
+        opacity: 1;
+    }
+    .mainWelcome.shadow {
+        display: none;
+    }
+    a.letter {
+        color: white;
+    }
+    .mainWelcome {
+        position: relative;
+        top: 15%;
+        overflow: scroll;
+    }
+    .menuWelcome {
+        padding-top: 20%;
+    }
+
+    .about {
+        padding-top: 20%;
+    }
+    .kontakt {
+        padding-top: 20%;
+    }
+    .interview {
+        padding-top: 20%;
+    }
+}

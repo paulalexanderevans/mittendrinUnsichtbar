@@ -1,6 +1,7 @@
 {
-    "name": "spiced-social-network",
-    "version": "1.0.0",
+    "name": "mittendrin-unsichtbar",
+    "version": "0.1.0",
+    "private": false,
     "description": "",
     "main": "server/server.js",
     "scripts": {

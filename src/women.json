@@ -1,0 +1,1470 @@
+[
+    {
+        "id": 1,
+        "bold": "Ich saß lange im Rollstuhl,",
+        "italic": "weil mein Ex-Freund mich geschlagen hat.",
+        "letter": "M",
+        "kurzbio": "Mein Sozialarbeiter meinte, ich solle mit meiner großen Klappe nach Berlin kommen. Das habe ich dann gemacht. Ich spiele gerne Gitarre, deswegen habe ich mir vor kurzem eine gekauft. Ich habe zwei Kinder, die mir aber vom Jugendamt weggenommen worden sind. Ich hätte nicht auf der Straße landen müssen, wenn ich gewusst hätte, dass ich 1.000 Euro auf dem Konto hatte. Die Fotos möchte ich meinen Kindern schicken.",
+        "interview": false,
+        "age": "38 Jahre alt",
+        "wohnungslos": "seit fünf Monaten wohnungslos",
+        "photos": [
+            {
+                "url": "/photos/1/1.jpg",
+                "format": "l",
+                "captionBold": "Man sieht es schlecht, aber da ging gerade die Sonne auf. Da kam ich gerade von der Notübernachtung an.",
+                "captionItalic": "Am Hauptbahnhof."
+            },
+
+            {
+                "url": "/photos/1/2.jpg",
+                "format": "p",
+                "captionBold": "",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/1/3.jpg",
+                "format": "l",
+                "captionBold": "Das hat mich an ein Lied von AnnenMayKantereit erinnert. Sie singen dort: „Oh wie schön ist Panama.“ Ich mag es sehr.",
+                "captionItalic": "Ein Schuhgeschäft."
+            },
+
+            {
+                "url": "/photos/1/4.jpg",
+                "format": "p",
+                "captionBold": "",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/1/5.jpg",
+                "format": "l",
+                "captionBold": "Da habe ich lange auf meinen ersten Kaffee gewartet.",
+                "captionItalic": "Am Zoo."
+            },
+            {
+                "url": "/photos/1/6.jpg",
+                "format": "l",
+                "captionBold": "Verliebt mit meinem Freund in Richtung Charlottenburg. Auf dem einen Foto sieht man mich mit der Kamera.",
+                "captionItalic": "Da war ich in der S-Bahn."
+            },
+
+            {
+                "url": "/photos/1/7.jpg",
+                "format": "l",
+                "captionBold": "",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/1/8.jpg",
+                "format": "l",
+                "captionBold": "Hier saß ich mit meinem Freund. Ich wollte die Raben fotografieren. Die haben sich immer versteckt. Raben sind meine Freunde und ich füttere sie gerne. Auf dem einen Bild sieht man meine Schuhe.",
+                "captionItalic": "Wieder am Zoo."
+            },
+
+            {
+                "url": "/photos/1/9.jpg",
+                "format": "l",
+                "captionBold": "",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/1/10.jpg",
+                "format": "l",
+                "captionBold": "",
+                "captionItalic": "Ein Gebäude am Zoo."
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "bold": "Wenn man als Frau keine Ruhe hat,",
+        "italic": "dann geht alles flöten.",
+        "letter": "D",
+        "kurzbio": "Ich komme aus Berlin, aus Friedrichshain. Ich wünsche mir eine eigene Wohnung. Dabei habe gar keine Ansprüche. Egal, ob Dusche oder Balkon. Mittlerweile ist mir auch der Bezirk egal. Einfach wieder einen sicheren Wohnraum. Einfach wieder ganz normal leben, arbeiten gehen und was Sinnvolles machen. Nicht so in den Tag rein leben. Meine Bastelsachen sind mir sehr wichtig, wie meine Buntstifte von Faber Castell. Zu Geburtstagen habe ich immer Karten selbst gebastelt. Wichtig sind mir auch meine Klebefolien in all möglichen Farben und Variationen. Ich achte sehr auf meine Sachen. Ich bin dankbar für das, was ich habe. Ich brauche nicht viel.",
+        "interview": true,
+        "interviewTxt": [
+            {
+                "question": "Wie alt bist du und woher kommst du?",
+                "answer": "Ich bin 43 Jahre alt und komme aus Berlin, Friedrichshain."
+            },
+            {
+                "question": "Wie war dein Tag gestern?",
+                "answer": "Mein gestriger Tag, hm. Meine Zimmermitbewohnerin ist gestern ausgezogen. Das war traurig."
+            },
+            {
+                "question": "Gab es die letzten Tage ein schönes Erlebnis für dich?",
+                "answer": "Ich bin froh, dass ich gestern einen Untermietvertrag für ein WG-Zimmer bekommen habe. Auch bin ich froh, dass das mit dem Jobcenter geregelt wurde. Der ganze Prozess hat lange gedauert. Der Hauptmieter der WG hatte mich immer wieder angerufen, zwecks Miete und Kaution – das war alles insgesamt etwas nervig. Aber es ist jetzt schön, dass alles geklärt ist. Die Wohnung ist gegenüber von einem Bäcker, in dem ich seit Jahren Stammkundin bin. Dort konnte ich sogar ein paar Sachen von mir lagern. So was macht einen Kiez aus – Menschlichkeit. Es gibt ja nur noch wenige Menschen, die so sind. Sie hatten auch keine Vorurteile mir gegenüber. Denn man schämt sich ja auch für die eigene Situation."
+            },
+            {
+                "question": "Hast du einen Beruf gelernt?",
+                "answer": "Ich bin Restaurantfachfrau."
+            },
+            {
+                "question": "Würdest du den Beruf heute noch ausüben?",
+                "answer": "Nein. Man wird ja nicht jünger und ich habe körperlich ganz schön abgebaut. Ich habe kaum noch Kraft. Dafür muss man schon fit sein. Auch will ich auch gar keinen Kundenkontakt. Momentan bin ich lieber im Hintergrund."
+            },
+            {
+                "question": "Wann bist du heute aufgestanden und hast die Einrichtung verlassen?",
+                "answer": "Um 7 Uhr bin ich heute aufgestanden. Um 8:30 Uhr müssen alle Frauen die Einrichtung verlassen."
+            },
+            {
+                "question": "Was ist dein erstes Ziel, wenn du die Einrichtung verlässt?",
+                "answer": "Erst mal schminke ich mich, damit man nicht ganz so krank aussieht. Wenn ich alles gemacht habe, sortiere ich meine Tasche. Man ist die ganze Zeit am hin und her Kramen – das ist total nervig. Danach gehe ich zu Edeka und hole mir ein Fladenbrot. Dann gehe ich zu dem Tagestreff Kiez-Café. Und ansonsten, läuft man halt hier so rum. Letztens habe ich einen Gabenzaun am Volkspark Friedrichshain entdeckt. Da findet man immer gute Sachen, z. B. diese Tasche hier. Das ist eigentlich eine Kühltasche, aber die ist total praktisch. Jetzt konnte ich endlich meine Tüte loswerden. Das war total nervig mit dieser Tüte. Ich hatte eigentlich einen Rucksack, aber der wurde mir geklaut."
+            },
+            {
+                "question": "Wann bist du abends wieder in der Einrichtung?",
+                "answer": "Man wartet ja, bis man wieder rein kann. So um ca. 18 Uhr kann man unten durch die Haustüre rein und dann setzt man sich auf die Treppe und wartet."
+            },
+            {
+                "question": "Seit wann bist du wohnungslos?",
+                "answer": "Seit 2019."
+            },
+            {
+                "question": "Warum bist du wohnungslos?",
+                "answer": "Ich hatte einen Untermietvertrag, aber der Hauptmieter hatte die Wohnung gekündigt. Dort habe ich ein paar Jahre gewohnt. Ich war dort nicht gemeldet und die Hausverwaltung wusste davon nichts. Als Untermieter hast du halt Pech. Ich habe jeden Schlupfwinkel genutzt, um meinen Auszug noch hinauszuzögern. Das war eine totale Stresssituation. Bevor es dann so weit gekommen ist, war ich bei der Sozialen Wohnhilfe, damit die mich vielleicht vermitteln können. Die Dame wollte, dass ich direkt in ein Wohnheim gehe. Was soll ich denn im Wohnheim? Ich brauche keine Betreuung oder Hilfe im Haushalt. Bei mir könnte man vom Boden essen, so sauber ist es. Diese Maßnahmen finde ich total bescheuert. Das liest sich immer schön: „Einzigartiges Projekt – Wohnung für Menschen, die auf normalem Weg keine Wohnung finden“. Die gehen immer davon aus, dass man Mietschulden hatte. Ich finde es schlimm, dass wir alle über einen Kamm geschert werden: „Es muss doch keiner auf der Straße leben.“ Wenn man dann einen „Stempel“ hat, haste Pech."
+            },
+            {
+                "question": "Wie geht’s dir mit der aktuellen Corona-Lage?",
+                "answer": "Ich dachte wirklich, jetzt durch die Corona-Lage, würden sich viele Dinge grundlegend ändern. Jetzt hat man doch gesehen, dass es jeden treffen kann und dass es schneller gehen kann, als man denkt. Irgendwie sind die Vorurteile trotzdem geblieben. Ich lese immer die Pressemeldungen von Berlin. Dort steht hin und wieder drin, dass ne neue Tageseinrichtung aufgemacht hat – Ja toll, die hat auch nur bis 16 Uhr offen oder es können nur eine bestimmte Anzahl an Menschen rein. Es ist ja auch nicht so, wenn man dort hinfährt, dass man dann auch rein darf. Man weiß das halt auch einfach nicht. Und wenn ich in Friedrichshain wohne fahre ich mit Sicherheit nicht nach Spandau, Steglitz, Moabit oder sonst wohin – und dann auch noch ohne Fahrkarte. Ich verstehe es nicht, vor allem jetzt mit der Corona-Lage, dass Frauen und Menschen im Allgemeinen aus den Notübernachtungen trotzdem raus müssen. Wie soll man sich den schützen, wenn man auf der Straße lebt und keine Möglichkeit hat, sich die Hände zu waschen und wenig Zugang zu Desinfektionsmitteln hat. Die obdachlosen Menschen werden total vergessen – vor allem Frauen. Ich finde, das ist eine Frechheit. In keinem Laden kann man mal auf die Toilette gehen. Dann bleibt einem nur die City-Toilette. Man muss aber auch erst mal wissen, wo eine ist. Und wenn man keine 50 Cent hat, kann man auch die City-Toilette nicht nutzen. Die Duschen am Zoologischen Garten oder am Ostbahnhof wurden auch alle geschlossen. Ich bin nur hin und her gelaufen, man kann sich nirgends hinsetzen und man wird ja auch total schief angeschaut. Irgendwann ist man auch total fertig und neben der Spur. Ich war da zum Teil echt verzweifelt. Ich habe geheult. Ich kann mir gar nicht vorstellen, bei der Kälte draußen zu schlafen – gerade als Frau."
+            },
+            {
+                "question": "Warum wohnst du in einer Notübernachtung für Frauen?",
+                "answer": "Man ist geschützter und „unter sich“. Ich habe nichts gegen Männer, aber ich fühle mich teilweise in der Gegenwart von ihnen unwohl. Wenn ich zum Beispiel aufstehe, möchte ich nicht unbedingt gleich einem Mann über den Weg laufen. Ich mag die Gesellschaft von Frauen lieber. Ich finde es auch nicht so toll, bald in einer WG mit zwei Männern zusammenzuwohnen. Ich traue mich da auch nicht wirklich auf die Toilette zu gehen. Aber ok."
+            },
+            {
+                "question": "Was ist das schwierigste für dich, als Frau wohnungslos zu sein?",
+                "answer": "Ich muss meine Sachen immer an einem bestimmten Ort haben. Und wenn man dann aus Kisten und Tüten lebt, das ist total anstrengend. Man kann auch nicht immer auf sein Äußeres achten. Man ist ja auch einfach froh, dass man irgendwas anhat. Man schaut auch gar nicht mehr, ob das jetzt farblich zusammen passt. Aber ja, das ist ja auch alles belanglos. Mich stört es, dass man einfach keinen Ort hat, an dem man zur Ruhe kommt. Wenn man als Frau keine Ruhe hat, dann geht alles flöten. Sich einfach mal ein bisschen pflegen zu können, wie z. B. eine Gesichtsmaske aufzutragen oder in Ruhe die Fingernägel feilen zu können. Normale Sachen eben. Man muss immer irgendwas mit sich mit schleppen. Man muss immer schauen, wo man etwas abstellt. Ein Kleiderschrank ist Luxus für mich. Den hatte ich schon so lange nicht mehr. Ich bin auch ein sehr sauberer und ordentlicher Mensch: Keine Waschmaschine zu haben, das ist das schlimmste für mich. Hier in der Notübernachtung gibt es eine, aber die ist schon seit längerem kaputt. Ich habe jetzt eine Bestandsaufnahme gemacht, was ich alles an sauberen Klamotten noch habe. Beim Bäcker hab ich mal meine Jacke waschen können. Je länger man mit seiner Wohnungslosigkeit lebt, desto kleiner wird das Selbstbewusstsein. Aber ich verliere nicht den Mut, obwohl ich früher auch oft verzweifelt war. Irgendwann ist man auch total entmutigt, weil man das Gefühl hat, sich im Kreis zu drehen. Es zermürbt einen halt nach der Zeit, wenn man keinen eigenen Wohnraum hat."
+            },
+            {
+                "question": "Wie gehst du damit um, wenn du deine Regelblutung hast?",
+                "answer": "Ja das ist scheiße. Es gibt hier in der Einrichtung ein paar Hygieneartikel, aber das sind super riesige Tampons. Aber das bietet sich schon an, wenn man den ganzen Tag draußen unterwegs ist. Man kann ja nicht mal einfach so auf die Toilette gehen. Das ist total doof. Das ist richtig scheiße. Da kann man ja nur Glück haben, wenn man gerade genug Geld hat, um auf eine City-Toilette gehen zu können. Hm ja, am besten, man setzt sich wo hin und bewegt sich nicht."
+            },
+            {
+                "question": "Hattest du auf der Straße schon mal Schwierigkeiten mit einem Mann?",
+                "answer": "Ne, aber ich bin auch so ein Mensch, der sich nichts gefallen lässt. Wenn ich einen Streit beobachte, dann gehe ich oft dazwischen. Ich wurde deswegen auch schon angemeckert, obwohl ich nur helfen wollte. Ich bin nicht auf Stress aus, aber wenn ich so etwas beobachte, kann ich nicht einfach wegschauen."
+            },
+            {
+                "question": "Wie sind wohnungslose Frauen untereinander?",
+                "answer": "Das ist immer eine Glückssache. Das ist jetzt meine erste Notunterkunft. Viele Frauen wollen für sich bleiben und ihre Ruhe haben. Aber es ist ja auch anstrengend, wenn man den ganzen Tag auf der Straße unterwegs ist. Das schlaucht voll, gerade wenn es so kalt ist – da ist man furchtbar durchgefroren. Es gibt auch Frauen die einen „kleinen Schaden“ haben und sich auch anschreien, aber wenn man so lange schon alleine und auf der Straße ist, ist man halt so. Aber generell redet man auch nicht darüber, was man tagsüber so macht und auch nicht warum man eigentlich hier, in der Notübernachtung, gelandet ist. Manche Frauen reden mit einem gar nicht. Eine Frau meinte mal zu mir, dass man bei manchen wohnungslosen Frauen das Gefühl hat, dass sie tot sind. Ich habe das nie verstanden, was damit gemeint war. Doch jetzt weiß ich es. Sie sind es von anderen Einrichtungen gewohnt. Mich hat einmal eine obdachlose Frau bei einer Essensausgabe total angeschrien. So nach dem Motto: „Eh, wat will denn die hier – kennt die hier jemand?“ Nur weil man eben noch nicht „so“ aussieht. Selbst wohnungslose Frauen haben ein bestimmtes Bild im Kopf, wie eine wohnungslose Frau auszusehen hat. Ich würde mir gern mehr Solidarität und auch mehr Zusammenhalt untereinander wünschen. Ich finde es wichtig, dass man sich gegenseitig unterstützt. Es ist doch eh schon schwer genug – ohne Wohnung. Auch finde ich es total bescheuert, zwischen obdachlos und wohnungslos so einen Unterschied zu machen. Ich weiß gar nicht so genau, was ich bin. Bin ich wohnungslos oder obdachlos?"
+            },
+            {
+                "question": "Sind wohnungslose Frauen unsichtbar?",
+                "answer": "Viele Frauen sind wohnungslos, weil sie notgedrungen wo unterkommen. Viele Frauen sind in einer Abhängigkeit von Männern. Ich sehe oft auf Ebay-Kleinanzeigen Anzeigen von Männern, bei denen ein Schlafplatz für Frauen angeboten wird, bei dem man sich aber das Schlafzimmer teilen muss. Da weiß ich dann sofort Bescheid. Als Frau, so oder so, man begibt sich immer in eine Abhängigkeit. Frauen sieht man es oft nicht an – oft sehen sie aus, wie das blühende Leben. Die geben sich schon mehr Mühe, dass man ihnen die Wohnungslosigkeit nicht ansieht. Ich schminke mich deswegen auch."
+            },
+            {
+                "question": "Bist du für etwas dankbar?",
+                "answer": "Ich bin dankbar über die Notübernachtung. Hätte ich diese Möglichkeit nicht gehabt, hier herzukommen, dann hätte ich nicht gewusst, was ich gemacht hätte. Also echt, keine Ahnung. Ich hatte überlegt, ob ich Klauen gehe, um mal eine Nacht irgendwo schlafen zu können. Total bescheuert. Aber jetzt haben auch keine Läden offen, also kann man auch nichts klauen. Ja, solche bescheuerten Gedanken kommen einem dann. Ansonsten bin ich dankbar, dass ich jetzt ein Zimmer habe. Wenn sich das nicht ergeben hätte, wäre ich wie alle anderen Frauen von Notunterkunft zu Notunterkunft gewandert. Und so viele Notunterkünfte nur für Frauen gibt es ja auch nicht in Berlin."
+            },
+            {
+                "question": "Willst du etwas in deinem Leben gar nicht mehr haben?",
+                "answer": "Dieses Gefühl, keine Wohnung zu haben. Nicht zu wissen, wohin man soll. Das ist ein ganz schreckliches Gefühl, wenn man nicht weiß, wohin und man keinen Rückzugsort hat. Man nicht einfach mal irgendwo hingehen und die Türe hinter sich zu schließen kann. Das ist eigentlich selbstverständlich, aber wenn man das dann nicht mehr hat, ist das echt ein schlimmes Gefühl – das kann man ja gar nicht beschreiben. Diese Angst bleibt einem immer. Ich träume auch davon. Man steht in der früh auf und man weiß nicht wohin. Man hat auch keine Freundschaften, selbst wenn, da will man sich auch nicht aufdrängen. Hier sind auch alle Hauseingänge verschlossen. Man hat ja nicht mal irgendeine Möglichkeit, sich einfach mal kurz irgendwo ungestört hinzusetzen. Und den ganzen Tag alleine herumhängen ist echt anstrengend. Ich habe mich einfach mal bei Humana in der Umkleidekabine auf einen Stuhl gesetzt und den Vorhang zugezogen, weil ich nicht mehr konnte."
+            },
+            {
+                "question": "Fühlst du dich manchmal einsam?",
+                "answer": "Ja. Man macht ja nicht immer etwas Sinnvolles. Das ist ja so auch so kein Leben. Aber eigentlich will ich hier gar nicht weg. Wenn man dann wieder alleine ist, ist das irgendwie komisch. Ich weiß auch nicht."
+            }
+        ],
+        "age": "43 Jahre alt",
+        "wohnungslos": "seit einem Jahr wohnungslos",
+        "photos": [
+            {
+                "url": "/photos/2/1.jpg",
+                "format": "l",
+                "captionBold": "wie bei Mutter.",
+                "captionItalic": "Der Kartoffelsalat war echt lecker –"
+            },
+
+            {
+                "url": "/photos/2/2.jpg",
+                "format": "l",
+                "captionBold": "Wir dürfen momentan nicht mit in die Küche, wegen Corona. Also konnten wir leider nicht mitkochen. ",
+                "captionItalic": "Das war unser Weihnachtsessen."
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "bold": "Es gibt Frauen, die wohnungslos sind.",
+        "italic": "Sie sind nur nicht so sichtbar.",
+        "letter": "W",
+        "kurzbio": "Ich komme aus Aachen. Mein Name ist polnisch und hat eine schöne Bedeutung: Die Siegbringende. Ob er mir wirklich Sieg bringt – weiß ich nicht. Aber ich hatte heute ein schönes Erlebnis: Ich habe einen 5€-Gutschein per E-Mail von IKEA bekommen, deswegen war ich heute dort und habe mir einen Beutel für meine Schuhe gekauft.",
+        "interview": false,
+        "age": "",
+        "wohnungslos": "wohnungslos",
+        "photos": [
+            {
+                "url": "/photos/3/1.jpg",
+                "format": "l",
+                "captionBold": "Da bin ich in der Früh los, als ich die Notübernachtung verlassen musste.",
+                "captionItalic": "Mein aktuelles Zuhause."
+            },
+
+            {
+                "url": "/photos/3/2.jpg",
+                "format": "l",
+                "captionBold": "Hier sitze ich oft, wenn das Wetter schön ist. Hier kann ich Ruhe finden. Es sind immer viele Kinder auf dem Spielplatz und viele Jogger laufen vorbei. Hin und wieder kommen auch kleine Spatzen, die ich gerne füttere.",
+                "captionItalic": "Mein täglicher Weg durch den Park."
+            },
+
+            {
+                "url": "/photos/3/3.jpg",
+                "format": "l",
+                "captionBold": "",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/3/4.jpg",
+                "format": "p",
+                "captionBold": "Hier stehe ich oft, wenn ich nach Wedding zu Evas Haltestelle fahre – eine Tagesstätte für Frauen.",
+                "captionItalic": "Am Nordbahnhof."
+            },
+
+            {
+                "url": "/photos/3/5.jpg",
+                "format": "l",
+                "captionBold": "Ich sitze dort gerne am Fenster. Es ist kaputt und zieht somit nicht so kalt rein.",
+                "captionItalic": "Mein Lieblingsplatz bei Evas Haltestelle."
+            },
+
+            {
+                "url": "/photos/3/6.jpg",
+                "format": "l",
+                "captionBold": "",
+                "captionItalic": "Der erste und letzte Ort des Tages."
+            },
+
+            {
+                "url": "/photos/3/7.jpg",
+                "format": "l",
+                "captionBold": "Da konnte ich endlich meinen Rucksack ablegen. Meiner hängt dort rechts. Mich ärgert es, dass man oft 30 Minuten warten muss, um reingehen zu dürfen. Momentan dürfen nur fünf Frauen gleichzeitig rein. Jetzt haben sie eh wegen einem akuten Coronafall dicht gemacht. Die Frau auf dem Foto hat es mir erlaubt, dass ich sie fotografiere. Auf den Stufen sitzt noch eine Frau – die sieht man aber nicht.",
+                "captionItalic": "Das ist vor der Tagesstätte Sophie."
+            },
+
+            {
+                "url": "/photos/3/8.jpg",
+                "format": "p",
+                "captionBold": "Den fand ich sehr schön. Den musste ich fotografieren.",
+                "captionItalic": "Hja, dieser bewachsene Mülleimer."
+            },
+
+            {
+                "url": "/photos/3/9.jpg",
+                "format": "l",
+                "captionBold": "Ich glaube, da war ich auf dem Weg zum Gesundbrunnen.",
+                "captionItalic": "Da war ich unterwegs."
+            },
+
+            {
+                "url": "/photos/3/10.jpg",
+                "format": "l",
+                "captionBold": "",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/3/11.jpg",
+                "format": "l",
+                "captionBold": "Das Wort Otto liest sich von vorne gleich wie von hinten. An dem bewachsenen Fenster sitze ich oft. Ich bin dort gerne zum Frauenfrühstück – das ist immer am Montag von 10 bis 12 Uhr. Dort gibt es immer gutes Essen.",
+                "captionItalic": "Das war beim Warmen Otto."
+            },
+
+            {
+                "url": "/photos/3/12.jpg",
+                "format": "p",
+                "captionBold": "",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/3/13.jpg",
+                "format": "l",
+                "captionBold": "Hin und wieder lass ich mir ein kleines Spielzeug raus. Wie letztens, eine kleine Spinne in einer Plastikkugel.",
+                "captionItalic": "Ein alter Automat."
+            },
+
+            {
+                "url": "/photos/3/14.jpg",
+                "format": "l",
+                "captionBold": "Hier stehe ich oft in der Dunkelheit. Wenn ich in Richtung Notübernachtung oder Warmen Otto fahre.",
+                "captionItalic": "Eine Tankstelle."
+            },
+
+            {
+                "url": "/photos/3/15.jpg",
+                "format": "l",
+                "captionBold": "In dem Relay Geschäft lese ich gerne mal ein Comicbuch. Comicbücher sind auch was für Erwachsene.",
+                "captionItalic": "Das ist am Hauptbahnhof."
+            },
+            {
+                "url": "/photos/3/16.jpg",
+                "format": "l",
+                "captionBold": "",
+                "captionItalic": ""
+            },
+            {
+                "url": "/photos/3/17.jpg",
+                "format": "l",
+                "captionBold": "Die sehe ich oft. Die fahre ich oft rauf und runter. Es gibt dort unten einen Rewe, indem ich mir oft Geflügelrollen kaufe. Geflügelrollen sind eine Holländische Spezialität.",
+                "captionItalic": "Das ist auch am Hauptbahnhof."
+            },
+
+            {
+                "url": "/photos/3/18.jpg",
+                "format": "l",
+                "captionBold": "",
+                "captionItalic": "Noch 20 Minuten bis die Notübernachtung öffnet."
+            },
+
+            {
+                "url": "/photos/3/19.jpg",
+                "format": "l",
+                "captionBold": "",
+                "captionItalic": "Mein Glück."
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "bold": "Von außen denkt jeder, dass es mir gut geht.",
+        "italic": "Doch ich weine viel. Ich weine nach innen.",
+        "letter": "S",
+        "kurzbio": "Ich komme ursprünglich aus Kambodscha und bin seit ca. 12 Jahren in Berlin. Ich habe drei Kinder, die in Kambodscha leben. Leider haben sie mich noch nie hier in Deutschland besucht. Als ich neun Jahre alt war, ist meine Mutter gestorben. Danach hatte ich viele Probleme im Leben. Doch Probleme sind allgemein etwas Gutes. Dafür bin ich sehr dankbar. Dadurch bekommt man Lebenserfahrung. Man lernt eben aus den schlechten Dingen im Leben. Ich habe Vieles akzeptiert im Leben, auch den Tod meiner Mutter. Denn jeder sollte sein eigener Therapeut sein. Man weiß ja nie, wann das Leben endet.",
+        "interview": false,
+        "age": "60 Jahre alt",
+        "wohnungslos": "wohnungslos",
+        "photos": [
+            {
+                "url": "/photos/4/1.jpg",
+                "format": "p",
+                "captionBold": "",
+                "captionItalic": "Das Zimmer in der Notübernachtung."
+            },
+
+            {
+                "url": "/photos/4/2.jpg",
+                "format": "l",
+                "captionBold": "Das Leben besteht oft aus Trampelpfaden, die in verschiedene Richtungen laufen. Das ist dann der eigentlich richtige Weg – oder er führt auf ihn.",
+                "captionItalic": "Das Leben ist keine Autobahn von A nach B."
+            },
+
+            {
+                "url": "/photos/4/3.jpg",
+                "format": "l",
+                "captionBold": "",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/4/4.jpg",
+                "format": "l",
+                "captionBold": "",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/4/5.jpg",
+                "format": "l",
+                "captionBold": "das bin ich. Ich falle oft auf den Boden. Das ist ein Zeichen, dass ich nicht mehr kann. Es ist schwierig, wieder aufzustehen, doch man muss sich immer wieder selbst aktivieren.",
+                "captionItalic": "Das sind nicht nur Bäume. Das sind auch nicht nur Blätter, die herunterfallen. Diese Blätter – "
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "bold": "Schöne Erlebnisse habe ich jeden Tag.",
+        "italic": "Der Tag ist lang.",
+        "letter": "I",
+        "kurzbio": "Ich komme aus Ostberlin. Dankbar bin ich für sehr Vieles im Leben – meistens aber eher unterbewusst. Der Mensch kann ja gar nicht überleben, wenn er für nichts dankbar wäre. Wir sind auf der Welt, um zu lernen. Wir alle müssen lernen loszulassen. Nur so kommen wir im Leben weiter. Hin und wieder frage ich mich, woher das kommt, dass der Mensch perfekt sein muss. Jeder Mensch ist doch ein Diamant, bei dem schon alles da ist und nur noch geschliffen werden muss. Was von Anfang bis zum Ende im Leben da ist und bleibt, ist das innere Selbst. Das muss geformt werden – und das durch Erfahrungen.",
+        "interview": false,
+        "age": "55 Jahre alt",
+        "wohnungslos": "wohnungslos",
+        "photos": [
+            {
+                "url": "/photos/5/1.jpg",
+                "format": "p",
+                "captionBold": "",
+                "captionItalic": "Ein Park in Alt-Moabit."
+            },
+            {
+                "url": "/photos/5/2.jpg",
+                "format": "p",
+                "captionBold": "Das Dach ist nur noch ein Gerüst. Ich wollte eigentlich, dass das alte Schild mit der Aufschrift Ausgang im Vordergrund steht. Da hätte ich mit der Kamera näher hingehen müssen. Da war ich auf dem Weg nach Potsdam.",
+                "captionItalic": "Das ist der Bahnhof in Hennigsdorf."
+            },
+
+            {
+                "url": "/photos/5/3.jpg",
+                "format": "p",
+                "captionBold": "Hierzu sage ich nichts. Da kann sich jeder selbst etwas dazu denken.",
+                "captionItalic": "Ein alter Trabi auf Beinen."
+            },
+            {
+                "url": "/photos/5/4.jpg",
+                "format": "p",
+                "captionBold": "",
+                "captionItalic": ""
+            },
+            {
+                "url": "/photos/5/5.jpg",
+                "format": "l",
+                "captionBold": "Der ist wirklich toll. Er ist am Bahnhof Pirschhaide. Den habe ich von außen fotografiert.",
+                "captionItalic": "Der Buchladen Sputnik."
+            },
+
+            {
+                "url": "/photos/5/6.jpg",
+                "format": "p",
+                "captionBold": "Ich fand die Details an dem Balkon sehr schön.",
+                "captionItalic": "Hier wurde es schon langsam dunkel."
+            },
+
+            {
+                "url": "/photos/5/7.jpg",
+                "format": "p",
+                "captionBold": "Ich fand das mittendrin gut.",
+                "captionItalic": "Der religiöse Hintergrund war mir nicht wichtig."
+            },
+
+            {
+                "url": "/photos/5/8.jpg",
+                "format": "p",
+                "captionBold": "Das ist eine ausgebombte Kirche.",
+                "captionItalic": "An dem Tag war ein schönes Glockenspiel zu hören. Da steht nur noch der Glockenturm."
+            },
+            {
+                "url": "/photos/5/9.jpg",
+                "format": "p",
+                "captionBold": "",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/5/10.jpg",
+                "format": "l",
+                "captionBold": "Da war ich noch nie drin.",
+                "captionItalic": "Das Wiener."
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "bold": "Das musste ich mir schon öfters von Männern anhören:",
+        "italic": "Zieh doch zu mir.",
+        "letter": "A",
+        "kurzbio": "Ich komme aus Hannover und bin seit Januar 2021 in Berlin. In meiner Jugend war ich in Düsseldorf für ein paar Wochen wohnungslos. Dort habe ich mich dann irgendwie immer durchgemogelt. Wichtig im Leben ist mir, dass ich meinen Humor und meine Freude nicht verliere. Das merke ich vor allem, wenn ich Zeitungen verkaufe. Wichtig sind auch gut gelaunte Menschen in meinem Umfeld. Mein wertvollster Besitz ist mein Handy: Damit kann ich Musik hören, weiß immer wie spät es ist und kann mich informieren und organisieren. Vor 10 Jahren war ich auf einem Reiterhof, bei dem therapeutisches Reiten angeboten wurde. Die Erfahrungen, die ich dort gesammelt habe, waren sehr positiv. So was würde ich gerne noch einmal machen. Aber im Moment ist eine sichere Wohnung mein größter Wunsch.",
+        "interview": true,
+        "interviewTxt": [
+            {
+                "question": "Wie alt bist du und woher kommst du?",
+                "answer": "Ich bin 32 Jahre alt und komme aus Hannover. Seit Anfang des Jahres bin ich in Berlin."
+            },
+            {
+                "question": "Wie war dein Tag heute?",
+                "answer": "Ich habe einiges an Anträgen ins Laufen gebracht. Es gibt Bewegung drin – das ist schon mal gut. Die letzten Tage habe ich versucht, der Kälte zu entfliehen. Ich bin viel S-Bahn und U-Bahn gefahren. Ich war viel unterwegs. Ich habe da so meine Strategien. Sonntags ist es besonders schwer, da alles zu hat. Man kann ja einfach nirgendwo hin. Bei dem Wetter Zeitungen zu verkaufen – das macht keinen Sinn. Man kann ja auch nur eine gewisse Zeit draußen stehen, ohne sich Eiszapfen an den Füßen zu holen. Ich bin nicht der Typ, der dann gerne in den Bahnen bettelt. "
+            },
+            {
+                "question": "Gab es die letzten Tage ein schönes Erlebnis für dich?",
+                "answer": "Ja, ich hatte gestern ein sehr großes Glück. Ich habe viele verschiedene Spendenstellen für Klamotten aufgesucht und versucht in meiner Größe etwas zu finden. Bei der Brückenküche hatte ich dann Glück. Dort habe ich dann eine warme Suppe bekommen und ein paar schöne heile Hosen."
+            },
+            {
+                "question": "Hast du die letzten Tage etwas nicht so schönes erlebt?",
+                "answer": "Abgesehen von dem beschissenen Wetter, hat man halt hin und wieder Passanten, die unangenehme und negative Sprüche von sich geben. Ich habe auch abwertende Blicke von oben nach unten bereits erlebt. Ich sehe das mittlerweile mit einem Schulterzucken und schaue drüber weg. Ich freue mich über die, die nicht so denken, handeln, sind."
+            },
+            {
+                "question": "Hast du einen Beruf gelernt?",
+                "answer": "Ja, ich habe gefühlt vor Ewigkeiten Bäckereifachverkäuferin gelernt. Wenn die äußeren Umstände wieder auf geraden Bahnen sind, spricht nichts dagegen, in dem Beruf wieder zu arbeiten."
+            },
+            {
+                "question": "Hast du Hobbys, denen du gerne nachgehst?",
+                "answer": "Ich schnappe mir gerne Zeitungen, die in der Bahn liegen geblieben sind und lese sie dann an einem möglichst windstillen Bahnhof. Dabei kann ich etwas runterkommen."
+            },
+            {
+                "question": "Verdienst du gerade Geld?",
+                "answer": "Ja, ich habe verschiedene Standbeine. Einmal das Verkaufen von dem Strassenfeger Magazin. Dann durch das Flaschensammeln an den Bahnhöfen. Wenn es ganz doof läuft, bettle ich von einer U-Bahn zur anderen U-Bahn die Menschen mit meinem Spruch um Geld an. Wobei ich nicht der Typ bin, der stundenlang vorm Supermarkt mit einem Becherchen sitzt, da dort auch Sprüche von Männern kommen. Ne, das muss ich nicht haben. Man muss nicht dauerhaft sichtbar sein. Ich möchte selbst entscheiden, wann ich sichtbar bin, werde – und wann nicht. "
+            },
+            {
+                "question": "Wann bist du heute aufgestanden und hast die Einrichtung verlassen?",
+                "answer": "Aufgestanden um 7:30 Uhr und verlassen um 10 Uhr. Die Zeit dazwischen habe ich genutzt, um mich frisch zu machen und was zu essen."
+            },
+            {
+                "question": "Was ist dein erstes Ziel, wenn du die Einrichtung verlässt?",
+                "answer": "Das ist komplett unterschiedlich und Tagesform abhängig. Wenn ich Pfandflaschen vom Vortag habe, gehe ich direkt in einen Supermarkt und tausche sie um. Und hole mir davon was zum Mittagessen oder was zu trinken. Manchmal gehe ich auch direkt ins Hofbräuhaus oder zu Evas Haltestelle. Es ist auch abhängig davon, ob ich noch Geld verdienen muss, ob ich mich warm aufhalten möchte oder das dringende Bedürfnis habe, auf die Toilette zu gehen. Danach richte ich individuell den Tag ein. Ich habe den Vorteil, dass ich ein Handy habe. Damit kann ich mich relativ gut organisieren. Was aber total doof ist, dass man sich die Fahrkarten sich selbst organisieren muss, wenn man nicht schwarz fahren möchte. Das zählt ja immer noch als Straftat und wenn man dreimal erwischt wurde, landet man schlimmsten Falls gleich im Knast. Lieber esse und trinke ich zwei Tage nichts, aber kann mir eine Fahrkarte kaufen. Ich habe noch keinen Tag erlebt, an dem ich nicht kontrolliert worden bin."
+            },
+            {
+                "question": "Gab es schon mal Streit oder Probleme in einer Einrichtung?",
+                "answer": "Ich versuche immer dem Streit aus dem Weg zu gehen. Auch gehe ich zu manchen Essensausgaben etwas später und bekomme im schlimmsten Fall vielleicht kein Essen mehr. Denn es kann immer sein, dass jemand zum Beispiel ein Messer zückt. Das habe ich am Rande schon mal mitbekommen. Man weiß nie, ob Alkohol oder Drogen im Spielt sind. Oder auch früher bei der Arbeit auf der Straße, wenn es dort Probleme gab, bin ich lieber in eine andere Ecke gegangen."
+            },
+            {
+                "question": "Seit wann bist du wohnungslos?",
+                "answer": "Seit ein paar Wochen. In meiner Jugend war ich in Düsseldorf auch für ein paar Wochen wohnungslos. Dort habe ich mich dann irgendwie immer durchgemogelt."
+            },
+            {
+                "question": "Warum bist du wohnungslos?",
+                "answer": "Jetzt wird es kompliziert. Ich bin damals von einem Stalker und anderen Belästigungen geflüchtet. Deswegen bin ich immer noch sehr schreckhaft und vorsichtig. Ich habe mich dann einfach in den Zug gesetzt und wusste, dass in Berlin es Anlaufstellen gibt. Ich habe mich dann für diesen Weg entschieden und bin gerade dabei, wieder aus dem Schlamassel heraus zukommen – ohne gleich einen Kopf kürzer zu sein."
+            },
+            {
+                "question": "Haben die Belästigungen durch den Stadtwechsel aufgehört?",
+                "answer": "Ich kann es noch nicht einschätzen, das ist das Problem. Weil ich wie gesagt noch sehr schreckhaft bin. Ich kann da im Moment noch nichts sagen. Ich bin froh über meinen Plan B, den ich zur Hand habe. Es gibt noch eine andere Stadt, wo ich hin könnte, aber dafür muss der andere Kram erst mal geklärt sein. Ich bin dankbar dafür, dass ich gerade nicht in dem ollen Keller schlafen muss, was auch noch eine Möglichkeit wäre, unterzukommen. Dort gibt es aber leider keine Toilette oder Dusche. Draußen schlafen, wäre dann schon noch mal eine Hausnummer übler."
+            },
+            {
+                "question": "Wie geht’s dir mit der aktuellen Corona-Lage?",
+                "answer": "Ätzend. Ich habe mich inzwischen an die Masken gewöhnt, aber es nervt einfach. Auch, dass der ganze Einzelhandel zu hat. Dadurch hat man keine Möglichkeiten sich einfach mal hinzusetzen. Man läuft rum, wie ein „Normalo“, also nicht sehr auffallend und möchte sich einfach mal ne halbe Stunde hinsetzen – aber man kann es nicht. Mit dem Wetter ist es doppelt und dreifach übel. Ich will nicht wissen, wie viele Tote es Ende der Woche geben wird."
+            },
+            {
+                "question": "Warum wohnst du in einer Einrichtung, in der nur Frauen wohnen?",
+                "answer": "Ich war bereits in Tageseinrichtungen, in denen Männern waren. Keinen Bock auf dumme Sprüche von Männern. Ich finde es ohne Männer einfach viel angenehmer. In den sehr großen Einrichtungen, in denen man in einem Raum mit zehn anderen Menschen schläft, muss man seinen Rucksack oft als Kopfkissen benutzen. Ansonsten muss man Angst haben, dass etwas geklaut wird. In etwas kleineren Einrichtungen hat man mehr Schutz und man kann auch seine Sachen wegsperren."
+            },
+            {
+                "question": "Hattest du auf der Straße schon mal Schwierigkeiten mit einem Mann?",
+                "answer": "Das musste ich mir leider schon oft von Männern anhören: „Zieh doch zu mir in die Wohnung, da kannste pennen.“ Oder, dass sie einen Drink ausgeben wollen und man nicht weiß, ob dort vielleicht etwas drin ist. Da bin ich vorsichtig und misstrauisch. Mich hat ein Mal ein Mann dreimal doof angebaggert. Er meinte: „Komm zu mir und werde meine Freundin.“ Nach dem dritten Mal: „No, no. Verpiss dich“, ist er abgehauen. Ich wurde dann schon lauter mit der Stimme. Ich bin nicht auf den Mund gefallen. Auch bewege ich mich in den U-Bahnen im Zickzack, um sicher zu sein, dass mir kein Mann hinterherläuft."
+            },
+            {
+                "question": "Was ist das schwierigste für dich, als Frau wohnungslos zu sein?",
+                "answer": "Da bin ich immer vorsichtig. Ich bin mit Binden immer gut ausgestattet. Es gibt aber halt auch nicht so viele Ecken, wo man eben mal schnell seine Binde in einem Busch wechseln kann."
+            },
+            {
+                "question": "Wie gehst du damit um, wenn du deine Regelblutung hast?",
+                "answer": "Gute Frage, nächste Frage. Zum einen, was ein allgemeines Problem ist, aber was durch Corona verstärkt wurde, ist die Möglichkeit auf die Toilette zu gehen und normale Körperhygiene-Sachen umzusetzen. Auch Orte, wo man sich mal ausruhen, entspannen und Sicherheit finden kann. Das finde ich schwierig."
+            },
+            {
+                "question": "Wie sind wohnungslose Frauen untereinander?",
+                "answer": "Komplett unterschiedlich. Es gibt einige, die nett sind, aber dann hinter dem Rücken lästern. Dann gibt es welche, die leben eine Ellenbogengesellschaft aus oder auch einige, die lieber für sich sind. Vereinzeln gibt es dann noch welche, mit denen man ganz gut klarkommt und die sich gegenseitig helfen. Man muss da vorsichtig sein, denn ich wurde schon ausgenutzt. Auch macht es einen Unterschied, ob Frauen alkohol- oder drogenabhängig sind oder eben keine Süchte haben."
+            },
+            {
+                "question": "Sind wohnungslose Frauen unsichtbar?",
+                "answer": "Ja, es ist einfach ein Schutz. Wenn man als wohnungslose Frau sehr erkennbar, z. B. verwahrlost herumläuft, ist man eher Opfer von Übergriffen, Gewalt und anderen Beleidigungen. Genau deshalb stehe ich auch nicht zehn Stunden am Tag vor dem Kaufhaus und bettle. Ich weiß genau, dass es  viele Idioten gibt, die dir im besten Fall nur deinen Becher wegtreten und im schlimmsten Fall  dir ne Bierflasche übern Kopf werfen. Der Gefahr setze ich mich nicht aus. Dann bin ich lieber unsichtbar. Auch aus Scham. Ich habe nichts dagegen, kurz durch die U-Bahn zu gehen mit meinem Becher, aber ich muss das nicht den ganzen Tag haben. Da ist mir meine Würde zu wertvoll. Oder, dass ein Typ mir hinterherläuft und mir eine rüberbratet. Ja, wegen Sicherheit und Scham."
+            },
+            {
+                "question": "Welche Werte sind dir in deinem Leben wichtig?",
+                "answer": "Ehrlichkeit, Freundlichkeit und Empathie."
+            },
+            {
+                "question": "Bist du heute oder im Allgemeinen für etwas dankbar?",
+                "answer": "Ich bin dankbar, dass es weitergeht – dass Bewegung drin ist. Es gibt ein paar Perspektiven, wenn auch eher kein und sehr schwammig, aber es ist momentan kein Stillstand. Aus welchen Richtungen auch immer – es geht voran."
+            },
+            {
+                "question": "Was willst du in deinem Leben gar nicht mehr haben?",
+                "answer": "Ich habe keinen Bock mehr auf Stalker und Arschlöcher, die einem ans Leder wollen. Definitiv."
+            },
+            {
+                "question": "Fühlst du dich manchmal einsam?",
+                "answer": "Ich bin ein kontaktfreudiger Mensch. Aber es gibt Phasen, in denen ich mir denke, dass eine herzliche Umarmung schön wäre."
+            },
+            {
+                "question": "Wem würdest du etwas sagen wollen, wenn du das könntest?",
+                "answer": "Den Politikern. Das Thema Obdachlosigkeit ist zu sehr in den Hintergrund geraten. Jetzt vor Kurzem sind an der Rummelsburger Bucht 100 Obdachlose bei Nacht geräumt worden. Da kommt dann das fadenscheinige Argument, dass aus Schutz der Platz geräumt wird oder der Grund, dass das Bild der öffentlichen Ordnung stört. Wichtig ist es, dass diesen Menschen dann aber auch adäquate und vernünftige Angebote geboten werden. Bei denen sie dann auch mit Beeinträchtigung, Sucht oder Hund hinkönnen. Das muss wirklich viel besser ausgebaut und verbessert werden."
+            },
+            {
+                "question": "Was würdest du allen Berlinern sagen wollen, wenn du das könntest?",
+                "answer": "Nehmt eure Umwelt mehr wahr, nehmt eure Mitmenschen mehr wahr. Traut euch ruhig eine Frau anzusprechen, wenn ihr diese als wohnungslos identifiziert. Fragt sie, was sie gebrauchen kann. Manchmal ist es auch so, dass man den fünften Kaffee ungefragt bekommt. Viel besser wäre es, zu fragen, was in dem Moment wirklich benötigt wird. Sich einfach mal fünf Minuten die Zeit nehmen, stehen bleiben und die Person ansprechen. Man braucht davor keine Angst oder Scheu haben. Das sind ganz normale Menschen, so wie du und ich."
+            }
+        ],
+        "age": "32 Jahre alt",
+        "wohnungslos": "seit vier Wochen wohnungslos",
+        "photos": [
+            {
+                "url": "/photos/6/1.jpg",
+                "format": "l",
+                "captionBold": "In der Coronazeit bekommen dort Bedürftige ein Essen von 10 bis 16 Uhr. Ich hatte dort einen Platz in der Ecke an einer Heizung.",
+                "captionItalic": "Das war im Hofbräuhaus."
+            },
+
+            {
+                "url": "/photos/6/2.jpg",
+                "format": "l",
+                "captionBold": "",
+                "captionItalic": "Mein Teller."
+            },
+
+            {
+                "url": "/photos/6/3.jpg",
+                "format": "p",
+                "captionBold": "",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/6/4.jpg",
+                "format": "l",
+                "captionBold": "Oder wie man es nennen mag.",
+                "captionItalic": "Zeit verweilen. Ruhe finden. Runterfahren."
+            },
+
+            {
+                "url": "/photos/6/5.jpg",
+                "format": "l",
+                "captionBold": "Das dort auf dem Foto, das war meine Vodka Flasche.",
+                "captionItalic": "Thema Sucht."
+            },
+
+            {
+                "url": "/photos/6/6.jpg",
+                "format": "l",
+                "captionBold": "Wenn man wegen dem Flaschensammeln durch die Stadt schlendert, fallen einem solche Läden auf. Manch andere Leute gehen vielleicht einfach vorbei.",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/6/7.jpg",
+                "format": "l",
+                "captionBold": "Da war ich halt. Aber an dem Tag war es aber ein Flop, da am Sonntag nur sechs Personen rein dürfen.",
+                "captionItalic": "In der Straße gab es eine Essensausgabe."
+            },
+
+            {
+                "url": "/photos/6/8.jpg",
+                "format": "l",
+                "captionBold": "Evas Haltestelle: eine Tagesstätte für Frauen.",
+                "captionItalic": "Aufwärmen. Aufhalten. Auf die Toilette gehen."
+            },
+
+            {
+                "url": "/photos/6/9.jpg",
+                "format": "l",
+                "captionBold": "Hier verkaufe ich den Strassenfeger. An der Ecke konnte ich in Ruhe stehen. Am Hermannplatz war mir zu viel Rumbaggerei – das war mir zu doof. Und auch nicht dieses typische Haltestellen-Klischee, was man oft mit dem Zeitungsverkauf in Verbindung setzt.",
+                "captionItalic": "Das war am Humboldthain."
+            },
+            {
+                "url": "/photos/6/10.jpg",
+                "format": "l",
+                "captionBold": "Da hab ich die Zeit am Ende genutzt, um einmal oben am Humboldthain die Aussicht zu genießen, da mir das Wetter zu geil war. Leider mit Rutschpartie am Ende.",
+                "captionItalic": "Man sieht hier die Brücke, wo ich stand."
+            },
+
+            {
+                "url": "/photos/6/11.jpg",
+                "format": "l",
+                "captionBold": "",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/6/12.jpg",
+                "format": "p",
+                "captionBold": "Eiszapfen, Kälte: die Problematik des Winters. Alles ist gefroren und man muss laufen, laufen, laufen.",
+                "captionItalic": "Das war am Rathhaus Neukölln."
+            },
+
+            {
+                "url": "/photos/6/13.jpg",
+                "format": "l",
+                "captionBold": "Wobei ich danach noch etwas Besseres gefunden habe. Das ist mein ganzes Hab und Gut, was ich tagsüber so mit mir rumschleppe.",
+                "captionItalic": "Aufhalten.Unterstellen. Hinsetzen."
+            },
+
+            {
+                "url": "/photos/6/14.jpg",
+                "format": "l",
+                "captionBold": "Wenn es regnet, dass man eine Unterschlupf findet.",
+                "captionItalic": "Hauseingänge."
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "bold": "",
+        "italic": "",
+        "letter": "S",
+        "kurzbio": "",
+        "interview": false,
+        "age": "49 Jahre alt",
+        "wohnungslos": "wohnungslos",
+        "photos": [
+            {
+                "url": "/photos/7/1.jpg",
+                "format": "l",
+                "captionBold": "Da wurden die Schließfächer in der Notübernachtung geleert. Ansammlungen von irgendwelchen Frauen, die die Sachen dort gelassen haben.",
+                "captionItalic": "Hja, das alles wird dann irgendwann einfach weggeschmissen."
+            },
+
+            {
+                "url": "/photos/7/2.jpg",
+                "format": "l",
+                "captionBold": "Es gibt ein Stockwerk oben drüber eine Küche, aber da dürfen wir nicht rein wegen Corona. Ich fand das Shampoo amüsant, das dort steht. Vielleicht hat sich eine Frau die Haare dort gewaschen.",
+                "captionItalic": "Die Spüle in der Notunterkunft."
+            },
+
+            {
+                "url": "/photos/7/3.jpg",
+                "format": "l",
+                "captionBold": "Die Weihnachtskarte ist von Franz Zander, dem Sänger, der normalerweise immer ein Weihnachtsessen für Obdachlose organisiert. Wegen Corona konnte das dieses Jahr nicht stattfinden. Da waren Schinkenknacker dabei – die mag ich nicht.",
+                "captionItalic": "Unser Weihnachtsessen."
+            },
+
+            {
+                "url": "/photos/7/4.jpg",
+                "format": "l",
+                "captionBold": "",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/7/5.jpg",
+                "format": "p",
+                "captionBold": "",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/7/6.jpg",
+                "format": "l",
+                "captionBold": "",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/7/7.jpg",
+                "format": "l",
+                "captionBold": "Ich habe sie zum Trocknen über den Föhn und diese echt hässliche Spüle gehängt. Man schwitzt ja auch oft unter denen. Ich habe eine öffentliche Toilette gefunden, für die man kein Geld braucht. Dort konnte ich meine Zähne putzen.",
+                "captionItalic": "Meine Masken."
+            },
+            {
+                "url": "/photos/7/8.jpg",
+                "format": "l",
+                "captionBold": "",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/7/9.jpg",
+                "format": "l",
+                "captionBold": "Ich mag vieles was mit Indien zu tun hat. Den Elefanten fand ich sehr schön. Ich habe lustigerweise in der Nähe eine Tasse gefunden – auch mit einem Elefanten drauf. Die habe ich mitgenommen.",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/7/10.jpg",
+                "format": "p",
+                "captionBold": "",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/7/11.jpg",
+                "format": "l",
+                "captionBold": "Den Spruch auf dem Fahrrad fand ich irgendwie cool.",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/7/12.jpg",
+                "format": "l",
+                "captionBold": "Fand ich gut.",
+                "captionItalic": "Die Frau kickt den Mann mit dem Fuß weg."
+            },
+
+            {
+                "url": "/photos/7/13.jpg",
+                "format": "l",
+                "captionBold": "",
+                "captionItalic": "Eine Melone als Telefon."
+            },
+
+            {
+                "url": "/photos/7/14.jpg",
+                "format": "l",
+                "captionBold": "Mir hat es sehr viel Spaß gemacht, durch die Stadt zu laufen und die Fotos zu machen. So sind mir auch viel mehr Dinge aufgefallen.",
+                "captionItalic": "Ein Kunstwerk an einer Hauswand."
+            },
+
+            {
+                "url": "/photos/7/15.jpg",
+                "format": "l",
+                "captionBold": "Traurig, dass man so was einfach wegschmeißt.",
+                "captionItalic": "Marmelade, Wurst und Brot in einer Tüte."
+            },
+
+            {
+                "url": "/photos/7/16.jpg",
+                "format": "p",
+                "captionBold": "",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/7/17.jpg",
+                "format": "l",
+                "captionBold": "Dort habe ich meine Klamotten her. Auch die Hose, die ich gerade anhabe. Der Osterhase stand dort auch.",
+                "captionItalic": "Das ist die Freibox am Richardplatz in Neukölln."
+            },
+
+            {
+                "url": "/photos/7/18.jpg",
+                "format": "p",
+                "captionBold": "Das find ich sehr witzig. An diesem Haus gehe ich oft vorbei. Es wird immer schön dekoriert.",
+                "captionItalic": "Ich bin nicht da! Bin mich suchen gegangen, wenn ich wieder da bin bevor ich zurückkomme, sagt mir ich soll auf mich warten."
+            },
+
+            {
+                "url": "/photos/7/19.jpg",
+                "format": "l",
+                "captionBold": "Das war kurz vor Silvester. Das hier habe ich dann meiner Zimmermitbewohnerin geschenkt.",
+                "captionItalic": "Das war zum Mitnehmen."
+            },
+
+            {
+                "url": "/photos/7/20.jpg",
+                "format": "l",
+                "captionBold": "",
+                "captionItalic": ""
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "bold": "Ein Mann hat mir Koks angeboten.",
+        "italic": "Dafür sollte ich ihm einen blasen.",
+        "letter": "S",
+        "kurzbio": "Ich komme ursprünglich aus Augsburg. Das wohl schönste Erlebnis in meinem Leben war die Geburt meiner beiden Söhne. Sie sind mir das Allerwichtigste. Leider habe ich sie schon lang nicht mehr gesehen. Mein großer Sohn arbeitet bei der Kriminalpolizei in Berlin. Mein größter Wunsch ist, dass mein Bein wieder heilt. Ich habe ein Ödem, das sind Wassereinlagerungen. Auch bin ich auf der Suche nach einem Zuhause. Doch ich weiß leider nicht, ob das noch klappt. Ich weiß nicht, ob das meine letzte Station ist – hier im Drogennotdienst. Ich fühle mich oft einsam.",
+        "interview": false,
+        "age": "41 Jahre alt",
+        "wohnungslos": "seit drei Jahren wohnungslos",
+        "photos": [
+            {
+                "url": "/photos/8/1.jpg",
+                "format": "l",
+                "captionBold": "",
+                "captionItalic": "Eine kleine Essensausgabe am Kotti."
+            },
+            {
+                "url": "/photos/8/2.jpg",
+                "format": "p",
+                "captionBold": "",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/8/3.jpg",
+                "format": "l",
+                "captionBold": "Hier in dem Innenhof, in den Garagen, musste ich einen Corona-Test machen, da ich mit positiv getesteten Personen Kontakt hatte. Der Test war zum Glück negativ.",
+                "captionItalic": "Das ist beim DND, das ist der Drogennotdienst."
+            },
+
+            {
+                "url": "/photos/8/4.jpg",
+                "format": "l",
+                "captionBold": "",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/8/5.jpg",
+                "format": "l",
+                "captionBold": "Hier wollte ein Mann sexuelle Gefälligkeiten gegen Drogen.",
+                "captionItalic": "Seinen Kumpels hat er erzählt, dass ich auf sein Angebot eingegangen bin."
+            },
+
+            {
+                "url": "/photos/8/6.jpg",
+                "format": "l",
+                "captionBold": "Hier kann man Drogen konsumieren – ohne Vorurteile. In dem einen Bus kann man konsumieren und in dem andern bekommt man alles dafür. Die Jungs durfte ich fotografieren.",
+                "captionItalic": "Der Fixpunkt in der Eisenacher Straße."
+            },
+
+            {
+                "url": "/photos/8/7.jpg",
+                "format": "p",
+                "captionBold": "",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/8/8.jpg",
+                "format": "l",
+                "captionBold": "",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/8/9.jpg",
+                "format": "l",
+                "captionBold": "",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/8/10.jpg",
+                "format": "l",
+                "captionBold": "Ich habe an dem Tag einen Mann getroffen, der mir einfach so neue Krücken gekauft hat. Bei meinen alten war das Profil unten kaputt. Und dann hat er mir auch noch einen neuen Gesundheitsschuh für 55€ gekauft.",
+                "captionItalic": "Ich konnte mein Glück kaum glauben. Gutes Karma für diesen Menschen."
+            },
+            {
+                "url": "/photos/8/11.jpg",
+                "format": "l",
+                "captionBold": "Manchmal warte ich schon um 16 Uhr vor der Eingangstür – sie öffnet um 19 Uhr.",
+                "captionItalic": "Das ist vor der Notübernachtung."
+            },
+
+            {
+                "url": "/photos/8/12.jpg",
+                "format": "l",
+                "captionBold": "",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/8/13.jpg",
+                "format": "l",
+                "captionBold": "Ich habe den Mann gefragt, ob ich mich dazu setzen kann. Er meinte „ja“, aber nur in ein bestimmtes Eck. Später wurden er und sein Kumpel etwas aggressiv und sie drohtenmir mit Gewalt. Sie meinten, ich zerstöre ihr Business, also die Schnorr-Einnahmen.",
+                "captionItalic": "Das war in der Zossenerstraße."
+            },
+
+            {
+                "url": "/photos/8/14.jpg",
+                "format": "l",
+                "captionBold": "Da sitze ich mit einem coolen Typen auf der Treppe. Die da hinten im Hintergrund – das sind unheimliche Menschen. Das sind die Menschen, die dich abzocken oder versuchen, dir was zu klauen.",
+                "captionItalic": "Das war wieder am Kotti."
+            },
+
+            {
+                "url": "/photos/8/15.jpg",
+                "format": "p",
+                "captionBold": "Die sind mittlerweile leider auch weg. Die sind mir in der Tür von der U-Bahn eingeklemmt und ich habe sie losgelassen. Dann sind sie weitergefahren und ich stand ohne da.",
+                "captionItalic": "Meine bemalten Krücken."
+            },
+
+            {
+                "url": "/photos/8/16.jpg",
+                "format": "l",
+                "captionBold": "",
+                "captionItalic": "Hier gebe ich mir einen Schuss."
+            },
+
+            {
+                "url": "/photos/8/17.jpg",
+                "format": "l",
+                "captionBold": "Ich habe mich gefreut, als ich das aufgeschrieben habe. Und das war dann einen Tag später… ",
+                "captionItalic": "Mein Kalender. In den schreibe ich hin und wieder etwas rein."
+            },
+
+            {
+                "url": "/photos/8/18.jpg",
+                "format": "l",
+                "captionBold": "Dann habe ich halt wieder Stoff gekauft. Wenn man bewusst einen Dealer sucht, dann findet man keinen. Und wenn man dann bewusst keinen sehen will, dann kommen einem alle über den Weg.",
+                "captionItalic": "Dann habe ich halt wieder Stoff gekauft."
+            },
+
+            {
+                "url": "/photos/8/19.jpg",
+                "format": "l",
+                "captionBold": "",
+                "captionItalic": "Da hatte ich dann eine Depri-Phase."
+            },
+
+            {
+                "url": "/photos/8/20.jpg",
+                "format": "l",
+                "captionBold": "Mein Freund hatte damals bei einem Amoklauf 12 Menschen umgebracht – und sich selbst danach auch. Das ist mir irgendwie noch mal hochgekommen.",
+                "captionItalic": "Das war 2002."
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "bold": "Generell bin ich ein",
+        "italic": "Stehauffrauchen.",
+        "letter": "M",
+        "kurzbio": "Geboren bin ich in Oberbayern, im Chiemgau und seit 1971 bin ich in Berlin. Aber eigentlich bin ich auf Kreta zu Hause. Dort hätte ich gerne meinen zweiten Wohnsitz. Das ist meine Zukunftsvision. Bei mir ist das Glas immer halb voll – oder es läuft über. Ich sterbe jeden Tag einen Tod, sonst kann ja auch nichts Neues passieren. Man darf den Humor nicht verlieren. Gott sei Dank ist mir das gelungen. Momentan hab ich nur 20 Cent in der Tasche – das ist schon manchmal bitter. Wenn mir nicht immer irgendwer etwas schenken würde, würde ich alt aussehen. Ich denke mir oft: Schlimmer geht’s immer.",
+        "interview": false,
+        "age": "70 Jahre alt",
+        "wohnungslos": "seit acht Jahren wohnungslos",
+        "photos": [
+            {
+                "url": "/photos/9/1.jpg",
+                "format": "l",
+                "captionBold": "Ich kenne sie seit Jahren. Wir verstehen uns gut.",
+                "captionItalic": "Das ist eine Sozialarbeiterin und unsere Security-Chefin."
+            },
+
+            {
+                "url": "/photos/9/2.jpg",
+                "format": "p",
+                "captionBold": "",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/9/3.jpg",
+                "format": "p",
+                "captionBold": "Müde Augen – hm ja.",
+                "captionItalic": "Ein Kunstwerk."
+            },
+
+            {
+                "url": "/photos/9/4.jpg",
+                "format": "p",
+                "captionBold": "",
+                "captionItalic": "Da wohnen die Ärmsten."
+            },
+
+            {
+                "url": "/photos/9/5.jpg",
+                "format": "l",
+                "captionBold": "Das sind alte Schnitzereien aus dem 11. Jahrhundert von Stabkirchen aus Skandinavien.",
+                "captionItalic": "Das hing an einer Brücke in Potsdam."
+            },
+
+            {
+                "url": "/photos/9/6.jpg",
+                "format": "p",
+                "captionBold": "",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/9/7.jpg",
+                "format": "l",
+                "captionBold": "Das ist ein leerstehendes Fischerhaus am Heiligen See. Hier laufe ich öfters vorbei und schaue es mir an.",
+                "captionItalic": "Das wäre mein Traum. Dort würde ich gerne wohnen."
+            },
+
+            {
+                "url": "/photos/9/8.jpg",
+                "format": "p",
+                "captionBold": "Hier bin ich gern und oft. Dort habe ich früher Widerstandslieder gesungen. Ich habe eine sehr schöne Stimme.",
+                "captionItalic": "Das ist am Schloss Cicilienhof."
+            },
+
+            {
+                "url": "/photos/9/9.jpg",
+                "format": "p",
+                "captionBold": "Die ist zwischen Berlin und Brandenburg. Nach dem Mauerfall konnte man dort wieder rüber.",
+                "captionItalic": "Meine Glienicker Brücke."
+            },
+
+            {
+                "url": "/photos/9/10.jpg",
+                "format": "p",
+                "captionBold": "",
+                "captionItalic": "Das Schloss Babelsberg."
+            },
+            {
+                "url": "/photos/9/11.jpg",
+                "format": "p",
+                "captionBold": "",
+                "captionItalic": "Ätzend – ein Sonnenuntergang."
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "bold": "Meine Berliner Klappe hilft mir oft.",
+        "italic": "Vor allem bei Männern.",
+        "letter": "P",
+        "kurzbio": "Ich komme aus Berlin, Neukölln. Ich habe meinen ganzen Hausrat verloren. Ich hatte schöne Sachen, wie z. B. Möbel von Rolf Benz. Aber das sind für mich alles nur materielle Dinge, die man ersetzen kann. Wertvoll ist das alles, was in meinem Herzen ist. Auch ist mir mein Humor sehr wichtig. Den habe ich von meiner Oma. An was viele Erinnerungen hängen, ist eine schwarze Plastiktüte von einem Mann aus Israel. Mit ihm war es Liebe auf den ersten Blick. Ich wünsche mir, dass meine Nichte gesund bleibt und ihr nichts passiert. Wichtig im Leben sind auch Freunde, die man rund um die Uhr anrufen kann, wenn man Hilfe braucht. Es müssen ja nicht viele sein.",
+        "interview": true,
+        "interviewTxt": [
+            {
+                "question": "Wie alt bist du und woher kommst du?",
+                "answer": "Ich bin 54 Jahre alt und komme aus Berlin, Neukölln."
+            },
+            {
+                "question": "Wie war dein Tag heute?",
+                "answer": "Mein Tag war heute entspannt. Ich habe viel organisiert, dass ich am 01.02.2021 aus der Obdachlosigkeit raus bin."
+            },
+            {
+                "question": "Gab es die letzten Tage eine schöne Begegnung für dich?",
+                "answer": "Ein Freund arbeitet in einem Späti in Königs Wusterhausen. Dort bin ich oft. Gestern habe ihn besucht. Mit ihm ist es immer lustig."
+            },
+            {
+                "question": "Hast du die letzten Tage etwas nicht so schönes erlebt?",
+                "answer": "Eigentlich nicht. Alles hat sich zum Positiven entwickelt aufgrund von Eigeninitiative. Ich bin recht gut vernetzt und hole mir die Kontakte, die ich brauche. Solange ich reden kann und ich um Hilfe fragen kann, ist alles gut. Besonders geholfen haben mir die Sozialarbeiter in der Tieckstraße 17, in der der Einrichtung „Marie“, in der ich zuvor gewohnt habe. Das ist unglaublich."
+            },
+            {
+                "question": "Hast du einen Beruf gelernt?",
+                "answer": "Ja, ich bin Arzthelferin."
+            },
+            {
+                "question": "Verdienst du gerade Geld?",
+                "answer": "Ich bekomme eine Erwerbsunfähigkeitsrente und einen Ehegattenunterhalt. Also ich bin finanziell abgesichert."
+            },
+            {
+                "question": "Wann bist du heute aufgestanden und hast die Einrichtung verlassen?",
+                "answer": "Ich bin um 4:30 Uhr aufgestanden – ich genieße die Ruhe. Da sind die Bäder noch nicht besetzt. Um 9 Uhr bin ich dann losgegangen."
+            },
+            {
+                "question": "Was ist dein erstes Ziel, wenn du die Einrichtung verlässt?",
+                "answer": "Je nachdem was ich so vorhabe. Das Hofbräuhaus am Alex wurde umfunktioniert. Dort bekommt man unter der Woche von 10 Uhr bis 16 Uhr als bedürftige Person ein Essen und kann sich dort aufhalten. Auch gibt es eine Kleiderkammer. Diese Hose, die ich anhabe, habe ich auch von dort. Im Moment plane ich alles für die neue Wohnung, also ich habe jeden Tag irgendetwas zu tun. Aber das ist auch gut. Auch besuche ich meine Oma oder meine Familie – da kann ich immer Zeit überbrücken. Die aber wissen nichts von meiner Wohnungslosigkeit. Ich überlege jeden Abend, was ich am nächsten Tag mache. Das muss man auch."
+            },
+            {
+                "question": "Gab es schon mal Streit oder Probleme in einer Einrichtung?",
+                "answer": "Das haben wir jeden Tag. Wir sind nicht mehr im Hühnerkäfig, sondern schon bei den Orang-Utans. Aber das ist ja normal. Einmal hatte ich Streit mit einer Frau, sodass sie meinen Finger schwer verletzt hat. Aber das Thema ist zum Glück abgehakt."
+            },
+            {
+                "question": "Seit wann bist du wohnungslos?",
+                "answer": "Das kann ich dir genau sagen. Das war am 13.08.2020. Ich habe mir aber von Anfang an ein Ziel gesetzt: Länger als vier Wochen, bleibe ich nicht auf der Straße. Ich habe schon überlegt, ganz in ein Hotel zu ziehen – wie Udo Lindenberg in Hamburg. Ich habe schon zweimal in einem Hotel gewohnt. Von meiner Wohnungslosigkeit hab ich den Menschen dort nichts erzählt. Ich habe ihnen immer erzählt, dass ich meine Oma in Berlin besuche."
+            },
+            {
+                "question": "Warum bist du wohnungslos?",
+                "answer": "Ich habe in einer Wohnung gewohnt, bei der die Vermieterin Eigenbedarf angemeldet hat. Ich habe dann die kompletten Mietzahlungen eingestellt. Es war auch ein Fehler meinerseits, denn ich hätte mindestens die Betriebskosten zahlen müssen. Dadurch war dann die Klage zur Räumung gegeben. Hätte ich die Betriebskosten weiter gezahlt, hätten sie mich nicht so schnell rausbekommen, da ich Zahlungsbereitschaft gezeigt hätte. Ich wollte aber auch wieder zurück nach Berlin, da ich in Motzen von einem Mann gestalkt wurde. Dadurch habe ich alles verloren – meinen ganzen Hausrat. Aber das sind für mich alles nur materielle Dinge. Das ist alles immer wieder ersetzbar. Ich hatte schöne Sachen, wie z. B. Möbel von Rolf Benz. Auch hatte ich mir ein Boxspringbett gekauft. Aber ich glaube, das sollte alles so passieren. Als Erstes hat mir eine Asylunterkunft geholfen in der Lietzenburger Straße. Dort bin ich hineingestolpert. Das ist eine Unterkunft nur für Männer. Ich wollte dort bleiben, aber das ging natürlich nicht. Aber ich konnte dort erst mal zwei Stunden schlafen – mir war Wärme erst mal wichtig. Ich hatte ja auch einen großen Koffer dabei. Denen bin ich sehr dankbar. Die haben mir dann ein paar Adressen gegeben und meinten, ich solle zur Bahnhofsmission. Und dann bin ich am 06.12.2020 in die Tieckstraße 17 gefahren."
+            },
+            {
+                "question": "Wie du mir bereits erzählt hast, hast du einen Mietvertrag unterschrieben. Wie kam es dazu?",
+                "answer": "Das ist vor acht Tagen passiert. Ich war unterwegs und habe einen Freund getroffen und ihm erzählt, dass ich eine neue Wohnung suche. Ich habe ihm aber nicht erzählt, dass ich wohnungslos bin. Einfach nur, dass ich eine neue Wohnung brauche. Und er meinte, dass bei ihm im Haus auf seiner Etage ein Zimmer frei ist. Wir teilen uns dann die Küche und das Bad. Darüber bin ich sehr glücklich, auch wenn nur als Übergangslösung."
+            },
+            {
+                "question": "Warum wohnst du in einer Notübernachtung für Frauen?",
+                "answer": "Ich weiß durch einen Freund, dass es in den gemischten Einrichtungen viel Neid unter den Frauen gibt. Was grausam ist, ist der Alkoholismus unter den Männern. Auch läuft es in den Fraueneinrichtungen etwas persönlicher ab."
+            },
+            {
+                "question": "Hattest du auf der Straße schon mal Schwierigkeiten mit einem Mann?",
+                "answer": "Eigentlich nicht. Ich bin da „tough“ genug und habe keine Berührungsängste. Meine Berliner Klappe hilft mir oft – vor allem bei Männern."
+            },
+            {
+                "question": "Was ist das schwierigste für dich, als Frau wohnungslos zu sein?",
+                "answer": "Dass ich mir nichts alleine kochen kann. Im Hotel ging das nicht und hier in der Einrichtung geht das momentan nicht, wegen Corona. Zwecks Hygiene und Pflege habe ich keine Schwierigkeiten. Es gibt dafür mehrere Möglichkeiten. Am Bahnhof Zoo gibt es Duschen und als Corona noch nicht war, konnte man in Hallenbäder gehen. Oder einfach für 50 Cent auf öffentliche Toiletten."
+            },
+            {
+                "question": "Wie gehst du damit um, wenn du deine Regelblutung hast?",
+                "answer": "Die habe ich Gott sei Dank nicht mehr. Das ist sicherlich für viele ein Problem. Das stelle ich mir sehr unangenehm vor."
+            },
+            {
+                "question": "Wie sind wohnungslose Frauen untereinander?",
+                "answer": "Hilfsbereit und dankbar für jeden Tipp. Raucher sowieso – das ist ein Geben und Nehmen. Die Einrichtung hier ist wirklich sehr toll."
+            },
+            {
+                "question": "Sind wohnungslose Frauen unsichtbar?",
+                "answer": "Hm, weil sie vielleicht zurückhaltender sind und sich fremdschämen. Sie ihre Situation einfach nicht gerne preisgeben. Frauen werden schneller verurteilt als Männer. Man sieht vielen Frauen ihre Wohnungslosigkeit einfach nicht an. Das beste Beispiel war doch, als wir zusammen am Hauptbahnhof waren und eine Frau uns eine Straßenzeitung verkaufen wollte. Dann habe ich ihr gesagt, dass ich selbst wohnungslos bin. Dann hat sie mich von oben bis unten gemustert und sie meinte ganz zornig: „Ach was! Wer’s glaubt, wird selig. Aber dann eine Jacke von Wellensteyn anhaben.“ Vielleicht habe ich mir die Jacke gekauft, bevor ich in die Wohnungslosigkeit geraten bin…?"
+            },
+            {
+                "question": "Welche Werte sind dir in deinem Leben wichtig?",
+                "answer": "Ehrlichkeit, Loyalität, Bodenständigkeit, Freundlichkeit und Respekt. Um alles abzudecken ist es Respekt. Das ist ganz wichtig."
+            },
+            {
+                "question": "Bist du heute oder im Allgemeinen für etwas dankbar?",
+                "answer": "Ich freue mich immer, wenn die Sonne aufgeht. (Die Frau fängt leicht an zu weinen.) Eigentlich bin ich für alles dankbar. Dass ich gerade weine, ist ok. Manchmal muss man weinen. Weinen ist befreiend und reinigt auch die Seele. Über meinen Freund aus dem Späti bin ich auch sehr dankbar. Er ist immer am Lachen. Das war der Erste, der mir geholfen hat. Ich hatte kein Geld mit dem Bus nach Hause zufahren und musste dringend aufs Klo. Er hat mich auf die Toilette gehen lassen und hat mir Geld für den Bus gegeben. Auch habe ich einen warmen Kakao, ein Croissant und ein belegtes Brötchen bekommen. Das werde ich nie vergessen."
+            },
+            {
+                "question": "Was willst du in deinem Leben gar nicht mehr haben?",
+                "answer": "Ich könnte jetzt sagen: Obdachlosigkeit. Aber das könnte ganz schnell wieder passieren. Jetzt weiß ich, wo ich Hilfe bekomme, wenn ich sie brauche. Man sieht auch einfach mal diese Armut, dieses Elend. Viele Menschen, die nicht betroffen sind, schauen einfach weg. Die leben in ihrer Dunstglocke und wissen gar nicht, was drei Straßen weiter passiert."
+            },
+            {
+                "question": "Fühlst du dich manchmal einsam?",
+                "answer": "Ja. Eigentlich ganz oft. Ich bin gerne in einer Partnerschaft. Solange es eine respektvolle Partnerschaft mit Geben und Nehmen ist. Irgendwo wird schon jemand für mich sein. Ich war 22 Jahre Ehefrau – das war ich gerne."
+            },
+            {
+                "question": "Was würdest du allen Berlinern sagen wollen, wenn du das könntest?",
+                "answer": "Insgesamt den Humor nicht zu verlieren. Auch wenn es nicht einfach ist, es geht weiter. Spontan fällt mir etwas von dem Komiker Kurt Krömer ein: „Bleibt gesund – Macht’s gut Nachbarn.“"
+            }
+        ],
+        "age": "54 Jahre alt",
+        "wohnungslos": "seit vier Monaten wohnungslos",
+        "photos": [
+            {
+                "url": "/photos/10/1.jpg",
+                "format": "l",
+                "captionBold": "Da bin ich in Richtung Königs Wusterhausen gefahren.",
+                "captionItalic": "Am Südkreuz."
+            },
+
+            {
+                "url": "/photos/10/2.jpg",
+                "format": "p",
+                "captionBold": "",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/10/3.jpg",
+                "format": "l",
+                "captionBold": "Auf dem Bild sieht man den geilsten Späti überhaupt. Da treffen sich auch immer ganz viele Leute, die ich kenne.",
+                "captionItalic": "Das ist in Adlershof."
+            },
+
+            {
+                "url": "/photos/10/4.jpg",
+                "format": "l",
+                "captionBold": "Auf dem Bild sieht man ein Haus, in dem ich mir mal eine Wohnung mieten wollte. Da kamen dann Erinnerungen hoch, wenn man da vorbeifährt. Aber es kam einiges dazwischen: Corona und dies und das.",
+                "captionItalic": "Und das ist in Grünau."
+            },
+
+            {
+                "url": "/photos/10/5.jpg",
+                "format": "p",
+                "captionBold": "",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/10/6.jpg",
+                "format": "l",
+                "captionBold": "Da musste ich von dem einen in den anderen Zug einsteigen. Das fand ich sehr niedlich. Das Mädchen kenne ich aus Königs Wusterhausen. Es war richtig kalt und sie stand da einfach mit nackigen Beinen. Immer diese 18-Jährigen. Ich dachte mir dabei nur: „Na warte nur, bis die erste Blasenentzündung kommt.“",
+                "captionItalic": "Das ist auch in Grünau."
+            },
+            {
+                "url": "/photos/10/7.jpg",
+                "format": "l",
+                "captionBold": "Da war alles mit Graffiti bemalt. Da hingen viele Jungs ab, die gesprayt haben.",
+                "captionItalic": "Das war zwischen Eichwalde und Zeuthen."
+            },
+
+            {
+                "url": "/photos/10/7.jpg",
+                "format": "l",
+                "captionBold": "Da war alles mit Graffiti bemalt. Da hingen viele Jungs ab, die gesprayt haben.",
+                "captionItalic": "Das war zwischen Eichwalde und Zeuthen."
+            },
+
+            {
+                "url": "/photos/10/8.jpg",
+                "format": "p",
+                "captionBold": "",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/10/9.jpg",
+                "format": "l",
+                "captionBold": "Das ist ein Freund von mir. Den kenn ich schon länger. Er arbeitet dort. Mit dem ist es immer lustig. Er wollte fotografiert werden. Eigentlich kann man dort auch immer schön sitzen, aber wegen Corona ist das natürlich alles anders.",
+                "captionItalic": "Das ist in einem Späti in Königs Wusterhausen."
+            },
+
+            {
+                "url": "/photos/10/10.jpg",
+                "format": "l",
+                "captionBold": "Hier stehen immer viele Dealer und Junkies, um Drogen zu verticken. Da ist fast jeden Tag ein Einsatz.",
+                "captionItalic": "Ja, das ist der Bahnhof Königs Wusterhausen."
+            },
+
+            {
+                "url": "/photos/10/11.jpg",
+                "format": "l",
+                "captionBold": "Die Taxifahrer, die dort stehen, kenn ich alle. Das war der Tag, als auch in Königs Wusterhausen die Maskenpflicht losging.",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/10/12.jpg",
+                "format": "l",
+                "captionBold": "Da kam gerade die Sonne durch. Das war schön.",
+                "captionItalic": "Da wurde der Weihnachtsbaum aufgestellt."
+            },
+
+            {
+                "url": "/photos/10/13.jpg",
+                "format": "p",
+                "captionBold": "",
+                "captionItalic": "Der Weihnachtsbaum in der Notübernachtung."
+            },
+
+            {
+                "url": "/photos/10/14.jpg",
+                "format": "l",
+                "captionBold": "",
+                "captionItalic": "Die Fotos sind an dem Tag entstanden, an dem ich plötzlich für drei Wochen in Haft musste. Und die nächsten Fotos sind dann entstanden, als ich noch für zwei Wochen eine Bleibe hatte. Doch ich bin da wieder ausgezogen, da der Vermieter mir gegenüber handgreiflich wurde. Der Typ hatte sogar die Polizei gerufen. Ich habe dann all meine Sachen gepackt und bin wieder für drei Tage ins Hotel gezogen. Ab morgen bin ich dann wieder in der Notunterkunft für Frauen. "
+            },
+
+            {
+                "url": "/photos/10/15.jpg",
+                "format": "l",
+                "captionBold": "",
+                "captionItalic": "Das ist das ehemalige Haus von meinem Ex-Mann und mir."
+            },
+
+            {
+                "url": "/photos/10/16.jpg",
+                "format": "l",
+                "captionBold": "Beide Häuser stehen zufälligerweise in der gleichen Straße.",
+                "captionItalic": "Und das ist das Haus in dem ich 14 Tage ein Zimmer hatte."
+            },
+
+            {
+                "url": "/photos/10/17.jpg",
+                "format": "p",
+                "captionBold": "",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/10/18.jpg",
+                "format": "l",
+                "captionBold": "Hja, hier saßen wir beide schon. Ich hatte es mir echt schön eingerichtet.",
+                "captionItalic": "Der Ausblick aus dem Zimmer."
+            },
+
+            {
+                "url": "/photos/10/19.jpg",
+                "format": "l",
+                "captionBold": "",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/10/20.jpg",
+                "format": "l",
+                "captionBold": "Das ist immer so ein Drama. Ich bin nie dazugekommen, meine Fußnägel mal neu zu lackieren.",
+                "captionItalic": "Meine Füße und ich."
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "bold": "Ich bin ein sehr",
+        "italic": "genügsamer Mensch.",
+        "letter": "J",
+        "kurzbio": "Ich bin Sozialpädagogin und komme ursprünglich aus dem Schwarzwald. Seit 30 Jahren bin ich in Berlin. Mein wertvollster Besitz ist mein Fahrrad. Mit dem bin ich unabhängig. Ich liebe Sprachen. Sie sind eine große Bereicherung für mich. Insgesamt spreche ich zehn Stück. Ansonsten zeichne ich sehr gerne Karikaturen und foto-grafiere. Gesundheit ist mir wichtig im Leben. Auch sind mir Menschen wichtig, die mir seelenverwandt sind. Das ist mir noch nicht oft passiert ist – das ist was ganz besonderes. Bald möchte ich mein Ziel verwirklichen und nach Griechenland immigrieren. Ich war vor 40 Jahren auf den Peloponnes, dort fahre ich wieder hin. Dort gibt es nicht viel – aber viel Ruhe, Wärme und Meer.",
+        "interview": false,
+        "age": "64 Jahre alt",
+        "wohnungslos": "seit zwei Wochen wohnungslos",
+        "photos": [
+            {
+                "url": "/photos/11/1.jpg",
+                "format": "l",
+                "captionBold": "Da ist immer viel los. Ein gravierender Unterschied zum Prenzlauer Berg, wo ich zuvor immer war. Ich sammle gerne Kinderbücher und verschenke sie dann. Im Prenzlauer Berg haben die Kinder alles und in Kreuzberg ist einfach ein anderes Publikum. Das ist für mich angenehmer.",
+                "captionItalic": "Der Görlitzer Park – am Morgen."
+            },
+
+            {
+                "url": "/photos/11/2.jpg",
+                "format": "l",
+                "captionBold": "Da ist immer viel los. Ein gravierender Unterschied zum Prenzlauer Berg, wo ich zuvor immer war. Ich sammle gerne Kinderbücher und verschenke sie dann. Im Prenzlauer Berg haben die Kinder alles und in Kreuzberg ist einfach ein anderes Publikum. Das ist für mich angenehmer.",
+                "captionItalic": "Der Görlitzer Park – am Morgen."
+            },
+
+            {
+                "url": "/photos/11/3.jpg",
+                "format": "l",
+                "captionBold": "An der Ecke ist ein vietnamesischer Imbiss. Es hat an dem Tag ein bisschen geschneit und Kinder haben dann diese kleinen Schneemänner dort darauf gebaut. Das Foto musste sein.",
+                "captionItalic": "Richtung Tempelhofer Feld."
+            },
+
+            {
+                "url": "/photos/11/4.jpg",
+                "format": "l",
+                "captionBold": "Mein geliebtes Tempelhofer Feld.",
+                "captionItalic": "Die Weite. Der freie Blick. Dieses Gefühl von Freiheit."
+            },
+
+            {
+                "url": "/photos/11/5.jpg",
+                "format": "l",
+                "captionBold": "",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/11/6.jpg",
+                "format": "l",
+                "captionBold": "Ein Lied von Reinhard Mey.",
+                "captionItalic": "Über den Wolken muss die Freiheit wohl grenzenlos sein."
+            },
+
+            {
+                "url": "/photos/11/7.jpg",
+                "format": "p",
+                "captionBold": "Es hat hier etwas sehr Gemütliches. Das Personal schätzt die Menschen so, wie sie sind – keine Kritik. Sie machen es uns so gemütlich, wie es nur geht.",
+                "captionItalic": "Der Aufgang zur Frauennotunterkunft."
+            },
+
+            {
+                "url": "/photos/11/8.jpg",
+                "format": "l",
+                "captionBold": "Das ist das Fenster kurz vor dem Dachboden. Dort hat man einen tollen Ausblick auf ein Haus. Wenn alle Lichter an sind, kann man die Menschen beobachten, wie sie beim Frühstücken sitzen. Dann denke ich mir: Irgendwann sitze ich auch wieder in meiner Wohnung. Dann mache ich mir ein schönes Licht an oder stelle mir Blumen ins Zimmer.",
+                "captionItalic": "Ein Lieblingsplätzchen von mir."
+            },
+
+            {
+                "url": "/photos/11/9.jpg",
+                "format": "l",
+                "captionBold": "Da hat eine Frau ihre ganze Familiengeschichte an die Wand geschrieben. Leider kann man es nicht so gut lesen. Sie hat diverse Verwandtschaftsgrade dort aufgeschrieben. Es wirkt wie ein Lebenslauf mit vielen Verbindungen zu Menschen. Das ist total spannend und hat etwas Faszinierendes. Es wirkt aber auch wie ein Hilferuf.",
+                "captionItalic": "Mutig, sich das alles von der Seele zu schreiben."
+            },
+
+            {
+                "url": "/photos/11/10.jpg",
+                "format": "p",
+                "captionBold": "Das Wohnzimmer hat etwas sehr Gemütliches.",
+                "captionItalic": "In der Notübernachtung."
+            },
+
+            {
+                "url": "/photos/11/11.jpg",
+                "format": "l",
+                "captionBold": "Das war wohl die Abenddämmerung.  Da war es ziemlich kalt – ich denke so Minus zwei Grad. Dort sind Kinder auf das Eis gesprungen. Das hab ich als Kind auch immer gemacht. Ich mag das – diese langen Wege.",
+                "captionItalic": "Der Görlitzer Park – am Abend."
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "bold": "",
+        "italic": "",
+        "letter": "L",
+        "kurzbio": "",
+        "interview": false,
+        "age": "",
+        "wohnungslos": "wohnungslos",
+        "photos": [
+            {
+                "url": "/photos/12/1.jpg",
+                "format": "p",
+                "captionBold": "",
+                "captionItalic": ""
+            },
+
+            {
+                "url": "/photos/12/2.jpg",
+                "format": "l",
+                "captionBold": "Die eine Frau trägt zwei unterschiedliche Schuhe. Ich würde mich nicht so auf den Boden setzen oder legen. Sie warten anscheinend schon länger vor der Türe.",
+                "captionItalic": "Das ist vor der Notübernachtung."
+            },
+
+            {
+                "url": "/photos/12/3.jpg",
+                "format": "l",
+                "captionBold": "Der große Tiergarten ist mein Lieblingspark. Er erinnert mich an den Helden Robin Hood. Hier bin ich oft.",
+                "captionItalic": "Mein Robin Hood Park."
+            },
+
+            {
+                "url": "/photos/12/4.jpg",
+                "format": "p",
+                "captionBold": "Denn man muss im Leben immer weiter kämpfen.",
+                "captionItalic": "Sie strahlt für mich viel Stärke aus."
+            },
+
+            {
+                "url": "/photos/12/5.jpg",
+                "format": "p",
+                "captionBold": "Ich bin an dieser Wohnung vorbeigelaufen und fand den beschmückten Baum sehr schön. Ich hätte gerne einen eigenen Weihnachtsbaum. Das wäre mein Wunsch.",
+                "captionItalic": ""
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "bold": "Bezüglich Männern ist mir noch nichts passiert.",
+        "italic": "Zum Glück.",
+        "letter": "U",
+        "kurzbio": "Ich komme aus Schönebeck und lebe seit 2013 in Berlin. Wichtig im Leben sind mir meine Freunde und generell gutes soziales Miteinander. Auch arbeiten zu gehen, ist mir sehr wichitg. Aber momentan geht das leider nicht. Mein wertvollster Besitz ist nichts Materielles, denn das habe ich ja gar nicht. Meine beiden Söhne sind mir sehr wichtig, die leben beide in Baden-Württemberg. Mein größter Wunsch ist bereits in Erfüllung gegangen: Ich habe jetzt wieder ein Obdach. Ich weiß noch nicht genau wann ich umziehe, denn ich muss noch ein paar bürokratische Sachen erledigen. Ansonsten wünsche ich mir, meine Söhne öfter sehen zu können. Auch wünsche ich mir, dass meine Geschwister und ich uns wieder versöhnen – da gab es vor längerer Zeit Krach.",
+        "interview": false,
+        "age": "50 Jahre alt",
+        "wohnungslos": "seit zwei Monaten wohnungslos",
+        "photos": [
+            {
+                "url": "/photos/13/1.jpg",
+                "format": "l",
+                "captionBold": "",
+                "captionItalic": "Mein Zimmer in der Notübernachtung."
+            },
+            {
+                "url": "/photos/13/2.jpg",
+                "format": "l",
+                "captionBold": "An dem Tag war ich zum Essen eingeladen – es gab Chilli Con Carne. Dort bin ich dann nächsten Samstag wieder eingeladen.",
+                "captionItalic": "Da wohnt die Mutter von einem Freund."
+            },
+
+            {
+                "url": "/photos/13/3.jpg",
+                "format": "l",
+                "captionBold": "Ich verbringe viel Zeit im Bus. Da ist es meistens warm. Ich mag Tageseinrichtungen nicht so sehr, dort ist mir zu viel los. Da fahre ich lieber Bus oder Bahn. Ich kaufe mir dann immer ein Tagesticket für 8,80€. Das war Richtung Dahlem-Dorf.",
+                "captionItalic": "Ich fahre viel rum. Dabei vergeht die Zeit schneller."
+            }
+        ]
+    }
+]
