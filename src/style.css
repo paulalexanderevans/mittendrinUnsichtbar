@@ -114,7 +114,11 @@ p {
 
 .headerWelcome {
     width: 100%;
+<<<<<<< HEAD
     height: 2em;
+=======
+    height: 6%;
+>>>>>>> e4941be39cfe747495ba641005a6e897458c9740
     position: fixed;
     z-index: 50;
     top: 0px;
@@ -128,7 +132,11 @@ p {
 
 .headerMain {
     width: 100%;
+<<<<<<< HEAD
     height: 2em;
+=======
+    height: 6%;
+>>>>>>> e4941be39cfe747495ba641005a6e897458c9740
     position: fixed;
     z-index: 50;
     top: 0px;
@@ -141,7 +149,11 @@ p {
 
 .headerMainBackground {
     width: 100%;
+<<<<<<< HEAD
     height: 2em;
+=======
+    height: 6%;
+>>>>>>> e4941be39cfe747495ba641005a6e897458c9740
     position: fixed;
     background-color: #fff;
     top: 0px;
@@ -169,7 +181,11 @@ p {
     top: 0;
     left: 35%;
     position: fixed;
+<<<<<<< HEAD
     height: 2em;
+=======
+    height: 6%;
+>>>>>>> e4941be39cfe747495ba641005a6e897458c9740
     opacity: 100%;
     padding-bottom: 0.3em;
     z-index: 30;
@@ -222,7 +238,11 @@ p {
     position: fixed;
     padding-right: 40px;
     padding-left: 0.5em;
+<<<<<<< HEAD
     padding-top: 2em;
+=======
+    padding-top: 7%;
+>>>>>>> e4941be39cfe747495ba641005a6e897458c9740
     top: 0;
     right: -50%;
     transition: all 0.5s ease-in-out;
@@ -267,7 +287,11 @@ h1.menu {
 
 .mainWelcome {
     position: fixed;
+<<<<<<< HEAD
     top: 2em;
+=======
+    top: 6%;
+>>>>>>> e4941be39cfe747495ba641005a6e897458c9740
     left: 0;
     width: 100%;
     color: white;
@@ -353,7 +377,11 @@ a.sitaten {
 }
 
 .infoOverlay {
+<<<<<<< HEAD
     top: 2em;
+=======
+    top: 6%;
+>>>>>>> e4941be39cfe747495ba641005a6e897458c9740
     width: 35%;
     height: 100%;
     left: 0;
@@ -365,7 +393,11 @@ a.sitaten {
 }
 
 .info {
+<<<<<<< HEAD
     top: 2em;
+=======
+    top: 6%;
+>>>>>>> e4941be39cfe747495ba641005a6e897458c9740
     width: 35%;
     height: 100%;
     left: 0;
@@ -391,7 +423,11 @@ a.sitaten {
 }
 
 .galleryL {
+<<<<<<< HEAD
     top: 2em;
+=======
+    top: 6%;
+>>>>>>> e4941be39cfe747495ba641005a6e897458c9740
     right: 0px;
     position: fixed;
     width: 65%;
@@ -400,7 +436,11 @@ a.sitaten {
 }
 
 .galleryP {
+<<<<<<< HEAD
     top: 2em;
+=======
+    top: 6%;
+>>>>>>> e4941be39cfe747495ba641005a6e897458c9740
     right: 0px;
     position: fixed;
     width: 65%;
@@ -458,7 +498,11 @@ a.sitaten {
 .about {
     top: 0px;
     right: -100%;
+<<<<<<< HEAD
     padding-top: 2em;
+=======
+    padding-top: 6%;
+>>>>>>> e4941be39cfe747495ba641005a6e897458c9740
     position: fixed;
     width: 100%;
     height: 100%;
@@ -484,7 +528,11 @@ a.sitaten {
 
 .interview {
     top: 0;
+<<<<<<< HEAD
     padding-top: 2em;
+=======
+    padding-top: 5%;
+>>>>>>> e4941be39cfe747495ba641005a6e897458c9740
     right: -100%;
 
     position: fixed;
@@ -529,7 +577,11 @@ a.sitaten {
 .kontakt {
     top: 0px;
     right: -100%;
+<<<<<<< HEAD
     padding-top: 2em;
+=======
+    padding-top: 5%;
+>>>>>>> e4941be39cfe747495ba641005a6e897458c9740
     padding-right: 0.5em;
     position: fixed;
     width: 100%;
@@ -555,7 +607,11 @@ a.sitaten {
 }
 
 .galleryNav {
+<<<<<<< HEAD
     top: 2em;
+=======
+    top: 6%;
+>>>>>>> e4941be39cfe747495ba641005a6e897458c9740
     right: 0px;
     position: fixed;
     width: 65%;

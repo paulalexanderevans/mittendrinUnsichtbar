@@ -15,7 +15,11 @@ export default class About extends React.Component {
             <div className="about">
                 <div className="aboutTxt">
                     <h1>
+<<<<<<< HEAD
                         ` Der Gedanke an eine wohnungslose Person ergibt oft ein
+=======
+                        Der Gedanke an eine wohnungslose Person ergibt oft ein
+>>>>>>> e4941be39cfe747495ba641005a6e897458c9740
                         sehr stigmatisiertes Bild: Ein Mann mit abgetragener
                         Kleidung, der auf der Straße lebt. Dieses vereinfachte
                         Bild der sichtbaren Wohnungslosigkeit steht oft in
@@ -38,6 +42,7 @@ export default class About extends React.Component {
                         Leben, um einen Einblick in ihre Lebenssituation zu
                         geben. Sie bleiben auf Wunsch anonym und werden
                         lediglich mit dem Anfangsbuchstaben ihres Vornamens
+<<<<<<< HEAD
                         abgekürzt.<br></br>
                         <br></br>Die Suche nach den Frauen war mit sehr vielen
                         Besuchen in verschiedenen Notübernachtungen in Berlin
@@ -54,6 +59,21 @@ export default class About extends React.Component {
                         allen Frauen für die Teilnahme an dem Projekt. Ich
                         bedanke mich für ihre Offenheit, ihre Wärme und ihr
                         Vertrauen.`
+=======
+                        abgekürzt. Die Suche nach den Frauen war mit sehr vielen
+                        Besuchen in verschiedenen Notübernachtungen in Berlin
+                        verbunden. Ich bedanke mich bei allen Leiterinnen für
+                        ihre hilfsbereite Unterstützung, die Einrichtungen
+                        mehrmals besuchen zu können. Christin Fritzsche
+                        Notübernachtung für Frauen Berlin-Mitte Isabelle
+                        Ponesicky Notübernachtung für Frauen Berlin-Moabit Elisa
+                        Lindemann Marie Berlin-Mitte Elke Loos Mitten im Kiez
+                        Berlin-Friedrichshain Natalie Kulik Evas Obdach
+                        Berlin-Neukölln Felina Beyer JugendKulturZentrum Pumpe
+                        Berlin-Mitte Mein besonderer Dank gilt allen Frauen für
+                        die Teilnahme an dem Projekt. Ich bedanke mich für ihre
+                        Offenheit, ihre Wärme und ihr Vertrauen.
+>>>>>>> e4941be39cfe747495ba641005a6e897458c9740
                     </h1>
                 </div>
             </div>
