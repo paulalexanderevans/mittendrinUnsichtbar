@@ -114,11 +114,7 @@ p {
 
 .headerWelcome {
     width: 100%;
-<<<<<<< HEAD
     height: 6%;
-=======
-    height: 7%;
->>>>>>> 466cd9e8db6c72f315d813fed702faa6499b61e1
     position: fixed;
     z-index: 50;
     top: 0px;
@@ -132,11 +128,7 @@ p {
 
 .headerMain {
     width: 100%;
-<<<<<<< HEAD
     height: 6%;
-=======
-    height: 7%;
->>>>>>> 466cd9e8db6c72f315d813fed702faa6499b61e1
     position: fixed;
     z-index: 50;
     top: 0px;
@@ -149,11 +141,7 @@ p {
 
 .headerMainBackground {
     width: 100%;
-<<<<<<< HEAD
     height: 6%;
-=======
-    height: 7%;
->>>>>>> 466cd9e8db6c72f315d813fed702faa6499b61e1
     position: fixed;
     background-color: #fff;
     top: 0px;
@@ -181,23 +169,12 @@ p {
     top: 0;
     left: 35%;
     position: fixed;
-<<<<<<< HEAD
     height: 6%;
-=======
-    height: 7%;
->>>>>>> 466cd9e8db6c72f315d813fed702faa6499b61e1
     opacity: 100%;
     padding-bottom: 0.3em;
     z-index: 30;
 }
 
-<<<<<<< HEAD
-=======
-/* .headerLetters h5 {
-    color: #3e0062;
-} */
-
->>>>>>> 466cd9e8db6c72f315d813fed702faa6499b61e1
 .menuButtonWelcome {
     height: 100%;
     width: auto;
@@ -213,13 +190,8 @@ p {
 }
 
 .menuBurgerWelcome1 {
-<<<<<<< HEAD
     margin-top: 0.1em;
     margin-bottom: 0.1em;
-=======
-    margin-top: 0.2em;
-    margin-bottom: 0.2em;
->>>>>>> 466cd9e8db6c72f315d813fed702faa6499b61e1
     height: 0.08em;
     width: 1.5em;
     background-color: white;
@@ -227,13 +199,8 @@ p {
 }
 
 .menuBurgerWelcome2 {
-<<<<<<< HEAD
     margin-top: 0.1em;
     margin-bottom: 0.1em;
-=======
-    margin-top: 0.2em;
-    margin-bottom: 0.2em;
->>>>>>> 466cd9e8db6c72f315d813fed702faa6499b61e1
     height: 0.08em;
     width: 1.5em;
     background-color: white;
@@ -242,19 +209,11 @@ p {
 
 /* menu open */
 .menuButtonWelcome.open .menuBurgerWelcome1 {
-<<<<<<< HEAD
     transform: rotate(45deg) translateX(0.2em);
 }
 
 .menuButtonWelcome.open .menuBurgerWelcome2 {
     transform: rotate(-45deg) translateX(0.2em);
-=======
-    transform: rotate(45deg) translateX(0.3em);
-}
-
-.menuButtonWelcome.open .menuBurgerWelcome2 {
-    transform: rotate(-45deg) translateX(0.3em);
->>>>>>> 466cd9e8db6c72f315d813fed702faa6499b61e1
 }
 
 .menuWelcome {
@@ -263,11 +222,7 @@ p {
     position: fixed;
     padding-right: 40px;
     padding-left: 0.5em;
-<<<<<<< HEAD
     padding-top: 7%;
-=======
-    padding-top: 6%;
->>>>>>> 466cd9e8db6c72f315d813fed702faa6499b61e1
     top: 0;
     right: -50%;
     transition: all 0.5s ease-in-out;
@@ -291,13 +246,8 @@ h1.menu {
 }
 
 .menuBurgerMain2 {
-<<<<<<< HEAD
     margin-top: 0.1em;
     margin-bottom: 0.1em;
-=======
-    margin-top: 0.2em;
-    margin-bottom: 0.2em;
->>>>>>> 466cd9e8db6c72f315d813fed702faa6499b61e1
     height: 0.08em;
     width: 1.5em;
     background-color: #3e0062;
@@ -306,30 +256,18 @@ h1.menu {
 
 /* menu open */
 .menuButtonWelcome.open .menuBurgerMain1 {
-<<<<<<< HEAD
     transform: rotate(45deg) translateX(0.2em);
-=======
-    transform: rotate(45deg) translateX(0.3em);
->>>>>>> 466cd9e8db6c72f315d813fed702faa6499b61e1
     background-color: #fff;
 }
 
 .menuButtonWelcome.open .menuBurgerMain2 {
-<<<<<<< HEAD
     transform: rotate(-45deg) translateX(0.2em);
-=======
-    transform: rotate(-45deg) translateX(0.3em);
->>>>>>> 466cd9e8db6c72f315d813fed702faa6499b61e1
     background-color: #fff;
 }
 
 .mainWelcome {
     position: fixed;
-<<<<<<< HEAD
     top: 6%;
-=======
-    top: 7%;
->>>>>>> 466cd9e8db6c72f315d813fed702faa6499b61e1
     left: 0;
     width: 100%;
     color: white;
@@ -415,11 +353,7 @@ a.sitaten {
 }
 
 .infoOverlay {
-<<<<<<< HEAD
     top: 6%;
-=======
-    top: 7%;
->>>>>>> 466cd9e8db6c72f315d813fed702faa6499b61e1
     width: 35%;
     height: 100%;
     left: 0;
@@ -431,11 +365,7 @@ a.sitaten {
 }
 
 .info {
-<<<<<<< HEAD
     top: 6%;
-=======
-    top: 7%;
->>>>>>> 466cd9e8db6c72f315d813fed702faa6499b61e1
     width: 35%;
     height: 100%;
     left: 0;
@@ -461,11 +391,7 @@ a.sitaten {
 }
 
 .galleryL {
-<<<<<<< HEAD
     top: 6%;
-=======
-    top: 7%;
->>>>>>> 466cd9e8db6c72f315d813fed702faa6499b61e1
     right: 0px;
     position: fixed;
     width: 65%;
@@ -474,11 +400,7 @@ a.sitaten {
 }
 
 .galleryP {
-<<<<<<< HEAD
     top: 6%;
-=======
-    top: 7%;
->>>>>>> 466cd9e8db6c72f315d813fed702faa6499b61e1
     right: 0px;
     position: fixed;
     width: 65%;
@@ -562,11 +484,7 @@ a.sitaten {
 
 .interview {
     top: 0;
-<<<<<<< HEAD
     padding-top: 5%;
-=======
-    padding-top: 6%;
->>>>>>> 466cd9e8db6c72f315d813fed702faa6499b61e1
     right: -100%;
 
     position: fixed;
@@ -611,11 +529,7 @@ a.sitaten {
 .kontakt {
     top: 0px;
     right: -100%;
-<<<<<<< HEAD
     padding-top: 5%;
-=======
-    padding-top: 6%;
->>>>>>> 466cd9e8db6c72f315d813fed702faa6499b61e1
     padding-right: 0.5em;
     position: fixed;
     width: 100%;
@@ -641,11 +555,7 @@ a.sitaten {
 }
 
 .galleryNav {
-<<<<<<< HEAD
     top: 6%;
-=======
-    top: 7%;
->>>>>>> 466cd9e8db6c72f315d813fed702faa6499b61e1
     right: 0px;
     position: fixed;
     width: 65%;
@@ -725,17 +635,11 @@ a.sitaten {
     .infoOverlay {
         display: none;
         opacity: 0;
-<<<<<<< HEAD
         top: 10%;
     }
     .galleryNav {
         opacity: 0%;
         top: 10%;
-=======
-    }
-    .galleryNav {
-        opacity: 0%;
->>>>>>> 466cd9e8db6c72f315d813fed702faa6499b61e1
     }
     .galleryImageP {
         width: 50%;
@@ -748,11 +652,7 @@ a.sitaten {
 
     .headerWelcome {
         width: 100%;
-<<<<<<< HEAD
         height: 10%;
-=======
-        height: 15%;
->>>>>>> 466cd9e8db6c72f315d813fed702faa6499b61e1
         position: fixed;
         z-index: 50;
         top: 0px;
@@ -765,7 +665,6 @@ a.sitaten {
 
     .headerMain {
         width: 100%;
-<<<<<<< HEAD
         height: 10%;
         position: fixed;
         z-index: 50;
@@ -778,11 +677,6 @@ a.sitaten {
     }
     .headerMainBackground {
         height: 10%;
-=======
-        height: auto;
-
-        color: white;
->>>>>>> 466cd9e8db6c72f315d813fed702faa6499b61e1
     }
 
     .fixedLogo {
@@ -798,13 +692,10 @@ a.sitaten {
         padding-right: 0;
     }
 
-<<<<<<< HEAD
     .fixedLogo.white {
         position: fixed;
     }
 
-=======
->>>>>>> 466cd9e8db6c72f315d813fed702faa6499b61e1
     .headerLetters {
         width: 80%;
         left: 0;
@@ -830,7 +721,6 @@ a.sitaten {
     }
     .mainWelcome {
         position: relative;
-<<<<<<< HEAD
         top: 10%;
         overflow: scroll;
     }
@@ -851,22 +741,5 @@ a.sitaten {
     .galleryL,
     .galleryP {
         top: 10%;
-=======
-        top: 15%;
-        overflow: scroll;
-    }
-    .menuWelcome {
-        padding-top: 20%;
-    }
-
-    .about {
-        padding-top: 20%;
-    }
-    .kontakt {
-        padding-top: 20%;
-    }
-    .interview {
-        padding-top: 20%;
->>>>>>> 466cd9e8db6c72f315d813fed702faa6499b61e1
     }
 }
