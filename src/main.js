@@ -258,7 +258,11 @@ export default class Main extends React.Component {
         const highlightedLetter = document.getElementById(`${this.state.id}`);
         highlightedLetter.style.color = "white";
         const info = document.querySelector(".info");
-        info.style.zIndex = "50";
+        const mediaQuery = window.matchMedia("(max-width: 812px)");
+        if (!mediaQuery.matches) {
+            info.style.zIndex = "50";
+        }
+
         const stats = document.querySelector(".stats");
         stats.style.color = "white";
         this.showWhite();
@@ -355,84 +359,106 @@ export default class Main extends React.Component {
                                 </div>
                             )}
                         </div>
-                        <div
-                            className="infoOverlay"
-                            onMouseEnter={() => this.showInfo()}
-                        ></div>
-                        <div
-                            id="info"
-                            className="info"
-                            onMouseLeave={() => this.hideInfo()}
-                        >
-                            {" "}
-                            <div className="infoTxt">
-                                <div className="stats">
-                                    {this.state.age && (
-                                        <h5>{this.state.age} |&nbsp;</h5>
-                                    )}
-                                    <h5>{this.state.wohnungslos}</h5>
-                                </div>
-                                {this.state.kurzbio && (
-                                    <p>
-                                        <br></br>
-                                        {this.state.kurzbio}
-                                    </p>
-                                )}
 
-                                {this.state.interview && (
-                                    <h5 onClick={() => this.showInterview()}>
-                                        <br></br>
-                                        <br></br>INTERVIEW →
-                                    </h5>
+                        <div className="gallery">
+                            <div
+                                className="galleryNav"
+                                onMouseEnter={() => this.showGallery()}
+                                onMouseLeave={() => this.hideGallery()}
+                            >
+                                <div
+                                    className="left"
+                                    onClick={() => this.clickLeft()}
+                                    onMouseEnter={(e) => this.leftHoverEnter(e)}
+                                    // onMouseLeave={(e) => this.leftHoverLeave(e)}
+                                ></div>
+                                <div
+                                    className="right"
+                                    onClick={() => this.clickRight()}
+                                    onMouseEnter={(e) =>
+                                        this.rightHoverEnter(e)
+                                    }
+                                    // onMouseLeave={(e) => this.rightHoverLeave(e)}
+                                ></div>
+                            </div>
+
+                            <div className="galleryL">
+                                {this.state.photos && (
+                                    <div className="galleryLMob">
+                                        <img
+                                            src={
+                                                this.state.photos[
+                                                    this.state.counter
+                                                ].url
+                                            }
+                                            alt="purple box"
+                                            className="galleryImageL"
+                                        />
+                                        <img
+                                            src="/right.png"
+                                            alt="right arrow"
+                                            className="arrowRight"
+                                        />
+                                        <img
+                                            src="/left.png"
+                                            alt="left arrow"
+                                            className="arrowLeft"
+                                        />
+                                    </div>
+                                )}
+                                {this.state.photos && (
+                                    <div className="captionLContainer">
+                                        <div className="captionLText">
+                                            {this.state.photos[
+                                                this.state.counter
+                                            ].captionItalic && (
+                                                <h6>
+                                                    {
+                                                        this.state.photos[
+                                                            this.state.counter
+                                                        ].captionItalic
+                                                    }
+                                                    &nbsp;
+                                                </h6>
+                                            )}
+                                            {this.state.photos[
+                                                this.state.counter
+                                            ].captionBold && (
+                                                <p>
+                                                    {
+                                                        this.state.photos[
+                                                            this.state.counter
+                                                        ].captionBold
+                                                    }
+                                                </p>
+                                            )}
+                                        </div>
+                                    </div>
                                 )}
                             </div>
-                        </div>
-                        <div
-                            className="galleryNav"
-                            onMouseEnter={() => this.showGallery()}
-                            onMouseLeave={() => this.hideGallery()}
-                        >
-                            <div
-                                className="left"
-                                onClick={() => this.clickLeft()}
-                                onMouseEnter={(e) => this.leftHoverEnter(e)}
-                                // onMouseLeave={(e) => this.leftHoverLeave(e)}
-                            ></div>
-                            <div
-                                className="right"
-                                onClick={() => this.clickRight()}
-                                onMouseEnter={(e) => this.rightHoverEnter(e)}
-                                // onMouseLeave={(e) => this.rightHoverLeave(e)}
-                            ></div>
-                        </div>
 
-                        <div className="galleryL">
-                            {this.state.photos && (
-                                <div className="galleryLMob">
-                                    <img
-                                        src={
-                                            this.state.photos[
-                                                this.state.counter
-                                            ].url
-                                        }
-                                        alt="purple box"
-                                        className="galleryImageL"
-                                    />
-                                    <img
-                                        src="/right.png"
-                                        alt="right arrow"
-                                        className="arrowRight"
-                                    />
-                                    <img
-                                        src="/left.png"
-                                        alt="left arrow"
-                                        className="arrowLeft"
-                                    />
-                                </div>
-                            )}
-                            {this.state.photos && (
-                                <div className="captionLContainer">
-                                    <div className="captionLText">
+                            <div className="galleryP">
+                                {this.state.photos && (
+                                    <div className="galleryPMob">
+                                        <img
+                                            src="./default"
+                                            alt="purple box"
+                                            className="galleryImageP"
+                                        />
+                                        <img
+                                            src="/right.png"
+                                            alt="right arrow"
+                                            className="arrowRight"
+                                        />
+                                        <img
+                                            src="/left.png"
+                                            alt="left arrow"
+                                            className="arrowLeft"
+                                        />
+                                    </div>
+                                )}
+                                {this.state.photos && (
+                                    <div className="captionP">
                                         {this.state.photos[this.state.counter]
                                             .captionItalic && (
                                             <h6>
@@ -446,58 +472,45 @@ export default class Main extends React.Component {
                                         )}
                                         {this.state.photos[this.state.counter]
                                             .captionBold && (
-                                            <p>
-                                                {
-                                                    this.state.photos[
-                                                        this.state.counter
-                                                    ].captionBold
-                                                }
-                                            </p>
+                                            <p>{this.state.captionBold}</p>
                                         )}
                                     </div>
-                                </div>
-                            )}
-                        </div>
+                                )}
+                            </div>
+                            <div
+                                className="infoOverlay"
+                                onMouseEnter={() => this.showInfo()}
+                            ></div>
+                            <div
+                                id="info"
+                                className="info"
+                                onMouseLeave={() => this.hideInfo()}
+                            >
+                                {" "}
+                                <div className="infoTxt">
+                                    <div className="stats">
+                                        {this.state.age && (
+                                            <h5>{this.state.age} |&nbsp;</h5>
+                                        )}
+                                        <h5>{this.state.wohnungslos}</h5>
+                                    </div>
+                                    {this.state.kurzbio && (
+                                        <p>
+                                            <br></br>
+                                            {this.state.kurzbio}
+                                        </p>
+                                    )}
 
-                        <div className="galleryP">
-                            {this.state.photos && (
-                                <div className="galleryPMob">
-                                    <img
-                                        src="./default"
-                                        alt="purple box"
-                                        className="galleryImageP"
-                                    />
-                                    <img
-                                        src="/right.png"
-                                        alt="right arrow"
-                                        className="arrowRight"
-                                    />
-                                    <img
-                                        src="/left.png"
-                                        alt="left arrow"
-                                        className="arrowLeft"
-                                    />
-                                </div>
-                            )}
-                            {this.state.photos && (
-                                <div className="captionP">
-                                    {this.state.photos[this.state.counter]
-                                        .captionItalic && (
-                                        <h6>
-                                            {
-                                                this.state.photos[
-                                                    this.state.counter
-                                                ].captionItalic
-                                            }
-                                            &nbsp;
-                                        </h6>
-                                    )}
-                                    {this.state.photos[this.state.counter]
-                                        .captionBold && (
-                                        <p>{this.state.captionBold}</p>
+                                    {this.state.interview && (
+                                        <h5
+                                            onClick={() => this.showInterview()}
+                                        >
+                                            <br></br>
+                                            <br></br>INTERVIEW →
+                                        </h5>
                                     )}
                                 </div>
-                            )}
+                            </div>
                         </div>
                         <div className="counter">
                             <h5>

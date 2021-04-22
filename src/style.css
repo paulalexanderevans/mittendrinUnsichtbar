@@ -87,6 +87,7 @@ h6 {
     font-family: "bigdailyshort-extralightitalic";
     font-size: 0.7em;
     display: inline;
+    color: #3e0062;
 }
 
 p {
@@ -453,11 +454,12 @@ a.sitaten {
     position: fixed;
     bottom: 0;
     right: 0;
+    z-index: 6;
 }
 
 .captionP {
     width: auto;
-    height: 100%;
+    height: auto;
     padding-right: 0.5em;
     padding-left: 0.5em;
     padding-top: 0.4em;
@@ -656,10 +658,7 @@ a.sitaten {
         opacity: 0;
         top: 4em;
     }
-    .galleryNav {
-        opacity: 0%;
-        top: 4em;
-    }
+
     .galleryImageP {
         width: 50%;
         height: auto;
@@ -719,13 +718,13 @@ a.sitaten {
         width: 80%;
         left: 0;
         position: relative;
-        padding-top: 3em;
+        padding-top: 4em;
         padding-left: 0.6em;
     }
     .menuButtonWelcome {
         position: fixed;
         right: 0;
-        top: 4%;
+        top: 1em;
         height: auto;
     }
 
@@ -750,11 +749,58 @@ a.sitaten {
     .interview {
         padding-top: 4em;
     }
-    .info,
-    .galleryL,
-    .galleryP {
+    .gallery {
         top: 4em;
+        height: auto;
+        width: 100%;
+        display: inline-block;
+        position: relative;
     }
+    .galleryNav {
+        height: 100%;
+    }
+    .galleryL,
+    .galleryP,
+    .galleryNav {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .galleryNav {
+        opacity: 0%;
+        position: absolute;
+        height: 50%;
+    }
+
+    .captionLContainer {
+        width: 100%;
+        height: auto;
+        overflow: scroll;
+    }
+
+    .info {
+        top: 0.5em;
+        height: auto;
+        left: 0;
+        width: 100%;
+        overflow: scroll;
+        position: relative;
+        box-sizing: border-box;
+        z-index: 5;
+        transition: all 1s ease-in-out;
+        background-color: #f4f2f9;
+    }
+    .infoTxt {
+        padding-top: 0;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        box-sizing: border-box;
+        z-index: 5;
+        transition: all 1s ease-in-out;
+    }
+
     .arrowRight,
     .arrowLeft {
         opacity: 1;
@@ -768,10 +814,7 @@ a.sitaten {
         opacity: 0;
         top: 4em;
     }
-    .galleryNav {
-        opacity: 0%;
-        top: 4em;
-    }
+
     .galleryImageP {
         width: 50%;
         height: auto;
@@ -831,13 +874,13 @@ a.sitaten {
         width: 80%;
         left: 0;
         position: relative;
-        padding-top: 3em;
+        padding-top: 4em;
         padding-left: 0.6em;
     }
     .menuButtonWelcome {
         position: fixed;
         right: 0;
-        top: 4%;
+        top: 1em;
         height: auto;
     }
 
@@ -862,11 +905,58 @@ a.sitaten {
     .interview {
         padding-top: 4em;
     }
-    .info,
-    .galleryL,
-    .galleryP {
+    .gallery {
         top: 4em;
+        height: auto;
+        width: 100%;
+        display: inline-block;
+        position: relative;
     }
+    .galleryNav {
+        height: 100%;
+    }
+    .galleryL,
+    .galleryP,
+    .galleryNav {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .galleryNav {
+        opacity: 0%;
+        position: absolute;
+        height: 50%;
+    }
+
+    .captionLContainer {
+        width: 100%;
+        height: auto;
+        overflow: scroll;
+    }
+
+    .info {
+        top: 0.5em;
+        height: auto;
+        left: 0;
+        width: 100%;
+        overflow: scroll;
+        position: relative;
+        box-sizing: border-box;
+        z-index: 5;
+        transition: all 1s ease-in-out;
+        background-color: #f4f2f9;
+    }
+    .infoTxt {
+        padding-top: 0;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        box-sizing: border-box;
+        z-index: 5;
+        transition: all 1s ease-in-out;
+    }
+
     .arrowRight,
     .arrowLeft {
         opacity: 1;
@@ -880,10 +970,7 @@ a.sitaten {
         opacity: 0;
         top: 4em;
     }
-    .galleryNav {
-        opacity: 0%;
-        top: 4em;
-    }
+
     .galleryImageP {
         width: 50%;
         height: auto;
@@ -943,13 +1030,13 @@ a.sitaten {
         width: 80%;
         left: 0;
         position: relative;
-        padding-top: 3em;
+        padding-top: 4em;
         padding-left: 0.6em;
     }
     .menuButtonWelcome {
         position: fixed;
         right: 0;
-        top: 4%;
+        top: 1em;
         height: auto;
     }
 
@@ -974,11 +1061,58 @@ a.sitaten {
     .interview {
         padding-top: 4em;
     }
-    .info,
-    .galleryL,
-    .galleryP {
+    .gallery {
         top: 4em;
+        height: auto;
+        width: 100%;
+        display: inline-block;
+        position: relative;
     }
+    .galleryNav {
+        height: 100%;
+    }
+    .galleryL,
+    .galleryP,
+    .galleryNav {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .galleryNav {
+        opacity: 0%;
+        position: absolute;
+        height: 50%;
+    }
+
+    .captionLContainer {
+        width: 100%;
+        height: auto;
+        overflow: scroll;
+    }
+
+    .info {
+        top: 0.5em;
+        height: auto;
+        left: 0;
+        width: 100%;
+        overflow: scroll;
+        position: relative;
+        box-sizing: border-box;
+        z-index: 5;
+        transition: all 1s ease-in-out;
+        background-color: #f4f2f9;
+    }
+    .infoTxt {
+        padding-top: 0;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        box-sizing: border-box;
+        z-index: 5;
+        transition: all 1s ease-in-out;
+    }
+
     .arrowRight,
     .arrowLeft {
         opacity: 1;
@@ -992,10 +1126,7 @@ a.sitaten {
         opacity: 0;
         top: 4em;
     }
-    .galleryNav {
-        opacity: 0%;
-        top: 4em;
-    }
+
     .galleryImageP {
         width: 50%;
         height: auto;
@@ -1055,13 +1186,13 @@ a.sitaten {
         width: 80%;
         left: 0;
         position: relative;
-        padding-top: 3em;
+        padding-top: 4em;
         padding-left: 0.6em;
     }
     .menuButtonWelcome {
         position: fixed;
         right: 0;
-        top: 4%;
+        top: 1em;
         height: auto;
     }
 
@@ -1086,11 +1217,58 @@ a.sitaten {
     .interview {
         padding-top: 4em;
     }
-    .info,
-    .galleryL,
-    .galleryP {
+    .gallery {
         top: 4em;
+        height: auto;
+        width: 100%;
+        display: inline-block;
+        position: relative;
     }
+    .galleryNav {
+        height: 100%;
+    }
+    .galleryL,
+    .galleryP,
+    .galleryNav {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .galleryNav {
+        opacity: 0%;
+        position: absolute;
+        height: 50%;
+    }
+
+    .captionLContainer {
+        width: 100%;
+        height: auto;
+        overflow: scroll;
+    }
+
+    .info {
+        top: 0.5em;
+        height: auto;
+        left: 0;
+        width: 100%;
+        overflow: scroll;
+        position: relative;
+        box-sizing: border-box;
+        z-index: 5;
+        transition: all 1s ease-in-out;
+        background-color: #f4f2f9;
+    }
+    .infoTxt {
+        padding-top: 0;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        box-sizing: border-box;
+        z-index: 5;
+        transition: all 1s ease-in-out;
+    }
+
     .arrowRight,
     .arrowLeft {
         opacity: 1;
@@ -1104,10 +1282,7 @@ a.sitaten {
         opacity: 0;
         top: 4em;
     }
-    .galleryNav {
-        opacity: 0%;
-        top: 4em;
-    }
+
     .galleryImageP {
         width: 50%;
         height: auto;
@@ -1167,13 +1342,13 @@ a.sitaten {
         width: 80%;
         left: 0;
         position: relative;
-        padding-top: 3em;
+        padding-top: 4em;
         padding-left: 0.6em;
     }
     .menuButtonWelcome {
         position: fixed;
         right: 0;
-        top: 4%;
+        top: 1em;
         height: auto;
     }
 
@@ -1198,11 +1373,58 @@ a.sitaten {
     .interview {
         padding-top: 4em;
     }
-    .info,
-    .galleryL,
-    .galleryP {
+    .gallery {
         top: 4em;
+        height: auto;
+        width: 100%;
+        display: inline-block;
+        position: relative;
     }
+    .galleryNav {
+        height: 100%;
+    }
+    .galleryL,
+    .galleryP,
+    .galleryNav {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .galleryNav {
+        opacity: 0%;
+        position: absolute;
+        height: 50%;
+    }
+
+    .captionLContainer {
+        width: 100%;
+        height: auto;
+        overflow: scroll;
+    }
+
+    .info {
+        top: 0.5em;
+        height: auto;
+        left: 0;
+        width: 100%;
+        overflow: scroll;
+        position: relative;
+        box-sizing: border-box;
+        z-index: 5;
+        transition: all 1s ease-in-out;
+        background-color: #f4f2f9;
+    }
+    .infoTxt {
+        padding-top: 0;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        box-sizing: border-box;
+        z-index: 5;
+        transition: all 1s ease-in-out;
+    }
+
     .arrowRight,
     .arrowLeft {
         opacity: 1;
@@ -1216,10 +1438,7 @@ a.sitaten {
         opacity: 0;
         top: 4em;
     }
-    .galleryNav {
-        opacity: 0%;
-        top: 4em;
-    }
+
     .galleryImageP {
         width: 50%;
         height: auto;
@@ -1279,13 +1498,13 @@ a.sitaten {
         width: 80%;
         left: 0;
         position: relative;
-        padding-top: 3em;
+        padding-top: 4em;
         padding-left: 0.6em;
     }
     .menuButtonWelcome {
         position: fixed;
         right: 0;
-        top: 4%;
+        top: 1em;
         height: auto;
     }
 
@@ -1310,11 +1529,58 @@ a.sitaten {
     .interview {
         padding-top: 4em;
     }
-    .info,
-    .galleryL,
-    .galleryP {
+    .gallery {
         top: 4em;
+        height: auto;
+        width: 100%;
+        display: inline-block;
+        position: relative;
     }
+    .galleryNav {
+        height: 100%;
+    }
+    .galleryL,
+    .galleryP,
+    .galleryNav {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .galleryNav {
+        opacity: 0%;
+        position: absolute;
+        height: 50%;
+    }
+
+    .captionLContainer {
+        width: 100%;
+        height: auto;
+        overflow: scroll;
+    }
+
+    .info {
+        top: 0.5em;
+        height: auto;
+        left: 0;
+        width: 100%;
+        overflow: scroll;
+        position: relative;
+        box-sizing: border-box;
+        z-index: 5;
+        transition: all 1s ease-in-out;
+        background-color: #f4f2f9;
+    }
+    .infoTxt {
+        padding-top: 0;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        box-sizing: border-box;
+        z-index: 5;
+        transition: all 1s ease-in-out;
+    }
+
     .arrowRight,
     .arrowLeft {
         opacity: 1;
